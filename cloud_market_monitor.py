@@ -16,9 +16,9 @@ from zoneinfo import ZoneInfo
 import yfinance as yf
 
 # ── Credentials (from Environment or Defaults) ───────────────────────────────
-GMAIL_USER     = os.environ.get("GMAIL_USER", "hari.mba000@gmail.com")
-GMAIL_APP_PASS = os.environ.get("GMAIL_APP_PASS", "yoll icus ollp glmx")
-ALERT_RECEIVER = os.environ.get("ALERT_RECEIVER", "hari.mba000@gmail.com")
+GMAIL_USER     = (os.environ.get("GMAIL_USER") or "hari.mba000@gmail.com").strip()
+GMAIL_APP_PASS = (os.environ.get("GMAIL_APP_PASS") or "yoll icus ollp glmx").strip()
+ALERT_RECEIVER = (os.environ.get("ALERT_RECEIVER") or "hari.mba000@gmail.com").strip()
 
 WATCHLIST = [
     {
@@ -275,13 +275,30 @@ def main():
     msg["To"] = ALERT_RECEIVER
     msg.attach(MIMEText(html, "html"))
 
+    print(f"Connecting to SMTP server as {GMAIL_USER}...")
+    sent = False
+    # Attempt 1: Port 587 (STARTTLS - standard for cloud runners)
     try:
-        with smtplib.SMTP_SSL("smtp.gmail.com", 465) as server:
+        with smtplib.SMTP("smtp.gmail.com", 587, timeout=30) as server:
+            server.ehlo()
+            server.starttls()
+            server.ehlo()
             server.login(GMAIL_USER, GMAIL_APP_PASS)
             server.sendmail(GMAIL_USER, ALERT_RECEIVER, msg.as_string())
-        print("✅ Monday Buy Report sent to email successfully!")
-    except Exception as e:
-        print(f"❌ Email sending error: {e}")
+        print("✅ Monday Buy Report sent via Port 587 successfully!")
+        sent = True
+    except Exception as e1:
+        print(f"Port 587 attempt failed: {e1}. Trying Port 465 SSL...")
+
+    # Attempt 2: Port 465 (SSL fallback)
+    if not sent:
+        try:
+            with smtplib.SMTP_SSL("smtp.gmail.com", 465, timeout=30) as server:
+                server.login(GMAIL_USER, GMAIL_APP_PASS)
+                server.sendmail(GMAIL_USER, ALERT_RECEIVER, msg.as_string())
+            print("✅ Monday Buy Report sent via Port 465 successfully!")
+        except Exception as e2:
+            print(f"❌ Port 465 attempt also failed: {e2}")
 
 
 if __name__ == "__main__":

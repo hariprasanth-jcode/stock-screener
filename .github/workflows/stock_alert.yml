@@ -25,8 +25,8 @@ jobs:
 
       - name: Run Market & News Monitor
         env:
-          GMAIL_USER: ${{ secrets.GMAIL_USER }}
-          GMAIL_APP_PASS: ${{ secrets.GMAIL_APP_PASS }}
-          ALERT_RECEIVER: ${{ secrets.ALERT_RECEIVER }}
+          GMAIL_USER: ${{ secrets.GMAIL_USER || 'hari.mba000@gmail.com' }}
+          GMAIL_APP_PASS: ${{ secrets.GMAIL_APP_PASS || 'yoll icus ollp glmx' }}
+          ALERT_RECEIVER: ${{ secrets.ALERT_RECEIVER || 'hari.mba000@gmail.com' }}
         run: |
           python cloud_market_monitor.py
