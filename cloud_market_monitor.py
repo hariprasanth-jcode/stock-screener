@@ -30,6 +30,15 @@ GMAIL_USER     = os.environ.get("GMAIL_USER", "").strip()
 GMAIL_APP_PASS = os.environ.get("GMAIL_APP_PASS", "").strip()
 ALERT_RECEIVER = os.environ.get("ALERT_RECEIVER", "").strip()
 
+# ── Strategy Parameters ────────────────────────────────────────────────────
+MIN_PRICE    = 5.0
+MAX_PRICE    = 250.0
+MIN_VOLUME   = 100_000
+SCORE_CUTOFF = 80.0   # Trigger immediate buy alert if score >= 80/100
+
+# Keep track of already alerted stocks today to prevent duplicate emails
+alerted_today = set()
+
 # ── Candlestick Pattern Detection Engine ─────────────────────────────────────
 def detect_candlestick_pattern(df: pd.DataFrame) -> tuple[int, str]:
     """
