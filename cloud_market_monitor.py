@@ -1,8 +1,11 @@
 """
-Cloud Stock & News Alert Dispatcher (Runs on GitHub Actions / Cloud Cron)
-========================================================================
-Runs on scheduled cloud server every Monday at 10:00 AM IST.
-Scans all 14 stocks, checks company news & sends immediate email to phone.
+Continuous Real-Time Cloud Stock & News Alert Monitor (9:30 AM - 3:30 PM IST)
+=============================================================================
+Runs continuously on GitHub Cloud Runner during the full 6 hours of trading:
+  - Scans live market prices every 2 minutes
+  - Fires an immediate Buy Alert when a stock enters its optimal buy window
+  - Inspects corporate news and announcements before sending
+  - Sends a morning overview at 9:35 AM IST
 """
 
 import os
@@ -15,10 +18,10 @@ from email.mime.multipart import MIMEMultipart
 from zoneinfo import ZoneInfo
 import yfinance as yf
 
-# ── Credentials (from Environment or Defaults) ───────────────────────────────
-GMAIL_USER     = (os.environ.get("GMAIL_USER") or "hari.mba000@gmail.com").strip()
-GMAIL_APP_PASS = (os.environ.get("GMAIL_APP_PASS") or "yoll icus ollp glmx").strip()
-ALERT_RECEIVER = (os.environ.get("ALERT_RECEIVER") or "hari.mba000@gmail.com").strip()
+# ── Credentials (from Encrypted GitHub Secrets) ──────────────────────────────
+GMAIL_USER     = os.environ.get("GMAIL_USER", "").strip()
+GMAIL_APP_PASS = os.environ.get("GMAIL_APP_PASS", "").strip()
+ALERT_RECEIVER = os.environ.get("ALERT_RECEIVER", "").strip()
 
 WATCHLIST = [
     {
@@ -163,6 +166,39 @@ WATCHLIST = [
     }
 ]
 
+# Track alerted symbols today
+alerted_today = set()
+
+
+def send_email(subject: str, html_body: str):
+    """Sends an email with dual port fallback."""
+    msg = MIMEMultipart("alternative")
+    msg["Subject"] = subject
+    msg["From"] = GMAIL_USER
+    msg["To"] = ALERT_RECEIVER
+    msg.attach(MIMEText(html_body, "html"))
+
+    try:
+        with smtplib.SMTP("smtp.gmail.com", 587, timeout=25) as server:
+            server.ehlo()
+            server.starttls()
+            server.ehlo()
+            server.login(GMAIL_USER, GMAIL_APP_PASS)
+            server.sendmail(GMAIL_USER, ALERT_RECEIVER, msg.as_string())
+        print(f"✅ Email sent: {subject}")
+        return True
+    except Exception as e1:
+        print(f"Port 587 failed: {e1}. Trying 465 SSL...")
+        try:
+            with smtplib.SMTP_SSL("smtp.gmail.com", 465, timeout=25) as server:
+                server.login(GMAIL_USER, GMAIL_APP_PASS)
+                server.sendmail(GMAIL_USER, ALERT_RECEIVER, msg.as_string())
+            print(f"✅ Email sent via 465: {subject}")
+            return True
+        except Exception as e2:
+            print(f"❌ Both SMTP ports failed: {e2}")
+            return False
+
 
 def fetch_news(sym: str) -> list:
     try:
@@ -176,131 +212,155 @@ def fetch_news(sym: str) -> list:
         return []
 
 
-def main():
+def send_immediate_buy_trigger(stock: dict, price: float, news: list):
+    """Dispatches immediate real-time buy alert."""
     ist = ZoneInfo("Asia/Kolkata")
-    now = datetime.datetime.now(ist)
-    day_name = now.strftime("%A")
-    now_str = now.strftime("%d %b %Y, %I:%M %p IST")
-    print(f"🚀 Cloud Market Scan starting: {now_str}")
+    now_str = datetime.datetime.now(ist).strftime("%I:%M %p IST")
+    sym = stock["symbol"]
+    name = stock["name"]
+    tgt = stock["target"]
+    sl = stock["stop_loss"]
+    gain = round(((tgt - price) / price) * 100, 1)
 
-    buy_now_rows = ""
-    watch_rows = ""
-
-    for item in WATCHLIST:
-        sym = item["symbol"]
-        try:
-            t = yf.Ticker(f"{sym}.NS")
-            price = round(float(t.fast_info["last_price"]), 2)
-            news = fetch_news(sym)
-            news_txt = "<br>".join(news) if news else "<i>No negative announcements. Trend steady.</i>"
-
-            gain = round(((item['target'] - price) / price) * 100, 1)
-
-            if item["entry_min"] <= price <= item["entry_max"]:
-                buy_now_rows += f"""
-                <tr style='background:#f6fff8; border-bottom:1px solid #d4edda;'>
-                    <td style='padding:10px;'><b>{sym}</b><br><small>{item['name']}</small></td>
-                    <td style='padding:10px;'><b style='color:#28a745; font-size:16px;'>₹{price:.2f}</b></td>
-                    <td style='padding:10px;'>₹{item['entry_min']:.2f} - ₹{item['entry_max']:.2f}</td>
-                    <td style='padding:10px;'><b style='color:#1a73e8;'>₹{item['target']:.2f}</b> (+{gain}%)</td>
-                    <td style='padding:10px;'><b style='color:#dc3545;'>₹{item['stop_loss']:.2f}</b></td>
-                    <td style='padding:10px; font-size:12px;'>{item['thesis']}<br><br><b>Updates:</b> {news_txt}</td>
-                </tr>
-                """
-            else:
-                status = "🟡 Near Zone" if price <= item["entry_max"] * 1.03 else ("🔵 Under Zone" if price < item["entry_min"] else "🔴 Moved Higher")
-                watch_rows += f"""
-                <tr style='border-bottom:1px solid #eee;'>
-                    <td style='padding:8px;'><b>{sym}</b></td>
-                    <td style='padding:8px;'>₹{price:.2f}</td>
-                    <td style='padding:8px;'>₹{item['entry_min']:.2f} - ₹{item['entry_max']:.2f}</td>
-                    <td style='padding:8px;'>₹{item['target']:.2f}</td>
-                    <td style='padding:8px;'>{status}</td>
-                </tr>
-                """
-        except Exception as e:
-            print(f"Error fetching {sym}: {e}")
+    news_html = ""
+    if news:
+        news_html = "<h4>📰 Company Updates:</h4><ul>" + "".join([f"<li>{x}</li>" for x in news]) + "</ul>"
+    else:
+        news_html = "<p><i>No negative announcements reported. Technical trend solid.</i></p>"
 
     html = f"""
     <html>
-    <body style='font-family: Arial, sans-serif; background:#f8f9fa; padding:15px;'>
-        <div style='max-width:700px; margin:auto; background:#fff; border-radius:8px; border:1px solid #ddd; padding:20px;'>
-            <div style='border-bottom:2px solid #1a73e8; padding-bottom:10px; margin-bottom:15px;'>
-                <h2 style='margin:0; color:#1a73e8;'>📈 {day_name} Market Buy Action Report</h2>
-                <span style='color:gray; font-size:13px;'>Snapshot: {now_str} (Cloud Automated)</span>
-            </div>
+    <body style='font-family: Arial, sans-serif; background:#f4f6f8; padding:15px;'>
+        <div style='max-width:550px; margin:auto; background:#fff; border-radius:8px; border:2px solid #28a745; padding:20px;'>
+            <span style='background:#28a745; color:#fff; font-size:12px; font-weight:bold; padding:4px 8px; border-radius:4px;'>BUY TRIGGER HIT</span>
+            <h2 style='margin:10px 0 0 0; color:#111;'>{name} ({sym})</h2>
+            <p style='font-size:15px;'>Price entered optimal entry zone at <b>₹{price:.2f}</b>.</p>
 
-            <h3 style='color:#28a745; margin-bottom:6px;'>🟢 STOCKS READY TO BUY (In Entry Zone):</h3>
-            <table style='width:100%; border-collapse:collapse; margin-bottom:25px;'>
-                <thead>
-                    <tr style='background:#28a745; color:#fff;'>
-                        <th style='padding:8px; text-align:left;'>Stock</th>
-                        <th style='padding:8px; text-align:left;'>Price</th>
-                        <th style='padding:8px; text-align:left;'>Entry Zone</th>
-                        <th style='padding:8px; text-align:left;'>Target</th>
-                        <th style='padding:8px; text-align:left;'>Stop Loss</th>
-                        <th style='padding:8px; text-align:left;'>Why & Updates</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {buy_now_rows if buy_now_rows else "<tr><td colspan='6' style='padding:15px; text-align:center;'>No stocks currently in the exact buy zone. Watching for pullback.</td></tr>"}
-                </tbody>
+            <table style='width:100%; border-collapse:collapse; margin:15px 0;'>
+                <tr style='background:#f8f9fa;'>
+                    <td style='padding:8px; border:1px solid #ddd;'><b>Current Price:</b></td>
+                    <td style='padding:8px; border:1px solid #ddd; color:#28a745; font-size:16px;'><b>₹{price:.2f}</b></td>
+                </tr>
+                <tr>
+                    <td style='padding:8px; border:1px solid #ddd;'><b>Entry Zone:</b></td>
+                    <td style='padding:8px; border:1px solid #ddd;'>₹{stock['entry_min']:.2f} - ₹{stock['entry_max']:.2f}</td>
+                </tr>
+                <tr style='background:#f8f9fa;'>
+                    <td style='padding:8px; border:1px solid #ddd;'><b>Target (1-Wk):</b></td>
+                    <td style='padding:8px; border:1px solid #ddd; color:#1a73e8; font-weight:bold;'>₹{tgt:.2f} (+{gain}%)</td>
+                </tr>
+                <tr>
+                    <td style='padding:8px; border:1px solid #ddd;'><b>Stop Loss:</b></td>
+                    <td style='padding:8px; border:1px solid #ddd; color:#dc3545; font-weight:bold;'>₹{sl:.2f}</td>
+                </tr>
             </table>
 
-            <h3 style='color:#6c757d; margin-bottom:6px;'>👀 WATCHLIST STATUS:</h3>
-            <table style='width:100%; border-collapse:collapse;'>
-                <thead>
-                    <tr style='background:#f1f3f5;'>
-                        <th style='padding:6px; text-align:left;'>Stock</th>
-                        <th style='padding:6px; text-align:left;'>Price</th>
-                        <th style='padding:6px; text-align:left;'>Target Zone</th>
-                        <th style='padding:6px; text-align:left;'>1-Wk Target</th>
-                        <th style='padding:6px; text-align:left;'>Status</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {watch_rows}
-                </tbody>
-            </table>
-
-            <div style='margin-top:20px; padding:10px; background:#fff3cd; border-left:4px solid #ffeeba; font-size:12px;'>
-                ⚠️ <b>Execution Rules:</b> 1-week swing holding. Place stop loss immediately in your broker app after purchase. Exit all positions by Friday 3:00 PM.
+            <div style='background:#eef6ff; padding:10px; border-left:4px solid #1a73e8; margin-bottom:15px;'>
+                <b>Why Enter Now:</b> {stock['thesis']}
             </div>
+
+            {news_html}
+
+            <p style='font-size:12px; color:#888;'>⏰ Triggered at {now_str} • Continuous Live Cloud Monitor</p>
         </div>
     </body>
     </html>
     """
+    subject = f"🚨 BUY NOW: {sym} @ ₹{price:.2f} (Target ₹{tgt})"
+    send_email(subject, html)
 
-    msg = MIMEMultipart("alternative")
-    msg["Subject"] = f"🚀 {day_name} 10:00 AM Stock Buy Report & Company Updates"
-    msg["From"] = GMAIL_USER
-    msg["To"] = ALERT_RECEIVER
-    msg.attach(MIMEText(html, "html"))
 
-    print(f"Connecting to SMTP server as {GMAIL_USER}...")
-    sent = False
-    # Attempt 1: Port 587 (STARTTLS - standard for cloud runners)
-    try:
-        with smtplib.SMTP("smtp.gmail.com", 587, timeout=30) as server:
-            server.ehlo()
-            server.starttls()
-            server.ehlo()
-            server.login(GMAIL_USER, GMAIL_APP_PASS)
-            server.sendmail(GMAIL_USER, ALERT_RECEIVER, msg.as_string())
-        print("✅ Monday Buy Report sent via Port 587 successfully!")
-        sent = True
-    except Exception as e1:
-        print(f"Port 587 attempt failed: {e1}. Trying Port 465 SSL...")
+def send_morning_overview():
+    """Sends morning market snapshot once at 9:35 AM."""
+    ist = ZoneInfo("Asia/Kolkata")
+    now_str = datetime.datetime.now(ist).strftime("%d %b %Y, %I:%M %p IST")
+    day_name = datetime.datetime.now(ist).strftime("%A")
 
-    # Attempt 2: Port 465 (SSL fallback)
-    if not sent:
+    rows = ""
+    for s in WATCHLIST:
+        sym = s["symbol"]
         try:
-            with smtplib.SMTP_SSL("smtp.gmail.com", 465, timeout=30) as server:
-                server.login(GMAIL_USER, GMAIL_APP_PASS)
-                server.sendmail(GMAIL_USER, ALERT_RECEIVER, msg.as_string())
-            print("✅ Monday Buy Report sent via Port 465 successfully!")
-        except Exception as e2:
-            print(f"❌ Port 465 attempt also failed: {e2}")
+            t = yf.Ticker(f"{sym}.NS")
+            p = round(float(t.fast_info["last_price"]), 2)
+            in_zone = s["entry_min"] <= p <= s["entry_max"]
+            status = "<b style='color:#28a745;'>🟢 IN ZONE</b>" if in_zone else f"₹{s['entry_min']}-₹{s['entry_max']}"
+            rows += f"""
+            <tr style='border-bottom:1px solid #eee;'>
+                <td style='padding:6px;'><b>{sym}</b></td>
+                <td style='padding:6px;'><b>₹{p:.2f}</b></td>
+                <td style='padding:6px;'>{status}</td>
+                <td style='padding:6px; color:#1a73e8;'>₹{s['target']}</td>
+                <td style='padding:6px; color:#dc3545;'>₹{s['stop_loss']}</td>
+            </tr>
+            """
+        except Exception:
+            pass
+
+    html = f"""
+    <html>
+    <body style='font-family: Arial, sans-serif; padding:15px;'>
+        <div style='max-width:600px; margin:auto; background:#fff; border:1px solid #ddd; padding:15px; border-radius:8px;'>
+            <h3 style='color:#1a73e8; margin-top:0;'>📊 {day_name} Morning Stock Watchlist ({now_str})</h3>
+            <p style='font-size:13px; color:#666;'>Continuous monitoring is ACTIVE (9:30 AM - 3:30 PM IST). You will receive instant alerts whenever any stock hits its buy window.</p>
+            <table style='width:100%; border-collapse:collapse; font-size:13px;'>
+                <tr style='background:#f2f2f2;'>
+                    <th style='padding:6px; text-align:left;'>Stock</th>
+                    <th style='padding:6px; text-align:left;'>Current</th>
+                    <th style='padding:6px; text-align:left;'>Buy Zone</th>
+                    <th style='padding:6px; text-align:left;'>Target</th>
+                    <th style='padding:6px; text-align:left;'>Stop Loss</th>
+                </tr>
+                {rows}
+            </table>
+        </div>
+    </body>
+    </html>
+    """
+    send_email(f"📈 {day_name} 9:35 AM Market Watchlist Overview", html)
+
+
+def main():
+    ist = ZoneInfo("Asia/Kolkata")
+    start_time = datetime.datetime.now(ist)
+    print(f"🚀 Real-Time Continuous Monitor Started at {start_time.strftime('%I:%M:%S %p IST')}")
+
+    # Send morning overview at start
+    send_morning_overview()
+
+    # Loop every 2 minutes until market close (3:30 PM IST)
+    while True:
+        now = datetime.datetime.now(ist)
+        time_val = now.hour * 100 + now.minute
+
+        # Stop monitoring after 3:30 PM IST (1530)
+        if time_val > 1530:
+            print(f"[{now.strftime('%H:%M:%S')}] Market closed for the day (3:30 PM IST). Finishing job.")
+            break
+
+        print(f"\n🔍 [{now.strftime('%H:%M:%S IST')}] Scanning live stock prices...")
+
+        for s in WATCHLIST:
+            sym = s["symbol"]
+            if sym in alerted_today:
+                continue
+
+            try:
+                t = yf.Ticker(f"{sym}.NS")
+                price = round(float(t.fast_info["last_price"]), 2)
+
+                if s["entry_min"] <= price <= s["entry_max"]:
+                    print(f"🎯 TRIGGER HIT: {sym} at ₹{price:.2f} (Entry: ₹{s['entry_min']}-₹{s['entry_max']})")
+                    news = fetch_news(sym)
+                    send_immediate_buy_trigger(s, price, news)
+                    alerted_today.add(sym)
+                else:
+                    print(f"   {sym:<12} ₹{price:>7.2f} (Target: ₹{s['entry_min']}-₹{s['entry_max']})")
+
+            except Exception as e:
+                print(f"   Error checking {sym}: {e}")
+
+        # Wait 2 minutes (120 seconds) before next scan
+        time.sleep(120)
 
 
 if __name__ == "__main__":
