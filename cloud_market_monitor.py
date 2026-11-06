@@ -30,11 +30,72 @@ GMAIL_USER     = os.environ.get("GMAIL_USER", "").strip()
 GMAIL_APP_PASS = os.environ.get("GMAIL_APP_PASS", "").strip()
 ALERT_RECEIVER = os.environ.get("ALERT_RECEIVER", "").strip()
 
-# ── Strategy Parameters ────────────────────────────────────────────────────
-MIN_PRICE    = 5.0
-MAX_PRICE    = 250.0
-MIN_VOLUME   = 100_000
-SCORE_CUTOFF = 80.0   # Trigger immediate buy alert if score >= 80/100
+# ── Candlestick Pattern Detection Engine ─────────────────────────────────────
+def detect_candlestick_pattern(df: pd.DataFrame) -> tuple[int, str]:
+    """
+    Analyzes the most recent OHLC candles and detects high-probability bullish patterns.
+    Returns: (candle_score 0-100, pattern_name)
+    """
+    if len(df) < 5:
+        return 50, "Neutral"
+
+    # Last 3 candles (c0: today/latest, c1: yesterday, c2: 2 days ago)
+    c0_open  = float(df["Open"].iloc[-1])
+    c0_high  = float(df["High"].iloc[-1])
+    c0_low   = float(df["Low"].iloc[-1])
+    c0_close = float(df["Close"].iloc[-1])
+
+    c1_open  = float(df["Open"].iloc[-2])
+    c1_high  = float(df["High"].iloc[-2])
+    c1_low   = float(df["Low"].iloc[-2])
+    c1_close = float(df["Close"].iloc[-2])
+
+    c2_open  = float(df["Open"].iloc[-3])
+    c2_close = float(df["Close"].iloc[-3])
+
+    body0 = abs(c0_close - c0_open)
+    range0 = c0_high - c0_low
+    is_green0 = c0_close > c0_open
+
+    body1 = abs(c1_close - c1_open)
+    is_red1 = c1_close < c1_open
+
+    # 1. 20-Day Resistance Breakout Candle (Closing above previous 20-day high)
+    prev_20_high = float(df["High"].iloc[-21:-1].max())
+    if c0_close > prev_20_high and is_green0:
+        return 100, "🔥 20-Day Breakout Candle (Massive Momentum)"
+
+    # 2. Bullish Engulfing (Green body completely engulfs previous red body)
+    if is_green0 and is_red1 and (c0_open <= c1_close) and (c0_close >= c1_open) and (body0 > body1):
+        return 95, "🟢 Bullish Engulfing (High-Probability Reversal)"
+
+    # 3. Morning Star (3-candle bullish reversal: Red -> Small -> Strong Green)
+    if (c2_close < c2_open) and (body1 < abs(c2_close - c2_open) * 0.4) and is_green0 and (c0_close > (c2_open + c2_close) / 2):
+        return 95, "⭐ Morning Star Pattern (Major Trend Reversal)"
+
+    # 4. Hammer / Bullish Pin Bar (Long lower wick >= 2x body, small upper wick)
+    lower_wick0 = (c0_open - c0_low) if is_green0 else (c0_close - c0_low)
+    upper_wick0 = (c0_high - c0_close) if is_green0 else (c0_high - c0_open)
+    if range0 > 0 and (lower_wick0 >= 2 * body0) and (upper_wick0 <= body0 * 0.5):
+        return 90, "🔨 Bullish Hammer / Pin Bar (Strong Floor Rejection)"
+
+    # 5. Bullish Marubozu (Strong solid green candle, minimal wicks, buyers in full control)
+    if is_green0 and range0 > 0 and (body0 / range0 >= 0.85):
+        return 85, "🟩 Bullish Marubozu (Aggressive Institutional Buying)"
+
+    # 6. Piercing Line (Opens below prior low, closes above prior 50% midpoint)
+    if is_red1 and is_green0 and (c0_open < c1_low) and (c0_close >= (c1_open + c1_close) / 2):
+        return 80, "📈 Piercing Line Pattern (Buyers Taking Control)"
+
+    # Normal green candle
+    if is_green0 and body0 > range0 * 0.5:
+        return 70, "🟢 Healthy Green Candle"
+
+    # Bearish patterns to penalize
+    if not is_green0 and body0 > range0 * 0.7:
+        return 20, "🔴 Bearish Red Candle (Selling Pressure)"
+
+    return 50, "Neutral Candle"
 
 # Keep track of already alerted stocks today to prevent duplicate emails
 alerted_today = set()
@@ -69,6 +130,7 @@ def send_immediate_buy_alert(stock_info: dict):
     price = stock_info["price"]
     score = stock_info["score"]
     rsi = stock_info["rsi"]
+    candle_pattern = stock_info.get("candle_pattern", "Bullish Formation")
     vol_surge = stock_info["vol_surge"]
     rev_qoq = stock_info["rev_qoq"]
     profit_qoq = stock_info["profit_qoq"]
@@ -99,18 +161,22 @@ def send_immediate_buy_alert(stock_info: dict):
                     <td style='padding:8px; border:1px solid #ddd; color:#dc3545; font-weight:bold;'>₹{stop_loss:.2f} (-8%)</td>
                 </tr>
                 <tr>
-                    <td style='padding:8px; border:1px solid #ddd;'><b>RSI (14):</b></td>
-                    <td style='padding:8px; border:1px solid #ddd;'>{rsi:.1f} (Optimal Buy Zone)</td>
+                    <td style='padding:8px; border:1px solid #ddd;'><b>🕯️ Candlestick Pattern:</b></td>
+                    <td style='padding:8px; border:1px solid #ddd; font-weight:bold; color:#155724;'>{candle_pattern}</td>
                 </tr>
                 <tr style='background:#f8f9fa;'>
                     <td style='padding:8px; border:1px solid #ddd;'><b>Volume Surge:</b></td>
                     <td style='padding:8px; border:1px solid #ddd;'><b>{vol_surge}</b> vs 20-Day Avg</td>
                 </tr>
                 <tr>
+                    <td style='padding:8px; border:1px solid #ddd;'><b>RSI (14):</b></td>
+                    <td style='padding:8px; border:1px solid #ddd;'>{rsi:.1f} (Optimal Zone)</td>
+                </tr>
+                <tr style='background:#f8f9fa;'>
                     <td style='padding:8px; border:1px solid #ddd;'><b>QoQ Revenue Growth:</b></td>
                     <td style='padding:8px; border:1px solid #ddd;'>{rev_qoq}</td>
                 </tr>
-                <tr style='background:#f8f9fa;'>
+                <tr>
                     <td style='padding:8px; border:1px solid #ddd;'><b>QoQ Net Profit Growth:</b></td>
                     <td style='padding:8px; border:1px solid #ddd; color:#28a745;'><b>{profit_qoq}</b></td>
                 </tr>
@@ -220,12 +286,17 @@ def analyze_single_stock(item: dict) -> dict | None:
             elif avg_g > 0:  q_score = 65
             else:            q_score = 30
 
-        # Weighted Total Score (out of 100)
+        # Candlestick Pattern Analysis
+        candle_score, candle_pattern = detect_candlestick_pattern(df)
+
+        # Weighted Total Score (out of 100):
+        # Candle Chart (25%), Volume Surge (25%), EMA Trend (20%), Fundamentals (20%), RSI (10%)
         total_score = round(
-            (rsi_score * 0.20) +
-            (ema_score * 0.25) +
-            (vol_score * 0.25) +
-            (q_score   * 0.30),
+            (candle_score * 0.25) +
+            (vol_score    * 0.25) +
+            (ema_score    * 0.20) +
+            (q_score      * 0.20) +
+            (rsi_score    * 0.10),
             1
         )
 
@@ -235,6 +306,7 @@ def analyze_single_stock(item: dict) -> dict | None:
             "price": curr_price,
             "score": total_score,
             "rsi": rsi,
+            "candle_pattern": candle_pattern,
             "vol_surge": f"{vol_ratio:.1f}×",
             "rev_qoq": f"{rev_growth:+.1f}%",
             "profit_qoq": f"{profit_growth:+.1f}%"
