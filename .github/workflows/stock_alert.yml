@@ -2,8 +2,8 @@ name: Continuous Market Stock Monitor (9:15 AM - 3:30 PM)
 
 on:
   schedule:
-    # 03:45 UTC = 9:15 AM IST, Monday through Friday
-    - cron: '45 3 * * 1-5'
+    # 03:45 UTC = 9:15 AM IST, Sunday through Friday (including special Sunday trading session)
+    - cron: '45 3 * * 0,1-5'
   workflow_dispatch: # Allows manual trigger anytime
 
 jobs:
