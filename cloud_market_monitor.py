@@ -1,11 +1,12 @@
 """
-Continuous Real-Time Cloud Stock & News Alert Monitor (9:30 AM - 3:30 PM IST)
+Continuous Real-Time Cloud Stock & News Alert Monitor (9:15 AM - 3:30 PM IST)
 =============================================================================
-Runs continuously on GitHub Cloud Runner during the full 6 hours of trading:
+Runs continuously on GitHub Cloud Runner during the full market session:
+  - Launches at market opening bell: 9:15 AM IST
   - Scans live market prices every 2 minutes
   - Fires an immediate Buy Alert when a stock enters its optimal buy window
   - Inspects corporate news and announcements before sending
-  - Sends a morning overview at 9:35 AM IST
+  - Sends a morning overview right at market open (9:16 AM IST)
 """
 
 import os
@@ -300,8 +301,8 @@ def send_morning_overview():
     <html>
     <body style='font-family: Arial, sans-serif; padding:15px;'>
         <div style='max-width:600px; margin:auto; background:#fff; border:1px solid #ddd; padding:15px; border-radius:8px;'>
-            <h3 style='color:#1a73e8; margin-top:0;'>📊 {day_name} Morning Stock Watchlist ({now_str})</h3>
-            <p style='font-size:13px; color:#666;'>Continuous monitoring is ACTIVE (9:30 AM - 3:30 PM IST). You will receive instant alerts whenever any stock hits its buy window.</p>
+            <h3 style='color:#1a73e8; margin-top:0;'>📊 {day_name} Market Opening Watchlist ({now_str})</h3>
+            <p style='font-size:13px; color:#666;'>Continuous monitoring is ACTIVE (9:15 AM - 3:30 PM IST). You will receive instant alerts whenever any stock hits its buy window.</p>
             <table style='width:100%; border-collapse:collapse; font-size:13px;'>
                 <tr style='background:#f2f2f2;'>
                     <th style='padding:6px; text-align:left;'>Stock</th>
@@ -316,7 +317,7 @@ def send_morning_overview():
     </body>
     </html>
     """
-    send_email(f"📈 {day_name} 9:35 AM Market Watchlist Overview", html)
+    send_email(f"📈 {day_name} 9:15 AM Market Opening Overview", html)
 
 
 def main():
