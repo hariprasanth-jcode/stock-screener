@@ -178,7 +178,9 @@ def fetch_news(sym: str) -> list:
 
 def main():
     ist = ZoneInfo("Asia/Kolkata")
-    now_str = datetime.datetime.now(ist).strftime("%d %b %Y, %I:%M %p IST")
+    now = datetime.datetime.now(ist)
+    day_name = now.strftime("%A")
+    now_str = now.strftime("%d %b %Y, %I:%M %p IST")
     print(f"🚀 Cloud Market Scan starting: {now_str}")
 
     buy_now_rows = ""
@@ -224,7 +226,7 @@ def main():
     <body style='font-family: Arial, sans-serif; background:#f8f9fa; padding:15px;'>
         <div style='max-width:700px; margin:auto; background:#fff; border-radius:8px; border:1px solid #ddd; padding:20px;'>
             <div style='border-bottom:2px solid #1a73e8; padding-bottom:10px; margin-bottom:15px;'>
-                <h2 style='margin:0; color:#1a73e8;'>📈 Monday Market Buy Action Report</h2>
+                <h2 style='margin:0; color:#1a73e8;'>📈 {day_name} Market Buy Action Report</h2>
                 <span style='color:gray; font-size:13px;'>Snapshot: {now_str} (Cloud Automated)</span>
             </div>
 
@@ -270,7 +272,7 @@ def main():
     """
 
     msg = MIMEMultipart("alternative")
-    msg["Subject"] = "🚀 Monday 10:00 AM Stock Buy Report & Company Updates"
+    msg["Subject"] = f"🚀 {day_name} 10:00 AM Stock Buy Report & Company Updates"
     msg["From"] = GMAIL_USER
     msg["To"] = ALERT_RECEIVER
     msg.attach(MIMEText(html, "html"))

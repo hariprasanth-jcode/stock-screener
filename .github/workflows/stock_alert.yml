@@ -1,9 +1,9 @@
-name: Monday Stock Buy Alert
+name: Daily Market Stock & News Alert
 
 on:
   schedule:
-    # 04:30 UTC every Monday = 10:00 AM IST
-    - cron: '30 4 * * 1'
+    # 04:30 UTC = 10:00 AM IST, every trading day (Monday to Friday)
+    - cron: '30 4 * * 1-5'
   workflow_dispatch: # Allows manual trigger anytime from GitHub mobile app or web
 
 jobs:
