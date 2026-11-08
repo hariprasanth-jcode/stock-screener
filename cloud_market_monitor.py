@@ -353,10 +353,11 @@ def run_full_market_scan(symbols: list):
 
 def main():
     ist = ZoneInfo("Asia/Kolkata")
+    now_start = datetime.datetime.now(ist)
     print("=" * 65)
     print(" 🚀 NSE FULL MARKET REAL-TIME BREAKOUT MONITOR")
     print(f" Filter: Price ₹{MIN_PRICE}–₹{MAX_PRICE} | Score Cutoff >= {SCORE_CUTOFF}")
-    print(" Active: 9:15 AM to 3:30 PM IST (Monday - Friday)")
+    print(f" Started at: {now_start.strftime('%d %b %Y, %I:%M:%S %p IST')}")
     print("=" * 65)
 
     # 1. Fetch complete symbol master
@@ -365,22 +366,25 @@ def main():
         print("❌ Could not retrieve symbols list.")
         return
 
-    # Loop continuously throughout the trading day (9:15 AM to 3:30 PM IST)
+    # 2. Always run a complete market scan first
+    print("\n▶️ Running initial market scan across all stocks...")
+    run_full_market_scan(symbols)
+
+    # 3. Continuous monitoring loop during market hours (9:15 AM to 3:30 PM IST)
     while True:
         now = datetime.datetime.now(ist)
         time_val = now.hour * 100 + now.minute
 
-        # Stop after 3:30 PM IST
-        if time_val > 1530:
-            print(f"[{now.strftime('%H:%M:%S')}] Market closed (3:30 PM IST). Scanner shutting down.")
+        # If outside regular market hours (before 9:15 AM or after 3:30 PM IST), finish cleanly
+        if not (915 <= time_val <= 1530):
+            print(f"\n🏁 [{now.strftime('%I:%M:%S %p IST')}] Market is closed (trading session: 9:15 AM - 3:30 PM IST).")
+            print("   Full scan finished successfully. Cloud runner exiting until next market session.")
             break
 
-        # Run complete market scan
-        run_full_market_scan(symbols)
-
-        # Brief pause before next cycle
-        print("☕ Market scan completed. Sleeping 3 minutes before next cycle...")
+        # During active market hours, sleep 3 minutes and rescan continuously
+        print(f"\n☕ [{now.strftime('%I:%M:%S %p IST')}] Scan complete. Rescanning in 3 minutes...")
         time.sleep(180)
+        run_full_market_scan(symbols)
 
 
 if __name__ == "__main__":
