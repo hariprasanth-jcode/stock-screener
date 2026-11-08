@@ -135,12 +135,108 @@ html_content = f"""<!DOCTYPE html>
       100% {{ transform: scale(0.95); opacity: 0.8; }}
     }}
 
+    /* Timing Strategy Guide Card */
+    .timing-banner {{
+      background: linear-gradient(135deg, #172554 0%, #1e1b4b 100%);
+      border: 2px solid #3b82f6;
+      border-radius: 18px;
+      padding: 22px 26px;
+      margin: 24px 0 28px 0;
+      box-shadow: 0 10px 30px rgba(59, 130, 246, 0.2);
+      display: grid;
+      grid-template-columns: 1.1fr 2fr;
+      gap: 24px;
+      align-items: center;
+    }}
+
+    @media (max-width: 960px) {{
+      .timing-banner {{
+        grid-template-columns: 1fr;
+      }}
+    }}
+
+    .timing-badge-title {{
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(59, 130, 246, 0.2);
+      color: #60a5fa;
+      border: 1px solid rgba(59, 130, 246, 0.4);
+      padding: 4px 12px;
+      border-radius: 8px;
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 10px;
+    }}
+
+    .timing-banner h3 {{
+      font-size: 22px;
+      font-weight: 800;
+      color: #ffffff;
+      line-height: 1.3;
+    }}
+
+    .timing-banner p {{
+      font-size: 13px;
+      color: #cbd5e1;
+      margin-top: 6px;
+    }}
+
+    .timing-boxes-grid {{
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+      gap: 14px;
+    }}
+
+    .time-slot-box {{
+      background: rgba(15, 23, 42, 0.7);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 12px;
+      padding: 14px 16px;
+      transition: all 0.2s;
+    }}
+
+    .time-slot-box.recommended {{
+      border-color: #10b981;
+      background: rgba(16, 185, 129, 0.1);
+    }}
+
+    .time-slot-box h4 {{
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      font-weight: 700;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }}
+
+    .time-slot-box.recommended h4 {{ color: #34d399; }}
+    .time-slot-box.secondary h4 {{ color: #60a5fa; }}
+    .time-slot-box.danger h4 {{ color: #f87171; }}
+
+    .time-slot-box .time-window {{
+      font-size: 17px;
+      font-weight: 800;
+      font-family: 'JetBrains Mono', monospace;
+      color: #ffffff;
+      margin: 6px 0 4px 0;
+    }}
+
+    .time-slot-box .time-desc {{
+      font-size: 11px;
+      color: var(--text-muted);
+      line-height: 1.4;
+    }}
+
     /* Metrics Bar */
     .metrics-bar {{
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
       gap: 16px;
-      margin: 24px 0 32px 0;
+      margin: 0 0 32px 0;
     }}
 
     .metric-card {{
@@ -324,11 +420,37 @@ html_content = f"""<!DOCTYPE html>
       border: 1px solid rgba(16, 185, 129, 0.3);
     }}
 
+    /* Card Timing Box */
+    .card-timing-box {{
+      background: rgba(59, 130, 246, 0.12);
+      border: 1px solid rgba(59, 130, 246, 0.3);
+      border-radius: 10px;
+      padding: 10px 14px;
+      margin: 12px 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }}
+
+    .card-timing-box .timing-tag {{
+      font-size: 11px;
+      color: #93c5fd;
+      font-weight: 700;
+      text-transform: uppercase;
+    }}
+
+    .card-timing-box .timing-val {{
+      font-size: 13px;
+      font-weight: 800;
+      color: #ffffff;
+      font-family: 'JetBrains Mono', monospace;
+    }}
+
     .trade-plan-grid {{
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 10px;
-      margin: 16px 0;
+      margin: 14px 0;
     }}
 
     .plan-box {{
@@ -369,14 +491,14 @@ html_content = f"""<!DOCTYPE html>
 
     .pattern-tag {{
       display: block;
-      background: rgba(59, 130, 246, 0.12);
-      border: 1px solid rgba(59, 130, 246, 0.3);
-      color: #93c5fd;
+      background: rgba(16, 185, 129, 0.08);
+      border: 1px solid rgba(16, 185, 129, 0.25);
+      color: #34d399;
       padding: 8px 12px;
       border-radius: 8px;
       font-size: 12px;
       font-weight: 600;
-      margin: 12px 0;
+      margin: 10px 0;
       text-align: center;
     }}
 
@@ -767,6 +889,48 @@ html_content = f"""<!DOCTYPE html>
 
   <main class="container">
 
+    <!-- Timing & Execution Strategy Banner -->
+    <div class="timing-banner">
+      <div>
+        <div class="timing-badge-title">⏰ PRECISION EXECUTION TIMING</div>
+        <h3>When Exactly To Buy For Maximum Profit</h3>
+        <p>Follow the institutional 15-minute rule to filter false opening spikes and lock in high-probability 1-week gains.</p>
+        <div style="margin-top: 14px; font-size: 13px; color: #93c5fd; font-weight: 600;">
+          📅 Target Entry Date: <span style="color: #ffffff; background: rgba(59,130,246,0.3); padding: 3px 8px; border-radius: 6px;">Monday, Nov 9, 2026</span>
+          <br>⏳ Target Exit Date: <span style="color: #34d399;">Friday, Nov 13, 2026</span> (or when +15% target is hit)
+        </div>
+      </div>
+
+      <div class="timing-boxes-grid">
+        <div class="time-slot-box recommended">
+          <h4>
+            <span>🏆 Best Entry Window</span>
+            <span>⭐ HIGH WIN-RATE</span>
+          </h4>
+          <div class="time-window">09:30 AM – 10:00 AM</div>
+          <div class="time-desc">Wait 15 mins after 9:15 open. If price holds above breakout level with sustained volume, execute BUY.</div>
+        </div>
+
+        <div class="time-slot-box secondary">
+          <h4>
+            <span>🕒 Secondary Window</span>
+            <span>EOD MOMENTUM</span>
+          </h4>
+          <div class="time-window">02:30 PM – 03:15 PM</div>
+          <div class="time-desc">Confirm daily closing candle strength. Perfect for high-volume breakouts closing near day highs.</div>
+        </div>
+
+        <div class="time-slot-box danger">
+          <h4>
+            <span>⚠️ Danger Zone</span>
+            <span>DO NOT BUY</span>
+          </h4>
+          <div class="time-window">09:15 AM – 09:25 AM</div>
+          <div class="time-desc">Initial 10-minute noise, gap-up traps & quick profit booking. Wait for the 15-min candle confirmation.</div>
+        </div>
+      </div>
+    </div>
+
     <!-- Top Key Metrics -->
     <div class="metrics-bar">
       <div class="metric-card">
@@ -876,7 +1040,7 @@ html_content = f"""<!DOCTYPE html>
             <th onclick="sortTable('symbol')">Stock Symbol ↕</th>
             <th onclick="sortTable('price')">Price ↕</th>
             <th onclick="sortTable('score')">Score ↕</th>
-            <th>Candlestick Pattern</th>
+            <th>Buy Timing</th>
             <th>1-Wk Target (+15%)</th>
             <th>Stop Loss (-8%)</th>
             <th onclick="sortTable('rsi')">RSI ↕</th>
@@ -896,7 +1060,7 @@ html_content = f"""<!DOCTYPE html>
   <footer>
     <div class="container">
       <p>⚡ Automated Stock Screener & Real-Time Alert Engine | Built for Hariprasanth</p>
-      <p style="margin-top: 6px; font-size: 11px;">Data updated automatically via GitHub Actions runner during market hours (9:15 AM - 3:30 PM IST).</p>
+      <p style="margin-top: 6px; font-size: 11px;">Target Holding: 1-Week (Nov 9 – Nov 13, 2026) | Active Cloud Monitor: 9:15 AM - 3:30 PM IST</p>
     </div>
   </footer>
 
@@ -945,6 +1109,18 @@ html_content = f"""<!DOCTYPE html>
             </div>
           </div>
 
+          <!-- Explicit Date & Time Window -->
+          <div class="card-timing-box">
+            <div>
+              <div class="timing-tag">📅 Buy Date</div>
+              <div class="timing-val" style="color: #38bdf8;">Mon, Nov 9, 2026</div>
+            </div>
+            <div style="text-align: right;">
+              <div class="timing-tag">⏰ Optimal Entry</div>
+              <div class="timing-val" style="color: #34d399;">09:30 – 10:00 AM</div>
+            </div>
+          </div>
+
           <div class="pattern-tag">
             ${{s.pattern || '🟢 Strong Bullish Trend'}}
           </div>
@@ -953,7 +1129,7 @@ html_content = f"""<!DOCTYPE html>
             <div class="plan-box target">
               <div class="plan-label">
                 <span>🎯 Target (+15%)</span>
-                <span>1-Week</span>
+                <span>Exit: Nov 13</span>
               </div>
               <div class="plan-val green">₹${{s.target}}</div>
             </div>
@@ -1043,7 +1219,7 @@ html_content = f"""<!DOCTYPE html>
               <span class="score-badge ${{scoreClass}}">⭐ ${{s.score}}</span>
             </td>
             <td>
-              <span style="font-size: 11px; color: #cbd5e1;">${{s.pattern || 'Bullish Trend'}}</span>
+              <span style="font-size: 11px; color: #34d399; font-weight: 600;">Mon 9:30-10:00 AM</span>
             </td>
             <td style="color: #10b981; font-weight: 700; font-family: 'JetBrains Mono', monospace;">₹${{s.target}}</td>
             <td style="color: #ef4444; font-weight: 700; font-family: 'JetBrains Mono', monospace;">₹${{s.stop_loss}}</td>
