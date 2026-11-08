@@ -13,7 +13,7 @@ html_content = f"""<!DOCTYPE html>
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>⚡ Stock Radar Pro - High-Conviction Swing Screener (&lt; ₹250)</title>
+  <title>⚡ Stock Radar Pro - High-Conviction Screener & Muhurat Trading (&lt; ₹250)</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
@@ -29,6 +29,7 @@ html_content = f"""<!DOCTYPE html>
       --accent-purple: #8b5cf6;
       --accent-red: #ef4444;
       --accent-gold: #f59e0b;
+      --accent-gold-glow: rgba(245, 158, 11, 0.3);
       --text-main: #f9fafb;
       --text-muted: #94a3b8;
       --text-sub: #64748b;
@@ -84,20 +85,20 @@ html_content = f"""<!DOCTYPE html>
     .logo-icon {{
       width: 42px;
       height: 42px;
-      background: linear-gradient(135deg, #10b981, #06b6d4);
+      background: linear-gradient(135deg, #f59e0b, #ef4444);
       border-radius: 12px;
       display: flex;
       align-items: center;
       justify-content: center;
       font-size: 22px;
-      box-shadow: 0 0 20px rgba(16, 185, 129, 0.4);
+      box-shadow: 0 0 20px rgba(245, 158, 11, 0.4);
     }}
 
     .logo-text h1 {{
       font-size: 20px;
       font-weight: 800;
       letter-spacing: -0.5px;
-      background: linear-gradient(90deg, #ffffff, #cbd5e1);
+      background: linear-gradient(90deg, #ffffff, #fef08a);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
     }}
@@ -135,13 +136,125 @@ html_content = f"""<!DOCTYPE html>
       100% {{ transform: scale(0.95); opacity: 0.8; }}
     }}
 
+    /* MUHURAT TRADING SPECIAL HERO BANNER */
+    .muhurat-section {{
+      background: radial-gradient(circle at 10% 20%, rgba(245, 158, 11, 0.15) 0%, rgba(180, 83, 9, 0.05) 50%, rgba(15, 23, 42, 0.8) 100%), #141324;
+      border: 2px solid #f59e0b;
+      border-radius: 20px;
+      padding: 26px 28px;
+      margin: 24px 0 32px 0;
+      box-shadow: 0 12px 40px rgba(245, 158, 11, 0.25);
+      position: relative;
+      overflow: hidden;
+    }}
+
+    .muhurat-header-row {{
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      gap: 16px;
+      margin-bottom: 20px;
+      border-bottom: 1px dashed rgba(245, 158, 11, 0.3);
+      padding-bottom: 16px;
+    }}
+
+    .muhurat-tag {{
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: linear-gradient(135deg, #f59e0b, #d97706);
+      color: #000000;
+      font-weight: 800;
+      font-size: 13px;
+      padding: 6px 14px;
+      border-radius: 8px;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      box-shadow: 0 4px 15px rgba(245, 158, 11, 0.4);
+    }}
+
+    .muhurat-title h2 {{
+      font-size: 24px;
+      font-weight: 800;
+      color: #ffffff;
+      margin-top: 10px;
+      letter-spacing: -0.5px;
+    }}
+
+    .muhurat-title p {{
+      font-size: 13px;
+      color: #cbd5e1;
+      margin-top: 4px;
+    }}
+
+    .muhurat-time-pill {{
+      background: rgba(0, 0, 0, 0.5);
+      border: 1px solid #f59e0b;
+      border-radius: 12px;
+      padding: 12px 18px;
+      text-align: right;
+    }}
+
+    .muhurat-time-pill .label {{
+      font-size: 11px;
+      color: #fbbf24;
+      text-transform: uppercase;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+    }}
+
+    .muhurat-time-pill .time {{
+      font-size: 18px;
+      font-weight: 800;
+      font-family: 'JetBrains Mono', monospace;
+      color: #ffffff;
+      margin-top: 2px;
+    }}
+
+    /* Muhurat Cards Grid */
+    .muhurat-cards-grid {{
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 18px;
+    }}
+
+    .muhurat-card {{
+      background: rgba(22, 27, 46, 0.85);
+      border: 1px solid rgba(245, 158, 11, 0.4);
+      border-radius: 16px;
+      padding: 20px;
+      transition: all 0.25s ease;
+      position: relative;
+    }}
+
+    .muhurat-card:hover {{
+      transform: translateY(-4px);
+      border-color: #f59e0b;
+      box-shadow: 0 10px 30px rgba(245, 158, 11, 0.25);
+    }}
+
+    .muhurat-card-badge {{
+      position: absolute;
+      top: 16px;
+      right: 16px;
+      background: rgba(245, 158, 11, 0.2);
+      border: 1px solid #f59e0b;
+      color: #fbbf24;
+      font-size: 11px;
+      font-weight: 700;
+      padding: 3px 8px;
+      border-radius: 6px;
+      text-transform: uppercase;
+    }}
+
     /* Timing Strategy Guide Card */
     .timing-banner {{
       background: linear-gradient(135deg, #172554 0%, #1e1b4b 100%);
       border: 2px solid #3b82f6;
       border-radius: 18px;
       padding: 22px 26px;
-      margin: 24px 0 28px 0;
+      margin: 0 0 28px 0;
       box-shadow: 0 10px 30px rgba(59, 130, 246, 0.2);
       display: grid;
       grid-template-columns: 1.1fr 2fr;
@@ -203,6 +316,11 @@ html_content = f"""<!DOCTYPE html>
       background: rgba(16, 185, 129, 0.1);
     }}
 
+    .time-slot-box.muhurat-box {{
+      border-color: #f59e0b;
+      background: rgba(245, 158, 11, 0.1);
+    }}
+
     .time-slot-box h4 {{
       font-size: 11px;
       text-transform: uppercase;
@@ -214,7 +332,7 @@ html_content = f"""<!DOCTYPE html>
     }}
 
     .time-slot-box.recommended h4 {{ color: #34d399; }}
-    .time-slot-box.secondary h4 {{ color: #60a5fa; }}
+    .time-slot-box.muhurat-box h4 {{ color: #fbbf24; }}
     .time-slot-box.danger h4 {{ color: #f87171; }}
 
     .time-slot-box .time-window {{
@@ -545,6 +663,18 @@ html_content = f"""<!DOCTYPE html>
       transform: translateY(-2px);
     }}
 
+    .btn-muhurat {{
+      background: linear-gradient(135deg, #f59e0b, #d97706);
+      color: #000000;
+      box-shadow: 0 4px 15px rgba(245, 158, 11, 0.4);
+    }}
+
+    .btn-muhurat:hover {{
+      background: linear-gradient(135deg, #d97706, #b45309);
+      transform: translateY(-2px);
+      color: #ffffff;
+    }}
+
     .btn-chart {{
       background: #1e293b;
       color: #93c5fd;
@@ -729,6 +859,12 @@ html_content = f"""<!DOCTYPE html>
       border-color: var(--accent-blue);
     }}
 
+    .pill.muhurat-pill.active {{
+      background: #f59e0b;
+      color: #000000;
+      border-color: #f59e0b;
+    }}
+
     /* Table Design */
     .table-container {{
       background: var(--bg-card);
@@ -869,16 +1005,16 @@ html_content = f"""<!DOCTYPE html>
   <header>
     <div class="container header-content">
       <div class="logo-area">
-        <div class="logo-icon">📈</div>
+        <div class="logo-icon">🪔</div>
         <div class="logo-text">
           <h1>⚡ NSE High-Conviction Stock Screener</h1>
-          <p>Filtered for &lt; ₹250 | 1-Week Swing Trading (+15% Target, -8% Stop Loss)</p>
+          <p>Filtered for &lt; ₹250 | 1-Week Swing Trading & Diwali Muhurat Special</p>
         </div>
       </div>
       <div style="display: flex; gap: 12px; align-items: center; flex-wrap: wrap;">
         <div class="status-badge">
           <div class="status-dot"></div>
-          <span>Cloud Monitor Active (9:15 AM - 3:30 PM IST)</span>
+          <span>Cloud Monitor Active (9:15 AM - 3:30 PM & Muhurat)</span>
         </div>
         <a href="https://github.com/hariprasanth-jcode/stock-screener/actions" target="_blank" class="btn btn-chart" style="padding: 6px 12px; font-size: 12px;">
           ⚙️ GitHub Actions
@@ -888,6 +1024,150 @@ html_content = f"""<!DOCTYPE html>
   </header>
 
   <main class="container">
+
+    <!-- DIWALI MUHURAT TRADING SPECIAL SHOWCASE -->
+    <div class="muhurat-section">
+      <div class="muhurat-header-row">
+        <div>
+          <div class="muhurat-tag">🪔 SAMVAT SPECIAL: MUHURAT TRADING PICKS</div>
+          <div class="muhurat-title">
+            <h2>Best Auspicious Stocks Under ₹250 for Muhurat Trading</h2>
+            <p>Hand-picked for festival momentum, massive quarterly profit growth, and institutional breakout candles.</p>
+          </div>
+        </div>
+        <div class="muhurat-time-pill">
+          <div class="label">⏰ Muhurat Trading Session</div>
+          <div class="time">06:15 PM – 07:15 PM IST</div>
+          <div style="font-size: 11px; color: #cbd5e1; margin-top: 2px;">Golden Buy Window: <strong>06:20 – 06:45 PM</strong></div>
+        </div>
+      </div>
+
+      <!-- 3 Handpicked Muhurat Champions -->
+      <div class="muhurat-cards-grid">
+        <!-- Muhurat Pick 1: RGL (Festive Gold & Jewellery) -->
+        <div class="muhurat-card" onclick="selectStockForCalc('RGL')">
+          <div class="muhurat-card-badge">✨ Festive Jewellery Theme</div>
+          <div class="stock-identity">
+            <div class="stock-rank-tag" style="color: #fbbf24; border: 1px solid #f59e0b;">#1</div>
+            <div>
+              <div class="stock-symbol">RGL</div>
+              <div class="stock-company">Renaissance Global Ltd</div>
+            </div>
+          </div>
+          <div class="hero-price-row">
+            <div>
+              <span style="font-size: 11px; color: var(--text-muted); display: block;">PRICE</span>
+              <span class="hero-price-current">₹154.31</span>
+            </div>
+            <div class="hero-score-pill" style="border-color: #f59e0b; color: #fbbf24; background: rgba(245, 158, 11, 0.15);">
+              ⭐ 87.2/100
+            </div>
+          </div>
+          <div class="pattern-tag" style="border-color: #f59e0b; color: #fbbf24; background: rgba(245, 158, 11, 0.1);">
+            🟩 Bullish Marubozu (Institutional Buying)
+          </div>
+          <div class="trade-plan-grid">
+            <div class="plan-box target">
+              <div class="plan-label"><span>🎯 1-Wk Target</span><span>+15%</span></div>
+              <div class="plan-val green">₹177.46</div>
+            </div>
+            <div class="plan-box stoploss">
+              <div class="plan-label"><span>🛡️ Stop Loss</span><span>Strict</span></div>
+              <div class="plan-val red">₹141.97</div>
+            </div>
+          </div>
+          <div style="font-size: 12px; color: #cbd5e1; margin: 10px 0; padding: 6px 0; border-top: 1px dashed rgba(255,255,255,0.1);">
+            💡 <strong>Why Auspicious:</strong> Global jewellery maker benefiting directly from Diwali/wedding festive demand. <strong>Profit QoQ up +230.4%!</strong>
+          </div>
+          <div class="hero-actions">
+            <a href="https://www.tradingview.com/chart/?symbol=NSE:RGL" target="_blank" class="btn btn-chart" onclick="event.stopPropagation()">📈 Chart</a>
+            <a href="https://www.google.com/finance/quote/RGL:NSE" target="_blank" class="btn btn-muhurat" onclick="event.stopPropagation()">🪔 Muhurat Buy</a>
+          </div>
+        </div>
+
+        <!-- Muhurat Pick 2: JAIBALAJI (Turnaround Multibagger) -->
+        <div class="muhurat-card" onclick="selectStockForCalc('JAIBALAJI')">
+          <div class="muhurat-card-badge">🔥 +298% Profit Growth</div>
+          <div class="stock-identity">
+            <div class="stock-rank-tag" style="color: #fbbf24; border: 1px solid #f59e0b;">#2</div>
+            <div>
+              <div class="stock-symbol">JAIBALAJI</div>
+              <div class="stock-company">Jai Balaji Industries</div>
+            </div>
+          </div>
+          <div class="hero-price-row">
+            <div>
+              <span style="font-size: 11px; color: var(--text-muted); display: block;">PRICE</span>
+              <span class="hero-price-current">₹67.95</span>
+            </div>
+            <div class="hero-score-pill" style="border-color: #f59e0b; color: #fbbf24; background: rgba(245, 158, 11, 0.15);">
+              ⭐ 88.8/100
+            </div>
+          </div>
+          <div class="pattern-tag" style="border-color: #10b981; color: #34d399; background: rgba(16, 185, 129, 0.1);">
+            🔥 20-Day Breakout Candle
+          </div>
+          <div class="trade-plan-grid">
+            <div class="plan-box target">
+              <div class="plan-label"><span>🎯 1-Wk Target</span><span>+15%</span></div>
+              <div class="plan-val green">₹78.14</div>
+            </div>
+            <div class="plan-box stoploss">
+              <div class="plan-label"><span>🛡️ Stop Loss</span><span>Strict</span></div>
+              <div class="plan-val red">₹62.51</div>
+            </div>
+          </div>
+          <div style="font-size: 12px; color: #cbd5e1; margin: 10px 0; padding: 6px 0; border-top: 1px dashed rgba(255,255,255,0.1);">
+            💡 <strong>Why Auspicious:</strong> Low price under ₹70, massive corporate debt-reduction turnaround with <strong>+298.8% QoQ profit</strong>.
+          </div>
+          <div class="hero-actions">
+            <a href="https://www.tradingview.com/chart/?symbol=NSE:JAIBALAJI" target="_blank" class="btn btn-chart" onclick="event.stopPropagation()">📈 Chart</a>
+            <a href="https://www.google.com/finance/quote/JAIBALAJI:NSE" target="_blank" class="btn btn-muhurat" onclick="event.stopPropagation()">🪔 Muhurat Buy</a>
+          </div>
+        </div>
+
+        <!-- Muhurat Pick 3: ESAFSFB (#1 Screener Champion) -->
+        <div class="muhurat-card" onclick="selectStockForCalc('ESAFSFB')">
+          <div class="muhurat-card-badge">🏆 #1 Overall Score</div>
+          <div class="stock-identity">
+            <div class="stock-rank-tag" style="color: #fbbf24; border: 1px solid #f59e0b;">#3</div>
+            <div>
+              <div class="stock-symbol">ESAFSFB</div>
+              <div class="stock-company">ESAF Small Finance Bank</div>
+            </div>
+          </div>
+          <div class="hero-price-row">
+            <div>
+              <span style="font-size: 11px; color: var(--text-muted); display: block;">PRICE</span>
+              <span class="hero-price-current">₹42.21</span>
+            </div>
+            <div class="hero-score-pill" style="border-color: #10b981; color: #34d399; background: rgba(16, 185, 129, 0.15);">
+              ⭐ 93.2/100
+            </div>
+          </div>
+          <div class="pattern-tag" style="border-color: #10b981; color: #34d399; background: rgba(16, 185, 129, 0.1);">
+            🔥 20-Day Breakout Candle
+          </div>
+          <div class="trade-plan-grid">
+            <div class="plan-box target">
+              <div class="plan-label"><span>🎯 1-Wk Target</span><span>+15%</span></div>
+              <div class="plan-val green">₹48.54</div>
+            </div>
+            <div class="plan-box stoploss">
+              <div class="plan-label"><span>🛡️ Stop Loss</span><span>Strict</span></div>
+              <div class="plan-val red">₹38.83</div>
+            </div>
+          </div>
+          <div style="font-size: 12px; color: #cbd5e1; margin: 10px 0; padding: 6px 0; border-top: 1px dashed rgba(255,255,255,0.1);">
+            💡 <strong>Why Auspicious:</strong> Highest conviction score across 2,630+ NSE equities. Banking credit growth +100% QoQ profit.
+          </div>
+          <div class="hero-actions">
+            <a href="https://www.tradingview.com/chart/?symbol=NSE:ESAFSFB" target="_blank" class="btn btn-chart" onclick="event.stopPropagation()">📈 Chart</a>
+            <a href="https://www.google.com/finance/quote/ESAFSFB:NSE" target="_blank" class="btn btn-muhurat" onclick="event.stopPropagation()">🪔 Muhurat Buy</a>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <!-- Timing & Execution Strategy Banner -->
     <div class="timing-banner">
@@ -911,13 +1191,13 @@ html_content = f"""<!DOCTYPE html>
           <div class="time-desc">Wait 15 mins after 9:15 open. If price holds above breakout level with sustained volume, execute BUY.</div>
         </div>
 
-        <div class="time-slot-box secondary">
+        <div class="time-slot-box muhurat-box">
           <h4>
-            <span>🕒 Secondary Window</span>
-            <span>EOD MOMENTUM</span>
+            <span>🪔 Muhurat Window</span>
+            <span>SPECIAL 1-HR</span>
           </h4>
-          <div class="time-window">02:30 PM – 03:15 PM</div>
-          <div class="time-desc">Confirm daily closing candle strength. Perfect for high-volume breakouts closing near day highs.</div>
+          <div class="time-window">06:20 PM – 06:45 PM</div>
+          <div class="time-desc">Diwali Evening special session. Wait 5 mins for initial frenzy to settle, enter token or swing positions.</div>
         </div>
 
         <div class="time-slot-box danger">
@@ -1018,11 +1298,12 @@ html_content = f"""<!DOCTYPE html>
       <div class="search-row">
         <div class="search-box">
           <span class="search-icon">🔍</span>
-          <input type="text" id="searchInput" placeholder="Search by Symbol (e.g. ESAFSFB, RBA, JAIBALAJI, ONGC)..." oninput="applyFilters()" />
+          <input type="text" id="searchInput" placeholder="Search by Symbol (e.g. ESAFSFB, RBA, JAIBALAJI, RGL, ONGC)..." oninput="applyFilters()" />
         </div>
       </div>
       <div class="filter-pills">
         <button class="pill active" onclick="setFilter('ALL', this)">All Stocks (517)</button>
+        <button class="pill muhurat-pill" onclick="setFilter('MUHURAT', this)">🪔 Muhurat Picks</button>
         <button class="pill" onclick="setFilter('SCORE_85', this)">🔥 Score ≥ 85 (Top Conviction)</button>
         <button class="pill" onclick="setFilter('SCORE_80', this)">⭐ Score ≥ 80</button>
         <button class="pill" onclick="setFilter('PRICE_50', this)">Under ₹50</button>
@@ -1060,13 +1341,15 @@ html_content = f"""<!DOCTYPE html>
   <footer>
     <div class="container">
       <p>⚡ Automated Stock Screener & Real-Time Alert Engine | Built for Hariprasanth</p>
-      <p style="margin-top: 6px; font-size: 11px;">Target Holding: 1-Week (Nov 9 – Nov 13, 2026) | Active Cloud Monitor: 9:15 AM - 3:30 PM IST</p>
+      <p style="margin-top: 6px; font-size: 11px;">Target Holding: 1-Week (Nov 9 – Nov 13, 2026) | Active Cloud Monitor: 9:15 AM - 3:30 PM & Muhurat Trading</p>
     </div>
   </footer>
 
   <script>
     // Embedded 517 Stock Records
     const STOCKS_DATA = {json.dumps(stocks_data)};
+
+    const MUHURAT_SYMBOLS = ['RGL', 'JAIBALAJI', 'ESAFSFB', 'RBA', 'AFCONS', 'PRABHA', 'PATELENG', 'HTMEDIA', 'ONGC', 'KANSAINER'];
 
     let currentFilter = 'ALL';
     let searchQuery = '';
@@ -1165,6 +1448,7 @@ html_content = f"""<!DOCTYPE html>
 
       let filtered = STOCKS_DATA.filter(s => {{
         // Filter pills
+        if (currentFilter === 'MUHURAT' && !MUHURAT_SYMBOLS.includes(s.symbol)) return false;
         if (currentFilter === 'SCORE_85' && (s.score || 0) < 85) return false;
         if (currentFilter === 'SCORE_80' && (s.score || 0) < 80) return false;
         if (currentFilter === 'PRICE_50' && (s.price || 0) >= 50) return false;
@@ -1207,11 +1491,12 @@ html_content = f"""<!DOCTYPE html>
 
       tbody.innerHTML = stocks.map(s => {{
         const scoreClass = s.score >= 85 ? 'score-high' : (s.score >= 80 ? 'score-mid' : 'score-low');
+        const isMuhurat = MUHURAT_SYMBOLS.includes(s.symbol);
         return `
           <tr onclick="selectStockForCalc('${{s.symbol}}')" style="cursor: pointer;">
             <td class="rank-cell">#${{s.rank}}</td>
             <td class="symbol-cell">
-              ${{s.symbol}}
+              ${{s.symbol}} ${{isMuhurat ? '<span style="display:inline; color: #fbbf24;">🪔</span>' : ''}}
               <span>${{s.name ? s.name.substring(0, 24) : ''}}</span>
             </td>
             <td class="price-cell">₹${{s.price}}</td>
@@ -1220,6 +1505,7 @@ html_content = f"""<!DOCTYPE html>
             </td>
             <td>
               <span style="font-size: 11px; color: #34d399; font-weight: 600;">Mon 9:30-10:00 AM</span>
+              ${{isMuhurat ? '<br><span style="font-size: 10px; color: #fbbf24; font-weight: 700;">🪔 Muhurat 6:20 PM</span>' : ''}}
             </td>
             <td style="color: #10b981; font-weight: 700; font-family: 'JetBrains Mono', monospace;">₹${{s.target}}</td>
             <td style="color: #ef4444; font-weight: 700; font-family: 'JetBrains Mono', monospace;">₹${{s.stop_loss}}</td>
