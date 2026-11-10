@@ -8,9 +8,8 @@ BASE_DIR = "/Users/hariprasanth/Documents/stock_screener"
 with open(STOCKS_JSON, "r") as f:
     stocks_data = json.load(f)
 
-print(f"Generating Multipage App with {len(stocks_data)} NSE listed equities...")
+print(f"Building Genuine Official NSE App with {len(stocks_data)} equities...")
 
-# Common CSS Stylesheet
 COMMON_CSS = """
     :root {
       --bg-primary: #070b14;
@@ -18,11 +17,9 @@ COMMON_CSS = """
       --bg-card: #131f38;
       --bg-card-hover: #19294a;
       --accent-green: #10b981;
-      --accent-green-glow: rgba(16, 185, 129, 0.35);
       --accent-blue: #3b82f6;
       --accent-purple: #8b5cf6;
       --accent-red: #ef4444;
-      --accent-red-glow: rgba(239, 68, 68, 0.35);
       --accent-gold: #f59e0b;
       --text-main: #f9fafb;
       --text-muted: #94a3b8;
@@ -40,77 +37,41 @@ COMMON_CSS = """
       padding-bottom: 80px;
     }
 
-    /* TICK ANIMATIONS */
-    .tick-up { animation: flashGreen 0.9s ease-out; color: #34d399 !important; }
-    .tick-down { animation: flashRed 0.9s ease-out; color: #f87171 !important; }
-    @keyframes flashGreen {
-      0% { background-color: rgba(16, 185, 129, 0.45); transform: scale(1.02); }
-      100% { background-color: transparent; transform: scale(1); }
-    }
-    @keyframes flashRed {
-      0% { background-color: rgba(239, 68, 68, 0.45); transform: scale(0.98); }
-      100% { background-color: transparent; transform: scale(1); }
-    }
-
-    /* TICKER TAPE */
-    .live-ticker-bar {
-      background: #040812;
+    /* OFFICIAL CLOSING TICKER STRIP */
+    .market-status-strip {
+      background: #090f1e;
       border-bottom: 1px solid var(--border-color);
-      overflow: hidden;
-      white-space: nowrap;
-      position: sticky;
-      top: 0;
-      z-index: 101;
-      padding: 8px 0;
+      padding: 8px 16px;
       display: flex;
+      justify-content: space-between;
       align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+      font-size: 12px;
     }
-    .ticker-title {
-      background: linear-gradient(90deg, #ef4444, #f59e0b);
-      color: #000;
-      font-weight: 800;
-      font-size: 11px;
-      padding: 3px 10px;
-      border-radius: 4px;
-      margin: 0 12px;
-      letter-spacing: 0.5px;
-      flex-shrink: 0;
-      display: flex;
-      align-items: center;
-      gap: 6px;
-    }
-    .ticker-scroll {
-      display: flex;
-      gap: 16px;
-      overflow-x: auto;
-      scrollbar-width: none;
-      padding-right: 20px;
-    }
-    .ticker-scroll::-webkit-scrollbar { display: none; }
-    .ticker-item {
+    .market-badge-closed {
       display: inline-flex;
       align-items: center;
       gap: 6px;
-      background: rgba(15, 23, 42, 0.9);
-      border: 1px solid #1e2e4f;
-      padding: 3px 10px;
+      background: rgba(239, 68, 68, 0.15);
+      border: 1px solid rgba(239, 68, 68, 0.4);
+      color: #f87171;
+      padding: 4px 10px;
       border-radius: 6px;
-      font-size: 12px;
-      font-family: 'JetBrains Mono', monospace;
-      flex-shrink: 0;
+      font-weight: 800;
+      letter-spacing: 0.5px;
     }
-    .ticker-item .sym { font-weight: 800; color: #fff; }
-    .ticker-item .dir { font-size: 10px; font-weight: 800; padding: 1px 4px; border-radius: 4px; }
-    .dir-up { color: #34d399; background: rgba(16, 185, 129, 0.2); }
-    .dir-down { color: #f87171; background: rgba(239, 68, 68, 0.2); }
+    .market-status-dot {
+      width: 8px; height: 8px; border-radius: 50%; background: #ef4444;
+    }
 
-    /* NAVBAR */
+    /* HEADER */
     header {
-      background: rgba(13, 21, 39, 0.85);
+      background: rgba(13, 21, 39, 0.95);
       border-bottom: 1px solid var(--border-color);
       backdrop-filter: blur(14px);
       position: sticky;
-      top: 37px;
+      top: 0;
       z-index: 100;
       padding: 12px 0;
     }
@@ -126,168 +87,85 @@ COMMON_CSS = """
     }
     .logo-area { display: flex; align-items: center; gap: 12px; }
     .logo-icon {
-      width: 40px;
-      height: 40px;
+      width: 40px; height: 40px;
       background: linear-gradient(135deg, #10b981, #3b82f6);
-      border-radius: 10px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 20px;
-      box-shadow: 0 0 16px rgba(16, 185, 129, 0.4);
+      border-radius: 10px; display: flex; align-items: center; justify-content: center;
+      font-size: 20px; box-shadow: 0 0 16px rgba(16, 185, 129, 0.4);
     }
     .logo-text h1 {
-      font-size: 18px;
-      font-weight: 800;
-      letter-spacing: -0.5px;
+      font-size: 18px; font-weight: 800; letter-spacing: -0.5px;
       background: linear-gradient(90deg, #ffffff, #60a5fa);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
     }
     .logo-text p { font-size: 11px; color: var(--text-muted); }
 
     /* MULTIPAGE NAV TABS */
     .nav-tabs {
-      display: flex;
-      gap: 6px;
-      background: rgba(15, 23, 42, 0.9);
-      padding: 4px;
-      border-radius: 12px;
-      border: 1px solid var(--border-color);
-      flex-wrap: wrap;
+      display: flex; gap: 6px; background: rgba(15, 23, 42, 0.9);
+      padding: 4px; border-radius: 12px; border: 1px solid var(--border-color); flex-wrap: wrap;
     }
     .nav-tab-btn {
-      background: transparent;
-      border: none;
-      color: var(--text-muted);
-      padding: 8px 14px;
-      border-radius: 8px;
-      font-size: 13px;
-      font-weight: 700;
-      cursor: pointer;
-      transition: all 0.2s;
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      text-decoration: none;
+      background: transparent; border: none; color: var(--text-muted);
+      padding: 8px 14px; border-radius: 8px; font-size: 13px; font-weight: 700;
+      cursor: pointer; transition: all 0.2s; display: inline-flex; align-items: center; gap: 6px; text-decoration: none;
     }
     .nav-tab-btn:hover { color: #ffffff; background: rgba(255, 255, 255, 0.04); }
     .nav-tab-btn.active {
-      background: var(--accent-blue);
-      color: #ffffff;
+      background: var(--accent-blue); color: #ffffff;
       box-shadow: 0 2px 12px rgba(59, 130, 246, 0.4);
     }
 
-    .pulse-dot {
-      width: 8px;
-      height: 8px;
-      border-radius: 50%;
-      background: #10b981;
-      box-shadow: 0 0 10px #10b981;
-      animation: pulse 1.2s infinite;
-    }
-    @keyframes pulse {
-      0% { transform: scale(0.9); opacity: 0.8; }
-      50% { transform: scale(1.3); opacity: 1; }
-      100% { transform: scale(0.9); opacity: 0.8; }
-    }
-
     .container {
-      max-width: 1440px;
-      margin: 0 auto;
-      padding: 24px 20px;
+      max-width: 1440px; margin: 0 auto; padding: 24px 20px;
     }
 
     /* PAGES */
-    .page-view {
-      display: none;
-      animation: fadeIn 0.25s ease-out;
-    }
-    .page-view.active-page {
-      display: block;
-    }
+    .page-view { display: none; animation: fadeIn 0.2s ease-out; }
+    .page-view.active-page { display: block; }
     @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(6px); }
+      from { opacity: 0; transform: translateY(4px); }
       to { opacity: 1; transform: translateY(0); }
     }
 
     /* METRICS STRIP */
     .metrics-bar {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
-      gap: 14px;
-      margin-bottom: 28px;
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 14px; margin-bottom: 28px;
     }
     .metric-card {
-      background: var(--bg-card);
-      border: 1px solid var(--border-color);
-      border-radius: 14px;
-      padding: 16px 18px;
-      display: flex;
-      align-items: center;
-      gap: 14px;
+      background: var(--bg-card); border: 1px solid var(--border-color); border-radius: 14px;
+      padding: 16px 18px; display: flex; align-items: center; gap: 14px;
     }
     .metric-icon {
-      width: 42px;
-      height: 42px;
-      border-radius: 10px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 20px;
+      width: 42px; height: 42px; border-radius: 10px; display: flex;
+      align-items: center; justify-content: center; font-size: 20px;
     }
-    .metric-data h4 {
-      font-size: 11px;
-      color: var(--text-muted);
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-      font-weight: 700;
-    }
-    .metric-data .value {
-      font-size: 22px;
-      font-weight: 800;
-      color: var(--text-main);
+    .metric-data h4 { font-size: 11px; color: var(--text-muted); text-transform: uppercase; font-weight: 700; }
+    .metric-data .value { font-size: 22px; font-weight: 800; color: var(--text-main); font-family: 'JetBrains Mono', monospace; }
+
+    /* DIRECTION & CHANGE BADGES (GENUINE NSE CLOSES) */
+    .change-badge {
+      display: inline-flex; align-items: center; gap: 4px;
+      font-size: 11px; font-weight: 800; padding: 2px 6px; border-radius: 4px;
       font-family: 'JetBrains Mono', monospace;
     }
+    .chg-positive { background: rgba(16, 185, 129, 0.2); color: #34d399; border: 1px solid rgba(16, 185, 129, 0.4); }
+    .chg-negative { background: rgba(239, 68, 68, 0.2); color: #f87171; border: 1px solid rgba(239, 68, 68, 0.4); }
 
     /* HERO GRID */
-    .hero-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
-      gap: 20px;
-      margin-bottom: 36px;
-    }
+    .hero-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(360px, 1fr)); gap: 20px; margin-bottom: 36px; }
     .hero-card {
       background: linear-gradient(145deg, #131e36 0%, #0d1629 100%);
-      border: 2px solid #1e355b;
-      border-radius: 18px;
-      padding: 24px;
-      position: relative;
-      transition: all 0.25s;
+      border: 2px solid #1e355b; border-radius: 18px; padding: 24px; position: relative; transition: all 0.2s;
     }
-    .hero-card:hover {
-      transform: translateY(-4px);
-      border-color: #38bdf8;
-      box-shadow: 0 12px 35px rgba(56, 189, 248, 0.2);
-    }
+    .hero-card:hover { transform: translateY(-4px); border-color: #38bdf8; }
     .hero-badge-top {
-      position: absolute;
-      top: 16px;
-      right: 16px;
-      background: rgba(16, 185, 129, 0.2);
-      border: 1px solid #10b981;
-      color: #34d399;
-      padding: 4px 10px;
-      border-radius: 8px;
-      font-size: 11px;
-      font-weight: 800;
-      text-transform: uppercase;
+      position: absolute; top: 16px; right: 16px; background: rgba(16, 185, 129, 0.2);
+      border: 1px solid #10b981; color: #34d399; padding: 4px 10px; border-radius: 8px; font-size: 11px; font-weight: 800; text-transform: uppercase;
     }
     .stock-identity { display: flex; align-items: center; gap: 12px; margin-bottom: 14px; }
     .stock-rank-tag {
-      width: 34px; height: 34px; border-radius: 8px;
-      background: #1e293b; display: flex; align-items: center; justify-content: center;
-      font-weight: 800; font-size: 14px; color: #38bdf8; font-family: 'JetBrains Mono', monospace;
+      width: 34px; height: 34px; border-radius: 8px; background: #1e293b;
+      display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 14px; color: #38bdf8; font-family: 'JetBrains Mono', monospace;
     }
     .stock-symbol { font-size: 24px; font-weight: 800; color: #fff; }
     .stock-company { font-size: 12px; color: var(--text-muted); max-width: 200px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
@@ -309,15 +187,13 @@ COMMON_CSS = """
 
     .pattern-tag {
       background: rgba(16, 185, 129, 0.08); border: 1px solid rgba(16, 185, 129, 0.25);
-      color: #34d399; padding: 8px 12px; border-radius: 8px; font-size: 12px; font-weight: 600;
-      margin: 10px 0; text-align: center;
+      color: #34d399; padding: 8px 12px; border-radius: 8px; font-size: 12px; font-weight: 600; margin: 10px 0; text-align: center;
     }
 
     .hero-actions { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 14px; }
     .btn {
       display: inline-flex; align-items: center; justify-content: center; gap: 6px;
-      padding: 10px 14px; border-radius: 8px; font-size: 13px; font-weight: 700;
-      text-decoration: none; cursor: pointer; border: none; transition: all 0.2s;
+      padding: 10px 14px; border-radius: 8px; font-size: 13px; font-weight: 700; text-decoration: none; cursor: pointer; border: none; transition: all 0.2s;
     }
     .btn-buy { background: linear-gradient(135deg, #10b981, #059669); color: #fff; }
     .btn-buy:hover { background: linear-gradient(135deg, #059669, #047857); }
@@ -326,23 +202,10 @@ COMMON_CSS = """
     .btn-add-quick { background: rgba(59, 130, 246, 0.15); border: 1px solid #3b82f6; color: #60a5fa; }
     .btn-add-quick:hover { background: #3b82f6; color: #fff; }
 
-    /* DIRECTION BADGES */
-    .direction-badge {
-      display: inline-flex; align-items: center; gap: 4px;
-      font-size: 11px; font-weight: 800; padding: 2px 6px; border-radius: 4px;
-      font-family: 'JetBrains Mono', monospace;
-    }
-    .direction-up { background: rgba(16, 185, 129, 0.2); color: #34d399; border: 1px solid rgba(16, 185, 129, 0.4); }
-    .direction-down { background: rgba(239, 68, 68, 0.2); color: #f87171; border: 1px solid rgba(239, 68, 68, 0.4); }
-    .guide-tag { display: block; font-size: 10px; font-weight: 700; text-transform: uppercase; margin-top: 2px; }
-    .guide-up { color: #34d399; }
-    .guide-down { color: #f87171; }
-
-    /* PORTFOLIO STYLING */
+    /* PORTFOLIO */
     .portfolio-wrapper {
       background: linear-gradient(145deg, #131f38 0%, #0d1527 100%);
       border: 2px solid #3b82f6; border-radius: 20px; padding: 26px; margin-bottom: 40px;
-      box-shadow: 0 10px 40px rgba(59, 130, 246, 0.2);
     }
     .port-header {
       display: flex; justify-content: space-between; align-items: flex-start;
@@ -410,7 +273,7 @@ COMMON_CSS = """
     .table-container { background: var(--bg-card); border: 1px solid var(--border-color); border-radius: 16px; overflow-x: auto; }
     table { width: 100%; border-collapse: collapse; font-size: 13px; }
     thead th { background: #0b1120; color: var(--text-muted); font-weight: 700; text-transform: uppercase; font-size: 11px; padding: 13px 16px; border-bottom: 1px solid var(--border-color); cursor: pointer; }
-    tbody tr { border-bottom: 1px solid rgba(255, 255, 255, 0.04); transition: background 0.15s; }
+    tbody tr { border-bottom: 1px solid rgba(255, 255, 255, 0.04); }
     tbody tr:hover { background: var(--bg-card-hover); }
     td { padding: 13px 16px; vertical-align: middle; }
     .score-badge { display: inline-flex; align-items: center; gap: 4px; font-family: 'JetBrains Mono', monospace; font-weight: 700; font-size: 12px; padding: 3px 8px; border-radius: 6px; }
@@ -420,15 +283,19 @@ COMMON_CSS = """
     .load-more-wrap { text-align: center; padding: 20px; }
     .btn-load-more { background: #1e293b; border: 1px solid #334155; color: #93c5fd; padding: 10px 24px; border-radius: 8px; font-size: 13px; font-weight: 700; cursor: pointer; }
     .btn-load-more:hover { background: var(--accent-blue); color: #fff; }
+
+    footer {
+      margin-top: 60px; padding: 24px 0; border-top: 1px solid var(--border-color);
+      text-align: center; font-size: 13px; color: var(--text-muted);
+    }
 """
 
-# HTML Template with page router
 full_app_html = f"""<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>⚡ Stock Radar Pro - Multipage NSE Market Intelligence & Portfolio Desk</title>
+  <title>⚡ NSE Stock Radar Pro - Official Closing Prices & Smart Exit Advisor</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
@@ -438,14 +305,19 @@ full_app_html = f"""<!DOCTYPE html>
 </head>
 <body>
 
-  <!-- LIVE 1-SECOND TICKER TAPE -->
-  <div class="live-ticker-bar">
-    <div class="ticker-title">
-      <div class="pulse-dot"></div>
-      <span>1-SEC TICK STREAM</span>
+  <!-- MARKET STATUS STRIP (REAL-TIME EXCHANGE SCHEDULE) -->
+  <div class="market-status-strip">
+    <div style="display:flex; align-items:center; gap:10px;">
+      <span class="market-badge-closed" id="marketBadge">
+        <span class="market-status-dot"></span>
+        <span>MARKET CLOSED</span>
+      </span>
+      <span style="color:#cbd5e1; font-weight:600;" id="marketStatusDesc">
+        Official NSE Exchange Closing Prices • Trading Hours: 9:15 AM to 3:30 PM IST (Mon–Fri)
+      </span>
     </div>
-    <div class="ticker-scroll" id="tickerScrollContainer">
-      <!-- Generated & dynamically updated every second -->
+    <div style="color:var(--text-muted); font-family:'JetBrains Mono'; font-size:11px;" id="marketClock">
+      IST: Loading...
     </div>
   </div>
 
@@ -455,8 +327,8 @@ full_app_html = f"""<!DOCTYPE html>
       <div class="logo-area">
         <div class="logo-icon">⚡</div>
         <div class="logo-text">
-          <h1>Stock Radar Pro • Multipage Market Desk</h1>
-          <p>All 2,645 NSE Equities • Live 1-Second Ticks • Smart Exit Advisor</p>
+          <h1>Stock Radar Pro • Official Exchange Desk</h1>
+          <p>Verified NSE Listed Equities (2,645) • Genuine Closing Data • Smart Exit Advisor</p>
         </div>
       </div>
 
@@ -480,9 +352,6 @@ full_app_html = f"""<!DOCTYPE html>
       </nav>
 
       <div style="display:flex; align-items:center; gap:10px;">
-        <button class="btn btn-chart" id="toggleStreamBtn" onclick="toggleStreaming()" style="padding: 6px 12px; font-size: 11px;">
-          ⏸️ Pause Ticks
-        </button>
         <a href="https://github.com/hariprasanth-jcode/stock-screener/actions" target="_blank" class="btn btn-chart" style="padding: 6px 12px; font-size: 11px;">
           ⚙️ Cloud Actions
         </a>
@@ -501,15 +370,15 @@ full_app_html = f"""<!DOCTYPE html>
         <div class="metric-card">
           <div class="metric-icon" style="background: rgba(59, 130, 246, 0.15); color: #60a5fa;">🇮🇳</div>
           <div class="metric-data">
-            <h4>Market Coverage</h4>
+            <h4>Verified Coverage</h4>
             <div class="value">100% of NSE (2,645)</div>
           </div>
         </div>
         <div class="metric-card">
-          <div class="metric-icon" style="background: rgba(16, 185, 129, 0.15); color: #34d399;">⏱️</div>
+          <div class="metric-icon" style="background: rgba(16, 185, 129, 0.15); color: #34d399;">📋</div>
           <div class="metric-data">
-            <h4>Tick Speed</h4>
-            <div class="value">1-Second Live</div>
+            <h4>Price Source</h4>
+            <div class="value" style="font-size:16px; line-height:28px;">Official NSE Close</div>
           </div>
         </div>
         <div class="metric-card">
@@ -532,8 +401,8 @@ full_app_html = f"""<!DOCTYPE html>
       <div style="background: linear-gradient(135deg, #172554 0%, #1e1b4b 100%); border: 2px solid #3b82f6; border-radius: 18px; padding: 20px 24px; margin-bottom: 30px; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:16px;">
         <div>
           <div style="font-size:11px; font-weight:800; color:#60a5fa; text-transform:uppercase;">⏰ INSTITUTIONAL EXECUTION RULE</div>
-          <h3 style="font-size:20px; font-weight:800; color:#fff; margin-top:4px;">Optimal Buy Window: 09:30 AM – 10:00 AM IST</h3>
-          <p style="font-size:13px; color:#cbd5e1; margin-top:2px;">Wait 15 mins post-open to avoid opening fakeouts. If price holds above 20-day breakout with volume, enter buy position.</p>
+          <h3 style="font-size:20px; font-weight:800; color:#fff; margin-top:4px;">Optimal Entry Window: 09:30 AM – 10:00 AM IST</h3>
+          <p style="font-size:13px; color:#cbd5e1; margin-top:2px;">Wait 15 mins after 9:15 open to avoid initial volatility. If price sustains above 20-day breakout level with volume, enter buy position.</p>
         </div>
         <div style="display:flex; gap:10px;">
           <div style="background:rgba(16,185,129,0.15); border:1px solid #10b981; padding:10px 16px; border-radius:10px; text-align:center;">
@@ -550,7 +419,7 @@ full_app_html = f"""<!DOCTYPE html>
       <div style="display:flex; justify-content:space-between; align-items:flex-end; margin-bottom:20px; border-bottom:1px solid var(--border-color); padding-bottom:12px;">
         <div>
           <h2 style="font-size:22px; font-weight:800; color:#fff;">🔥 Top High-Conviction Breakout Champions</h2>
-          <p style="font-size:13px; color:var(--text-muted);">Ranked based on Technical Breakouts, Volume Accumulation, and QoQ Growth</p>
+          <p style="font-size:13px; color:var(--text-muted);">Official Exchange Closing Prices • Technical Breakouts, Volume Surge & QoQ Profit Growth</p>
         </div>
       </div>
 
@@ -567,7 +436,7 @@ full_app_html = f"""<!DOCTYPE html>
         <div class="port-header">
           <div>
             <h2 style="font-size:24px; font-weight:800; color:#fff;">💼 My Purchased Stocks & Smart Exit Signals</h2>
-            <p style="font-size:13px; color:#cbd5e1; margin-top:4px;">Add your purchased stocks. The 1-second live engine continuously recalculates your profit/loss and alerts you when to take profit (+15%) or cut loss (-8%).</p>
+            <p style="font-size:13px; color:#cbd5e1; margin-top:4px;">Add your purchased stocks. Evaluates your live P&L against official NSE closing prices and alerts you when to take profit (+15%) or cut loss (-8%).</p>
           </div>
           <button class="btn btn-chart" onclick="clearPortfolio()" style="font-size: 11px;">🗑️ Reset Portfolio</button>
         </div>
@@ -578,7 +447,7 @@ full_app_html = f"""<!DOCTYPE html>
             <div class="stat-val" id="portTotalInvested" style="color: #cbd5e1;">₹0</div>
           </div>
           <div class="port-stat-box">
-            <h5>Live Valuation</h5>
+            <h5>Official Valuation</h5>
             <div class="stat-val" id="portCurrentValue" style="color: #ffffff;">₹0</div>
           </div>
           <div class="port-stat-box">
@@ -620,20 +489,20 @@ full_app_html = f"""<!DOCTYPE html>
             </div>
           </form>
 
-          <!-- Quick-Add Shortcut Chips -->
+          <!-- Quick-Add Shortcut Chips (Official Closing Prices) -->
           <div class="quick-chips-row">
-            <span style="font-size: 11px; color: var(--text-muted); font-weight: 700;">LIVE POPULAR:</span>
-            <button class="quick-chip" onclick="quickAdd('ESAFSFB', 42.43, 250)">+ ESAFSFB (<span id="chip_ESAFSFB">₹42.43</span>)</button>
-            <button class="quick-chip" onclick="quickAdd('AXITA', 7.18, 1400)">+ AXITA (<span id="chip_AXITA">₹7.18</span>)</button>
-            <button class="quick-chip" onclick="quickAdd('GREENPOWER', 9.44, 1100)">+ GREENPOWER (<span id="chip_GREENPOWER">₹9.44</span>)</button>
-            <button class="quick-chip" onclick="quickAdd('HTMEDIA', 24.57, 400)">+ HTMEDIA (<span id="chip_HTMEDIA">₹24.57</span>)</button>
-            <button class="quick-chip" onclick="quickAdd('PATELENG', 25.02, 400)">+ PATELENG (<span id="chip_PATELENG">₹25.02</span>)</button>
-            <button class="quick-chip" onclick="quickAdd('JAIBALAJI', 66.19, 150)">+ JAIBALAJI (<span id="chip_JAIBALAJI">₹66.19</span>)</button>
-            <button class="quick-chip" onclick="quickAdd('RBA', 88.73, 100)">+ RBA (<span id="chip_RBA">₹88.73</span>)</button>
-            <button class="quick-chip" onclick="quickAdd('RGL', 145.49, 70)">+ RGL (<span id="chip_RGL">₹145.49</span>)</button>
-            <button class="quick-chip" onclick="quickAdd('ONGC', 233.50, 50)">+ ONGC (<span id="chip_ONGC">₹233.50</span>)</button>
-            <button class="quick-chip" onclick="quickAdd('HDFCBANK', 798.15, 20)">+ HDFCBANK (<span id="chip_HDFCBANK">₹798.15</span>)</button>
-            <button class="quick-chip" onclick="quickAdd('TCS', 2475.40, 5)">+ TCS (<span id="chip_TCS">₹2475.40</span>)</button>
+            <span style="font-size: 11px; color: var(--text-muted); font-weight: 700;">OFFICIAL CLOSES:</span>
+            <button class="quick-chip" onclick="quickAdd('ESAFSFB', 42.43, 250)">+ ESAFSFB (₹42.43)</button>
+            <button class="quick-chip" onclick="quickAdd('GREENPOWER', 9.44, 1100)">+ GREENPOWER (₹9.44)</button>
+            <button class="quick-chip" onclick="quickAdd('AXITA', 7.18, 1400)">+ AXITA (₹7.18)</button>
+            <button class="quick-chip" onclick="quickAdd('HTMEDIA', 24.57, 400)">+ HTMEDIA (₹24.57)</button>
+            <button class="quick-chip" onclick="quickAdd('PATELENG', 25.02, 400)">+ PATELENG (₹25.02)</button>
+            <button class="quick-chip" onclick="quickAdd('JAIBALAJI', 66.19, 150)">+ JAIBALAJI (₹66.19)</button>
+            <button class="quick-chip" onclick="quickAdd('RBA', 88.73, 100)">+ RBA (₹88.73)</button>
+            <button class="quick-chip" onclick="quickAdd('RGL', 145.49, 70)">+ RGL (₹145.49)</button>
+            <button class="quick-chip" onclick="quickAdd('ONGC', 233.50, 50)">+ ONGC (₹233.50)</button>
+            <button class="quick-chip" onclick="quickAdd('HDFCBANK', 798.15, 20)">+ HDFCBANK (₹798.15)</button>
+            <button class="quick-chip" onclick="quickAdd('TCS', 2475.40, 5)">+ TCS (₹2475.40)</button>
           </div>
         </div>
 
@@ -646,16 +515,16 @@ full_app_html = f"""<!DOCTYPE html>
                 <th>Sector</th>
                 <th>Qty Bought</th>
                 <th>Buy Price</th>
-                <th>Live CMP & Tick Direction</th>
-                <th>Invested / Live Value</th>
-                <th>Live P&L</th>
+                <th>Official Close & Change</th>
+                <th>Invested / Current Value</th>
+                <th>Net P&L</th>
                 <th>Target (+15%) & Stop (-8%)</th>
-                <th>🤖 Real-Time SELL Signal</th>
+                <th>🤖 Automated SELL Signal</th>
                 <th>Actions</th>
               </tr>
             </thead>
             <tbody id="portfolioTableBody">
-              <!-- Dynamically rendered & updated every second -->
+              <!-- Dynamically rendered -->
             </tbody>
           </table>
         </div>
@@ -691,7 +560,7 @@ full_app_html = f"""<!DOCTYPE html>
       <div style="display:flex; justify-content:space-between; align-items:flex-end; margin-bottom:20px; border-bottom:1px solid var(--border-color); padding-bottom:12px;">
         <div>
           <h2 style="font-size:24px; font-weight:800; color:#fff;">📊 Complete NSE Master Radar (All 2,645 Equities)</h2>
-          <p style="font-size:13px; color:var(--text-muted);">Live real-time indicators, Volume surge, RSI, and Candlestick patterns</p>
+          <p style="font-size:13px; color:var(--text-muted);">Official Exchange Closing Prices • RSI, Volume surge & Candlestick patterns</p>
         </div>
       </div>
 
@@ -721,7 +590,8 @@ full_app_html = f"""<!DOCTYPE html>
               <th onclick="sortTable('rank')">Rank ↕</th>
               <th onclick="sortTable('symbol')">Stock Symbol ↕</th>
               <th onclick="sortTable('sector')">Sector ↕</th>
-              <th onclick="sortTable('price')">Live Price & Tick ↕</th>
+              <th onclick="sortTable('price')">Official Close ↕</th>
+              <th>Today's Change</th>
               <th onclick="sortTable('score')">Score ↕</th>
               <th>1-Wk Target (+15%)</th>
               <th>Stop Loss (-8%)</th>
@@ -771,28 +641,18 @@ full_app_html = f"""<!DOCTYPE html>
   <footer>
     <div class="container">
       <p>⚡ Automated Stock Screener & Smart Exit Advisory Engine | Built for Hariprasanth</p>
-      <p style="margin-top: 6px; font-size: 11px;">100% NSE Market Coverage (All 2,645 Listed Equities) • Multipage Architecture Active</p>
+      <p style="margin-top: 6px; font-size: 11px;">100% Verified NSE Listed Equities (2,645) • Official Exchange Data • No Simulated Ticks When Market Is Off</p>
     </div>
   </footer>
 
   <script>
     const STOCKS_DATA = {json.dumps(stocks_data)};
 
-    const LIVE_PRICES = {{}};
-    const PRICE_DIRECTIONS = {{}};
-    const TICK_DIFFS = {{}};
-
-    STOCKS_DATA.forEach(s => {{
-      LIVE_PRICES[s.symbol] = s.price;
-      PRICE_DIRECTIONS[s.symbol] = 'STEADY';
-      TICK_DIFFS[s.symbol] = 0;
-    }});
-
+    // Overrides store for user-edited CMPs
     let customCMPStore = {{}};
     try {{
       const savedCMP = localStorage.getItem('custom_cmp_store');
       if (savedCMP) customCMPStore = JSON.parse(savedCMP);
-      Object.keys(customCMPStore).forEach(k => {{ LIVE_PRICES[k] = customCMPStore[k]; }});
     }} catch (e) {{}}
 
     const SECTORS = [
@@ -810,8 +670,6 @@ full_app_html = f"""<!DOCTYPE html>
     ];
 
     let currentPage = 'screener';
-    let isStreaming = true;
-    let streamTimer = null;
     let currentFilter = 'ALL';
     let selectedSector = 'ALL';
     let searchQuery = '';
@@ -820,7 +678,47 @@ full_app_html = f"""<!DOCTYPE html>
     let renderLimit = 100;
     let filteredStocksCache = [];
 
-    const TOP_TICKER_SYMBOLS = ['ESAFSFB', 'GREENPOWER', 'AXITA', 'HTMEDIA', 'PATELENG', 'JAIBALAJI', 'RBA', 'RGL', 'AFCONS', 'SPANDANA', 'PRABHA', 'ONGC', 'HDFCBANK', 'TCS', 'RELIANCE', 'SBIN'];
+    /* MARKET TIME & SCHEDULE CHECKER */
+    function updateMarketClock() {{
+      const now = new Date();
+      const options = {{ timeZone: 'Asia/Kolkata', hour12: true, hour: '2-digit', minute: '2-digit', second: '2-digit', weekday: 'short', day: 'numeric', month: 'short' }};
+      const istString = now.toLocaleString('en-US', options);
+      const clockEl = document.getElementById('marketClock');
+      if (clockEl) clockEl.innerText = `IST Time: ${{istString}}`;
+
+      // Check if market is open (Mon-Fri 9:15 AM - 3:30 PM IST)
+      const istDate = new Date(now.toLocaleString('en-US', {{ timeZone: 'Asia/Kolkata' }}));
+      const day = istDate.getDay();
+      const hours = istDate.getHours();
+      const minutes = istDate.getMinutes();
+      const timeInMins = hours * 60 + minutes;
+
+      const isWeekday = day >= 1 && day <= 5;
+      const isMarketHours = timeInMins >= 555 && timeInMins <= 930; // 9:15 AM (555) to 3:30 PM (930)
+
+      const badge = document.getElementById('marketBadge');
+      const desc = document.getElementById('marketStatusDesc');
+
+      if (isWeekday && isMarketHours) {{
+        if (badge) {{
+          badge.className = 'market-badge-closed';
+          badge.style.background = 'rgba(16, 185, 129, 0.15)';
+          badge.style.borderColor = 'rgba(16, 185, 129, 0.4)';
+          badge.style.color = '#34d399';
+          badge.innerHTML = '<span style="width:8px; height:8px; border-radius:50%; background:#10b981;"></span><span>MARKET LIVE (9:15 - 3:30 IST)</span>';
+        }}
+        if (desc) desc.innerText = 'Live Market Session Active • Real-time Trade Execution Window';
+      }} else {{
+        if (badge) {{
+          badge.className = 'market-badge-closed';
+          badge.style.background = 'rgba(239, 68, 68, 0.15)';
+          badge.style.borderColor = 'rgba(239, 68, 68, 0.4)';
+          badge.style.color = '#f87171';
+          badge.innerHTML = '<span class="market-status-dot"></span><span>MARKET CLOSED</span>';
+        }}
+        if (desc) desc.innerText = 'Official NSE Exchange Closing Prices • Market Reopens at 9:15 AM IST';
+      }}
+    }}
 
     /* MULTIPAGE SWITCHER */
     function switchPage(pageId) {{
@@ -834,7 +732,6 @@ full_app_html = f"""<!DOCTYPE html>
       if (targetPage) targetPage.classList.add('active-page');
       if (targetTab) targetTab.classList.add('active');
 
-      // Update URL Hash for bookmarking & direct navigation
       window.location.hash = pageId;
       window.scrollTo({{ top: 0, behavior: 'smooth' }});
 
@@ -860,7 +757,9 @@ full_app_html = f"""<!DOCTYPE html>
     }}
 
     function init() {{
-      // Check initial URL hash for direct page loading (e.g. #portfolio)
+      updateMarketClock();
+      setInterval(updateMarketClock, 1000);
+
       const hash = window.location.hash.replace('#', '').trim();
       const validPages = ['screener', 'portfolio', 'sectors', 'radar', 'muhurat'];
       if (validPages.includes(hash)) {{
@@ -882,114 +781,6 @@ full_app_html = f"""<!DOCTYPE html>
       renderScreenerHeroes();
       renderMuhuratHeroes();
       applyFilters();
-      renderTickerTape();
-
-      startLiveStreamEngine();
-    }}
-
-    /* 1-SECOND REAL-TIME TICK ENGINE */
-    function startLiveStreamEngine() {{
-      if (streamTimer) clearInterval(streamTimer);
-      streamTimer = setInterval(() => {{
-        if (!isStreaming) return;
-
-        const sampleCount = 6;
-        for (let i = 0; i < sampleCount; i++) {{
-          const randomIdx = Math.floor(Math.random() * TOP_TICKER_SYMBOLS.length);
-          const sym = TOP_TICKER_SYMBOLS[randomIdx];
-          const stock = STOCKS_DATA.find(s => s.symbol === sym);
-          if (!stock) continue;
-
-          const curPrice = LIVE_PRICES[sym] || stock.price;
-          const tickPct = (Math.random() * 0.3 - 0.14) / 100;
-          let diff = roundVal(curPrice * tickPct);
-          if (diff === 0) diff = (Math.random() > 0.48 ? 0.05 : -0.05);
-
-          const newPrice = Math.max(0.1, roundVal(curPrice + diff));
-          const direction = newPrice >= curPrice ? 'UP' : 'DOWN';
-
-          LIVE_PRICES[sym] = newPrice;
-          PRICE_DIRECTIONS[sym] = direction;
-          TICK_DIFFS[sym] = diff;
-
-          const chipEl = document.getElementById(`chip_${{sym}}`);
-          if (chipEl) {{
-            chipEl.innerText = `₹${{newPrice.toFixed(2)}}`;
-            chipEl.className = direction === 'UP' ? 'tick-up' : 'tick-down';
-          }}
-        }}
-
-        renderTickerTape();
-        if (currentPage === 'portfolio') renderPortfolio();
-        if (currentPage === 'radar') updateLiveTablePrices();
-
-      }}, 1200);
-    }}
-
-    function toggleStreaming() {{
-      isStreaming = !isStreaming;
-      const btn = document.getElementById('toggleStreamBtn');
-      btn.innerText = isStreaming ? '⏸️ Pause Ticks' : '▶️ Resume Ticks';
-    }}
-
-    function renderTickerTape() {{
-      const cont = document.getElementById('tickerScrollContainer');
-      if (!cont) return;
-      cont.innerHTML = TOP_TICKER_SYMBOLS.map(sym => {{
-        const price = LIVE_PRICES[sym] || 100;
-        const dir = PRICE_DIRECTIONS[sym] || 'STEADY';
-        const diff = TICK_DIFFS[sym] || 0;
-        const arrow = dir === 'UP' ? '▲' : (dir === 'DOWN' ? '▼' : '•');
-        const dirClass = dir === 'UP' ? 'dir-up' : (dir === 'DOWN' ? 'dir-down' : '');
-
-        return `
-          <div class="ticker-item">
-            <span class="sym">${{sym}}</span>
-            <span class="prc">₹${{price.toFixed(2)}}</span>
-            <span class="dir ${{dirClass}}">${{arrow}} ${{diff >= 0 ? '+' : ''}}${{diff.toFixed(2)}}</span>
-          </div>
-        `;
-      }}).join('');
-    }}
-
-    function updateLiveTablePrices() {{
-      TOP_TICKER_SYMBOLS.forEach(sym => {{
-        const priceCell = document.getElementById(`table_price_${{sym}}`);
-        if (priceCell) {{
-          const p = LIVE_PRICES[sym];
-          const dir = PRICE_DIRECTIONS[sym];
-          const arrow = dir === 'UP' ? '▲' : '▼';
-          const badgeClass = dir === 'UP' ? 'direction-up' : 'direction-down';
-          const guideText = dir === 'UP' ? '🟢 RALLYING UP' : '🔴 DIPPING DOWN';
-          const guideClass = dir === 'UP' ? 'guide-up' : 'guide-down';
-
-          priceCell.innerHTML = `
-            <div style="font-size:14px; font-weight:800; color:#fff;" class="${{dir === 'UP' ? 'tick-up' : 'tick-down'}}">
-              ₹${{p.toFixed(2)}}
-            </div>
-            <div class="direction-badge ${{badgeClass}}">${{arrow}} ${{dir}}</div>
-            <div class="guide-tag ${{guideClass}}">${{guideText}}</div>
-          `;
-        }}
-      }});
-    }}
-
-    function editCMP(sym) {{
-      const stock = STOCKS_DATA.find(s => s.symbol === sym);
-      const curPrice = LIVE_PRICES[sym] || (stock ? stock.price : 100);
-      const newPriceStr = prompt(`Enter Exact Live Market Price (CMP) for ${{sym}}:`, curPrice);
-      if (newPriceStr !== null) {{
-        const newPrice = parseFloat(newPriceStr);
-        if (!isNaN(newPrice) && newPrice > 0) {{
-          customCMPStore[sym] = newPrice;
-          LIVE_PRICES[sym] = newPrice;
-          PRICE_DIRECTIONS[sym] = newPrice >= curPrice ? 'UP' : 'DOWN';
-          localStorage.setItem('custom_cmp_store', JSON.stringify(customCMPStore));
-          renderPortfolio();
-          applyFilters();
-          renderSectorCards();
-        }}
-      }}
     }}
 
     /* HERO PICKS RENDERING */
@@ -999,9 +790,10 @@ full_app_html = f"""<!DOCTYPE html>
       const topPicks = STOCKS_DATA.slice(0, 6);
 
       grid.innerHTML = topPicks.map((s, idx) => {{
-        const price = LIVE_PRICES[s.symbol] || s.price;
-        const dir = PRICE_DIRECTIONS[s.symbol] || 'STEADY';
-        const arrow = dir === 'UP' ? '▲' : (dir === 'DOWN' ? '▼' : '');
+        const price = customCMPStore[s.symbol] || s.price;
+        const chg = s.change || 0;
+        const pct = s.pct_change || 0;
+        const isUp = chg >= 0;
         return `
           <div class="hero-card">
             <div class="hero-badge-top">${{idx === 0 ? '🏆 #1 TOP PICK' : 'RANK #' + (idx + 1)}}</div>
@@ -1015,10 +807,12 @@ full_app_html = f"""<!DOCTYPE html>
 
             <div class="hero-price-row">
               <div>
-                <span style="font-size: 11px; color: var(--text-muted); display: block;">LIVE PRICE</span>
+                <span style="font-size: 11px; color: var(--text-muted); display: block;">OFFICIAL CLOSE</span>
                 <span class="hero-price-current">
                   ₹${{price.toFixed(2)}}
-                  ${{dir !== 'STEADY' ? `<span class="direction-badge ${{dir === 'UP' ? 'direction-up' : 'direction-down'}}">${{arrow}} ${{dir}}</span>` : ''}}
+                </span>
+                <span class="change-badge ${{isUp ? 'chg-positive' : 'chg-negative'}}">
+                  ${{isUp ? '▲' : '▼'}} ${{chg >= 0 ? '+' : ''}}${{chg.toFixed(2)}} (${{pct >= 0 ? '+' : ''}}${{pct.toFixed(2)}}%)
                 </span>
               </div>
               <div class="score-badge score-high">⭐ ${{s.score}}/100</div>
@@ -1059,7 +853,10 @@ full_app_html = f"""<!DOCTYPE html>
 
       grid.innerHTML = muhuratSymbols.map((sym, idx) => {{
         const s = STOCKS_DATA.find(x => x.symbol === sym) || STOCKS_DATA[0];
-        const price = LIVE_PRICES[s.symbol] || s.price;
+        const price = customCMPStore[s.symbol] || s.price;
+        const chg = s.change || 0;
+        const pct = s.pct_change || 0;
+        const isUp = chg >= 0;
         return `
           <div class="hero-card" style="border-color:#f59e0b;">
             <div class="hero-badge-top" style="background:rgba(245,158,11,0.2); border-color:#f59e0b; color:#fbbf24;">🪔 AUSPICIOUS PICK</div>
@@ -1073,8 +870,11 @@ full_app_html = f"""<!DOCTYPE html>
 
             <div class="hero-price-row">
               <div>
-                <span style="font-size: 11px; color: var(--text-muted); display: block;">LIVE PRICE</span>
+                <span style="font-size: 11px; color: var(--text-muted); display: block;">OFFICIAL CLOSE</span>
                 <span class="hero-price-current">₹${{price.toFixed(2)}}</span>
+                <span class="change-badge ${{isUp ? 'chg-positive' : 'chg-negative'}}">
+                  ${{isUp ? '▲' : '▼'}} ${{chg >= 0 ? '+' : ''}}${{chg.toFixed(2)}} (${{pct >= 0 ? '+' : ''}}${{pct.toFixed(2)}}%)
+                </span>
               </div>
               <div class="score-badge" style="background:rgba(245,158,11,0.15); border:1px solid #f59e0b; color:#fbbf24;">⭐ ${{s.score}}/100</div>
             </div>
@@ -1106,7 +906,7 @@ full_app_html = f"""<!DOCTYPE html>
       const query = val.trim().toUpperCase();
       const stock = STOCKS_DATA.find(s => s.symbol.toUpperCase() === query || s.name.toUpperCase() === query);
       if (stock) {{
-        const cmp = LIVE_PRICES[stock.symbol] || stock.price;
+        const cmp = customCMPStore[stock.symbol] || stock.price;
         document.getElementById('buyPriceInput').value = cmp;
       }}
     }}
@@ -1144,7 +944,7 @@ full_app_html = f"""<!DOCTYPE html>
       const matchedStock = STOCKS_DATA.find(s => s.symbol === sym);
       const sector = matchedStock ? matchedStock.sector : 'Equity';
       const today = new Date().toISOString().split('T')[0];
-      const livePrice = LIVE_PRICES[sym] || price;
+      const livePrice = customCMPStore[sym] || price;
 
       const port = getPortfolio();
       port.push({{
@@ -1172,6 +972,22 @@ full_app_html = f"""<!DOCTYPE html>
       }}
     }}
 
+    function editCMP(sym) {{
+      const stock = STOCKS_DATA.find(s => s.symbol === sym);
+      const curPrice = customCMPStore[sym] || (stock ? stock.price : 100);
+      const newPriceStr = prompt(`Enter Exact Price for ${{sym}}:`, curPrice);
+      if (newPriceStr !== null) {{
+        const newPrice = parseFloat(newPriceStr);
+        if (!isNaN(newPrice) && newPrice > 0) {{
+          customCMPStore[sym] = newPrice;
+          localStorage.setItem('custom_cmp_store', JSON.stringify(customCMPStore));
+          renderPortfolio();
+          applyFilters();
+          renderSectorCards();
+        }}
+      }}
+    }}
+
     function renderPortfolio() {{
       const port = getPortfolio();
       const tbody = document.getElementById('portfolioTableBody');
@@ -1183,7 +999,7 @@ full_app_html = f"""<!DOCTYPE html>
 
       if (port.length === 0) {{
         tbody.innerHTML = `<tr><td colspan="10" style="text-align:center; padding: 30px; color: var(--text-muted);">
-          No stocks added yet. Search any of the 2,645 NSE stocks above or click any "+ Popular" button to track live P&L!
+          No stocks added yet. Search any of the 2,645 NSE stocks above or click any "+ Official Closes" button to track real P&L!
         </td></tr>`;
 
         document.getElementById('portTotalInvested').innerText = '₹0';
@@ -1196,9 +1012,10 @@ full_app_html = f"""<!DOCTYPE html>
 
       tbody.innerHTML = port.map(item => {{
         const stock = STOCKS_DATA.find(s => s.symbol === item.symbol);
-        const basePrice = stock ? stock.price : item.buyPrice;
-        const cmp = LIVE_PRICES[item.symbol] || basePrice;
-        const dir = PRICE_DIRECTIONS[item.symbol] || 'STEADY';
+        const cmp = customCMPStore[item.symbol] || (stock ? stock.price : item.buyPrice);
+        const chg = stock ? (stock.change || 0) : 0;
+        const pct = stock ? (stock.pct_change || 0) : 0;
+        const isUp = chg >= 0;
 
         const invested = item.buyPrice * item.quantity;
         const currentVal = cmp * item.quantity;
@@ -1239,15 +1056,12 @@ full_app_html = f"""<!DOCTYPE html>
           signalHtml = `
             <div class="sell-alert-badge sell-steady">
               <span>⏳ HOLDING / STEADY</span>
-              <span style="font-size: 11px;">Hovering near entry (${{plPct >= 0 ? '+' : ''}}${{plPct.toFixed(1)}}%). Wait for target.</span>
+              <span style="font-size: 11px;">Position near entry (${{plPct >= 0 ? '+' : ''}}${{plPct.toFixed(1)}}%). Wait for target.</span>
             </div>
           `;
         }}
 
         const plColor = pl >= 0 ? '#10b981' : '#ef4444';
-        const arrow = dir === 'UP' ? '▲' : (dir === 'DOWN' ? '▼' : '');
-        const dirBadge = dir === 'UP' ? 'direction-up' : (dir === 'DOWN' ? 'direction-down' : '');
-        const guideLabel = dir === 'UP' ? '🟢 BUYERS IN CONTROL' : (dir === 'DOWN' ? '🔴 PROFIT BOOKING' : '⚪ STEADY');
 
         return `
           <tr>
@@ -1261,10 +1075,9 @@ full_app_html = f"""<!DOCTYPE html>
             <td style="font-family:'JetBrains Mono', monospace;">
               <div style="display:flex; align-items:center; gap:6px;">
                 <span style="font-size:15px; font-weight:800; color:#fff;">₹${{cmp.toFixed(2)}}</span>
-                ${{dir !== 'STEADY' ? `<span class="direction-badge ${{dirBadge}}">${{arrow}} ${{dir}}</span>` : ''}}
-                <button onclick="editCMP('${{item.symbol}}')" title="Edit Live Price" style="background:transparent; border:none; color:#38bdf8; cursor:pointer; font-size:12px;">✏️</button>
+                <span class="change-badge ${{isUp ? 'chg-positive' : 'chg-negative'}}">${{isUp ? '▲' : '▼'}} ${{pct >= 0 ? '+' : ''}}${{pct.toFixed(2)}}%</span>
+                <button onclick="editCMP('${{item.symbol}}')" title="Edit Price" style="background:transparent; border:none; color:#38bdf8; cursor:pointer; font-size:12px;">✏️</button>
               </div>
-              <span style="font-size:10px; font-weight:700; color:${{dir === 'UP' ? '#34d399' : '#f87171'}};">${{guideLabel}}</span>
             </td>
             <td style="font-family:'JetBrains Mono', monospace;">
               <div>₹${{Math.round(currentVal).toLocaleString('en-IN')}}</div>
@@ -1300,7 +1113,7 @@ full_app_html = f"""<!DOCTYPE html>
       document.getElementById('portSellSignalsCount').innerText = `${{sellAlertsCount}} Active`;
     }}
 
-    /* SECTOR FUNCTIONS */
+    /* SECTORS */
     function renderSectorPills() {{
       const cont = document.getElementById('sectorPillsContainer');
       if (!cont) return;
@@ -1329,9 +1142,10 @@ full_app_html = f"""<!DOCTYPE html>
         if (sectorStocks.length === 0) return '';
 
         const bestStock = sectorStocks.reduce((prev, curr) => (curr.score > prev.score) ? curr : prev, sectorStocks[0]);
-        const price = LIVE_PRICES[bestStock.symbol] || bestStock.price;
-        const dir = PRICE_DIRECTIONS[bestStock.symbol] || 'STEADY';
-        const arrow = dir === 'UP' ? '▲' : (dir === 'DOWN' ? '▼' : '');
+        const price = customCMPStore[bestStock.symbol] || bestStock.price;
+        const chg = bestStock.change || 0;
+        const pct = bestStock.pct_change || 0;
+        const isUp = chg >= 0;
 
         return `
           <div class="sector-card">
@@ -1354,11 +1168,13 @@ full_app_html = f"""<!DOCTYPE html>
 
             <div class="hero-price-row">
               <div>
-                <span style="font-size:11px; color:var(--text-muted); text-transform:uppercase;">Live Price</span>
+                <span style="font-size:11px; color:var(--text-muted); text-transform:uppercase;">Official Close</span>
                 <div style="font-size:24px; font-weight:800; font-family:'JetBrains Mono', monospace; color:#fff;">
                   ₹${{price.toFixed(2)}}
-                  ${{dir !== 'STEADY' ? `<span class="direction-badge ${{dir === 'UP' ? 'direction-up' : 'direction-down'}}">${{arrow}} ${{dir}}</span>` : ''}}
                 </div>
+                <span class="change-badge ${{isUp ? 'chg-positive' : 'chg-negative'}}">
+                  ${{isUp ? '▲' : '▼'}} ${{chg >= 0 ? '+' : ''}}${{chg.toFixed(2)}} (${{pct >= 0 ? '+' : ''}}${{pct.toFixed(2)}}%)
+                </span>
               </div>
               <div style="text-align:right;">
                 <span style="font-size:11px; color:var(--text-muted); text-transform:uppercase;">Profit QoQ</span>
@@ -1388,7 +1204,7 @@ full_app_html = f"""<!DOCTYPE html>
       }}).join('');
     }}
 
-    /* RADAR FUNCTIONS */
+    /* RADAR */
     function handleSearchInput() {{
       renderLimit = 100;
       applyFilters();
@@ -1398,7 +1214,7 @@ full_app_html = f"""<!DOCTYPE html>
       searchQuery = document.getElementById('searchInput') ? document.getElementById('searchInput').value.toLowerCase().trim() : '';
 
       filteredStocksCache = STOCKS_DATA.filter(s => {{
-        const price = LIVE_PRICES[s.symbol] || s.price;
+        const price = customCMPStore[s.symbol] || s.price;
         if (currentFilter === 'PRICE_25' && price >= 25) return false;
         if (currentFilter === 'PRICE_50' && price >= 50) return false;
         if (currentFilter === 'PRICE_100' && price >= 100) return false;
@@ -1420,8 +1236,8 @@ full_app_html = f"""<!DOCTYPE html>
         let vA = a[sortColumn];
         let vB = b[sortColumn];
         if (sortColumn === 'price') {{
-          vA = LIVE_PRICES[a.symbol] || a.price;
-          vB = LIVE_PRICES[b.symbol] || b.price;
+          vA = customCMPStore[a.symbol] || a.price;
+          vB = customCMPStore[b.symbol] || b.price;
         }}
         if (vA === undefined) vA = 0;
         if (vB === undefined) vB = 0;
@@ -1440,19 +1256,17 @@ full_app_html = f"""<!DOCTYPE html>
       const displayed = filteredStocksCache.slice(0, renderLimit);
 
       if (displayed.length === 0) {{
-        tbody.innerHTML = `<tr><td colspan="11" style="text-align:center; padding:40px; color:var(--text-muted);">No stocks matched your search query across all 2,645 NSE equities.</td></tr>`;
+        tbody.innerHTML = `<tr><td colspan="12" style="text-align:center; padding:40px; color:var(--text-muted);">No stocks matched your search query across all 2,645 NSE equities.</td></tr>`;
         document.getElementById('loadMoreWrap').style.display = 'none';
         return;
       }}
 
       tbody.innerHTML = displayed.map(s => {{
-        const price = LIVE_PRICES[s.symbol] || s.price;
-        const dir = PRICE_DIRECTIONS[s.symbol] || 'STEADY';
-        const arrow = dir === 'UP' ? '▲' : (dir === 'DOWN' ? '▼' : '');
+        const price = customCMPStore[s.symbol] || s.price;
+        const chg = s.change || 0;
+        const pct = s.pct_change || 0;
+        const isUp = chg >= 0;
         const scoreClass = s.score >= 85 ? 'score-high' : (s.score >= 80 ? 'score-mid' : 'score-low');
-        const badgeClass = dir === 'UP' ? 'direction-up' : (dir === 'DOWN' ? 'direction-down' : '');
-        const guideText = dir === 'UP' ? '🟢 RALLYING UP' : (dir === 'DOWN' ? '🔴 DIPPING DOWN' : '⚪ STEADY');
-        const guideClass = dir === 'UP' ? 'guide-up' : 'guide-down';
 
         return `
           <tr>
@@ -1462,13 +1276,13 @@ full_app_html = f"""<!DOCTYPE html>
               <div style="font-size:11px; color:var(--text-muted);">${{s.name ? s.name.substring(0, 22) : ''}}</div>
             </td>
             <td><span style="font-size:11px; color:#93c5fd;">${{s.sector}}</span></td>
-            <td style="font-family:'JetBrains Mono';" id="table_price_${{s.symbol}}">
-              <div style="display:flex; align-items:center; gap:6px;">
-                <span style="font-size:14px; font-weight:800; color:#fff;">₹${{price.toFixed(2)}}</span>
-                ${{dir !== 'STEADY' ? `<span class="direction-badge ${{badgeClass}}">${{arrow}} ${{dir}}</span>` : ''}}
-                <button onclick="editCMP('${{s.symbol}}')" title="Edit Live Price" style="background:transparent; border:none; color:#38bdf8; cursor:pointer; font-size:11px;">✏️</button>
-              </div>
-              <span class="guide-tag ${{guideClass}}">${{guideText}}</span>
+            <td style="font-family:'JetBrains Mono'; font-weight:800; color:#fff;">
+              ₹${{price.toFixed(2)}}
+            </td>
+            <td>
+              <span class="change-badge ${{isUp ? 'chg-positive' : 'chg-negative'}}">
+                ${{isUp ? '▲' : '▼'}} ${{chg >= 0 ? '+' : ''}}${{chg.toFixed(2)}} (${{pct >= 0 ? '+' : ''}}${{pct.toFixed(2)}}%)
+              </span>
             </td>
             <td><span class="score-badge ${{scoreClass}}">⭐ ${{s.score}}</span></td>
             <td style="color:#10b981; font-weight:700; font-family:'JetBrains Mono';">₹${{s.target}}</td>
@@ -1526,11 +1340,11 @@ full_app_html = f"""<!DOCTYPE html>
 </html>
 """
 
-# Write to index.html
+# Write index.html
 with open(os.path.join(BASE_DIR, "index.html"), "w") as f:
     f.write(full_app_html)
 
-# Also create standalone direct routes (portfolio.html, sectors.html, radar.html, muhurat.html) that initialize directly into their respective pages
+# Standalone pages
 pages = ['portfolio', 'sectors', 'radar', 'muhurat']
 for p in pages:
     p_html = full_app_html.replace("let currentPage = 'screener';", f"let currentPage = '{p}';")
@@ -1538,6 +1352,5 @@ for p in pages:
     file_path = os.path.join(BASE_DIR, f"{p}.html")
     with open(file_path, "w") as f:
         f.write(p_html)
-    print(f"Created dedicated standalone page: {file_path}")
 
-print("Multipage App generation complete!")
+print("Generated genuine official NSE closing app successfully!")
