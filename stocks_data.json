@@ -16,7 +16,8 @@
     "profit_qoq": "100.01",
     "trend": "BULLISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Banking & Financials"
   },
   {
     "rank": 2,
@@ -35,7 +36,8 @@
     "profit_qoq": "30.95",
     "trend": "BULLISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "FMCG & Consumer Goods"
   },
   {
     "rank": 3,
@@ -54,7 +56,8 @@
     "profit_qoq": "298.83",
     "trend": "BULLISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Metals & Mining"
   },
   {
     "rank": 4,
@@ -73,7 +76,8 @@
     "profit_qoq": "134.62",
     "trend": "BEARISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Infrastructure & Realty"
   },
   {
     "rank": 5,
@@ -92,7 +96,8 @@
     "profit_qoq": "53.54",
     "trend": "BEARISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Banking & Financials"
   },
   {
     "rank": 6,
@@ -111,7 +116,8 @@
     "profit_qoq": "208.27",
     "trend": "BEARISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Energy, Power & Oil"
   },
   {
     "rank": 7,
@@ -130,7 +136,8 @@
     "profit_qoq": "12.49",
     "trend": "BULLISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Industrial & Diversified"
   },
   {
     "rank": 8,
@@ -149,7 +156,8 @@
     "profit_qoq": "230.42",
     "trend": "BULLISH",
     "macd": "SELL/HOLD",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Jewellery & Textiles"
   },
   {
     "rank": 9,
@@ -168,7 +176,8 @@
     "profit_qoq": "26.37",
     "trend": "BULLISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Banking & Financials"
   },
   {
     "rank": 10,
@@ -187,7 +196,8 @@
     "profit_qoq": "16.4",
     "trend": "BEARISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Banking & Financials"
   },
   {
     "rank": 11,
@@ -206,7 +216,8 @@
     "profit_qoq": "327.8",
     "trend": "BEARISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Media & Telecom"
   },
   {
     "rank": 12,
@@ -225,7 +236,8 @@
     "profit_qoq": "125.79",
     "trend": "BEARISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Infrastructure & Realty"
   },
   {
     "rank": 13,
@@ -244,7 +256,8 @@
     "profit_qoq": "133.44",
     "trend": "BEARISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Infrastructure & Realty"
   },
   {
     "rank": 14,
@@ -263,7 +276,8 @@
     "profit_qoq": "111.62",
     "trend": "BEARISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Industrial & Diversified"
   },
   {
     "rank": 15,
@@ -282,7 +296,8 @@
     "profit_qoq": "42.26",
     "trend": "BEARISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "IT & Technology"
   },
   {
     "rank": 16,
@@ -301,7 +316,8 @@
     "profit_qoq": "76.54",
     "trend": "BEARISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Banking & Financials"
   },
   {
     "rank": 17,
@@ -320,7 +336,8 @@
     "profit_qoq": "470.19",
     "trend": "BULLISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Industrial & Diversified"
   },
   {
     "rank": 18,
@@ -339,7 +356,8 @@
     "profit_qoq": "40.84",
     "trend": "BEARISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Media & Telecom"
   },
   {
     "rank": 19,
@@ -358,7 +376,8 @@
     "profit_qoq": "97.89",
     "trend": "BEARISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Infrastructure & Realty"
   },
   {
     "rank": 20,
@@ -377,7 +396,8 @@
     "profit_qoq": "67.58",
     "trend": "BEARISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Metals & Mining"
   },
   {
     "rank": 21,
@@ -396,7 +416,8 @@
     "profit_qoq": "106.27",
     "trend": "BEARISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Industrial & Diversified"
   },
   {
     "rank": 22,
@@ -415,7 +436,8 @@
     "profit_qoq": "40462.42",
     "trend": "BULLISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Industrial & Diversified"
   },
   {
     "rank": 23,
@@ -434,7 +456,8 @@
     "profit_qoq": "233.22",
     "trend": "BEARISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Energy, Power & Oil"
   },
   {
     "rank": 24,
@@ -453,7 +476,8 @@
     "profit_qoq": "158.54",
     "trend": "BEARISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Industrial & Diversified"
   },
   {
     "rank": 25,
@@ -472,7 +496,8 @@
     "profit_qoq": "2523.26",
     "trend": "BEARISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Industrial & Diversified"
   },
   {
     "rank": 26,
@@ -491,7 +516,8 @@
     "profit_qoq": "253.32",
     "trend": "BEARISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Jewellery & Textiles"
   },
   {
     "rank": 27,
@@ -510,7 +536,8 @@
     "profit_qoq": "88.46",
     "trend": "BEARISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "IT & Technology"
   },
   {
     "rank": 28,
@@ -529,7 +556,8 @@
     "profit_qoq": "271.05",
     "trend": "BEARISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Industrial & Diversified"
   },
   {
     "rank": 29,
@@ -548,7 +576,8 @@
     "profit_qoq": "103.0",
     "trend": "BEARISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Banking & Financials"
   },
   {
     "rank": 30,
@@ -567,7 +596,8 @@
     "profit_qoq": "23.05",
     "trend": "BULLISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Media & Telecom"
   },
   {
     "rank": 31,
@@ -586,7 +616,8 @@
     "profit_qoq": "-3.58",
     "trend": "BULLISH",
     "macd": "SELL/HOLD",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Industrial & Diversified"
   },
   {
     "rank": 32,
@@ -605,7 +636,8 @@
     "profit_qoq": "402.94",
     "trend": "BULLISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Metals & Mining"
   },
   {
     "rank": 33,
@@ -624,7 +656,8 @@
     "profit_qoq": "148.42",
     "trend": "BULLISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Jewellery & Textiles"
   },
   {
     "rank": 34,
@@ -643,7 +676,8 @@
     "profit_qoq": "-24.95",
     "trend": "BULLISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Energy, Power & Oil"
   },
   {
     "rank": 35,
@@ -662,7 +696,8 @@
     "profit_qoq": "203.61",
     "trend": "BEARISH",
     "macd": "SELL/HOLD",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Industrial & Diversified"
   },
   {
     "rank": 36,
@@ -681,7 +716,8 @@
     "profit_qoq": "-15.26",
     "trend": "BULLISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "FMCG & Consumer Goods"
   },
   {
     "rank": 37,
@@ -700,7 +736,8 @@
     "profit_qoq": "9.98",
     "trend": "BEARISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Energy, Power & Oil"
   },
   {
     "rank": 38,
@@ -719,7 +756,8 @@
     "profit_qoq": "38.57",
     "trend": "BEARISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Banking & Financials"
   },
   {
     "rank": 39,
@@ -738,7 +776,8 @@
     "profit_qoq": "3.38",
     "trend": "BEARISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Infrastructure & Realty"
   },
   {
     "rank": 40,
@@ -757,7 +796,8 @@
     "profit_qoq": "184.49",
     "trend": "BEARISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Energy, Power & Oil"
   },
   {
     "rank": 41,
@@ -776,7 +816,8 @@
     "profit_qoq": "214.21",
     "trend": "BEARISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Pharma & Healthcare"
   },
   {
     "rank": 42,
@@ -795,7 +836,8 @@
     "profit_qoq": "302.15",
     "trend": "BEARISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Industrial & Diversified"
   },
   {
     "rank": 43,
@@ -814,7 +856,8 @@
     "profit_qoq": "147.34",
     "trend": "BEARISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Industrial & Diversified"
   },
   {
     "rank": 44,
@@ -833,7 +876,8 @@
     "profit_qoq": "253.13",
     "trend": "BEARISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Industrial & Diversified"
   },
   {
     "rank": 45,
@@ -852,7 +896,8 @@
     "profit_qoq": "404.34",
     "trend": "BEARISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "FMCG & Consumer Goods"
   },
   {
     "rank": 46,
@@ -871,7 +916,8 @@
     "profit_qoq": "2354.05",
     "trend": "BEARISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Industrial & Diversified"
   },
   {
     "rank": 47,
@@ -890,7 +936,8 @@
     "profit_qoq": "565.73",
     "trend": "BEARISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Industrial & Diversified"
   },
   {
     "rank": 48,
@@ -909,7 +956,8 @@
     "profit_qoq": "114.68",
     "trend": "BEARISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Banking & Financials"
   },
   {
     "rank": 49,
@@ -928,7 +976,8 @@
     "profit_qoq": "7.83",
     "trend": "BULLISH",
     "macd": "SELL/HOLD",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Metals & Mining"
   },
   {
     "rank": 50,
@@ -947,7 +996,8 @@
     "profit_qoq": "61.47",
     "trend": "BEARISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Industrial & Diversified"
   },
   {
     "rank": 51,
@@ -966,7 +1016,8 @@
     "profit_qoq": "143.0",
     "trend": "BEARISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Industrial & Diversified"
   },
   {
     "rank": 52,
@@ -985,7 +1036,8 @@
     "profit_qoq": "-8.43",
     "trend": "BEARISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Industrial & Diversified"
   },
   {
     "rank": 53,
@@ -1004,7 +1056,8 @@
     "profit_qoq": "187.7",
     "trend": "BEARISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Industrial & Diversified"
   },
   {
     "rank": 54,
@@ -1023,7 +1076,8 @@
     "profit_qoq": "209.16",
     "trend": "BEARISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Pharma & Healthcare"
   },
   {
     "rank": 55,
@@ -1042,7 +1096,8 @@
     "profit_qoq": "85.11",
     "trend": "BEARISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Industrial & Diversified"
   },
   {
     "rank": 56,
@@ -1061,7 +1116,8 @@
     "profit_qoq": "153.25",
     "trend": "BEARISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Pharma & Healthcare"
   },
   {
     "rank": 57,
@@ -1080,7 +1136,8 @@
     "profit_qoq": "844.42",
     "trend": "BEARISH",
     "macd": "SELL/HOLD",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "IT & Technology"
   },
   {
     "rank": 58,
@@ -1099,7 +1156,8 @@
     "profit_qoq": "49.91",
     "trend": "BULLISH",
     "macd": "SELL/HOLD",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Industrial & Diversified"
   },
   {
     "rank": 59,
@@ -1118,7 +1176,8 @@
     "profit_qoq": "11.52",
     "trend": "BULLISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "FMCG & Consumer Goods"
   },
   {
     "rank": 60,
@@ -1137,7 +1196,8 @@
     "profit_qoq": "48.83",
     "trend": "BULLISH",
     "macd": "SELL/HOLD",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Jewellery & Textiles"
   },
   {
     "rank": 61,
@@ -1156,7 +1216,8 @@
     "profit_qoq": "21.48",
     "trend": "BULLISH",
     "macd": "SELL/HOLD",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Banking & Financials"
   },
   {
     "rank": 62,
@@ -1175,7 +1236,8 @@
     "profit_qoq": "94.9",
     "trend": "BULLISH",
     "macd": "SELL/HOLD",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Banking & Financials"
   },
   {
     "rank": 63,
@@ -1194,7 +1256,8 @@
     "profit_qoq": "14.36",
     "trend": "BEARISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Banking & Financials"
   },
   {
     "rank": 64,
@@ -1213,7 +1276,8 @@
     "profit_qoq": "-8.38",
     "trend": "BEARISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Industrial & Diversified"
   },
   {
     "rank": 65,
@@ -1232,7 +1296,8 @@
     "profit_qoq": "108.04",
     "trend": "BULLISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Pharma & Healthcare"
   },
   {
     "rank": 66,
@@ -1251,7 +1316,8 @@
     "profit_qoq": "334.19",
     "trend": "BULLISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Industrial & Diversified"
   },
   {
     "rank": 67,
@@ -1270,7 +1336,8 @@
     "profit_qoq": "18.38",
     "trend": "BEARISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Banking & Financials"
   },
   {
     "rank": 68,
@@ -1289,7 +1356,8 @@
     "profit_qoq": "4.23",
     "trend": "BEARISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Industrial & Diversified"
   },
   {
     "rank": 69,
@@ -1308,7 +1376,8 @@
     "profit_qoq": "24.6",
     "trend": "BEARISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Industrial & Diversified"
   },
   {
     "rank": 70,
@@ -1327,7 +1396,8 @@
     "profit_qoq": "-57.04",
     "trend": "BEARISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Banking & Financials"
   },
   {
     "rank": 71,
@@ -1346,7 +1416,8 @@
     "profit_qoq": "-4.18",
     "trend": "BEARISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Industrial & Diversified"
   },
   {
     "rank": 72,
@@ -1365,7 +1436,8 @@
     "profit_qoq": "32.87",
     "trend": "BULLISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Metals & Mining"
   },
   {
     "rank": 73,
@@ -1384,7 +1456,8 @@
     "profit_qoq": "6.47",
     "trend": "BEARISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Metals & Mining"
   },
   {
     "rank": 74,
@@ -1403,7 +1476,8 @@
     "profit_qoq": "536.45",
     "trend": "BULLISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "FMCG & Consumer Goods"
   },
   {
     "rank": 75,
@@ -1422,7 +1496,8 @@
     "profit_qoq": "1412.77",
     "trend": "BEARISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Energy, Power & Oil"
   },
   {
     "rank": 76,
@@ -1441,7 +1516,8 @@
     "profit_qoq": "23.94",
     "trend": "BEARISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Banking & Financials"
   },
   {
     "rank": 77,
@@ -1460,7 +1536,8 @@
     "profit_qoq": "41.23",
     "trend": "BULLISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Industrial & Diversified"
   },
   {
     "rank": 78,
@@ -1479,7 +1556,8 @@
     "profit_qoq": "18.51",
     "trend": "BEARISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Industrial & Diversified"
   },
   {
     "rank": 79,
@@ -1498,7 +1576,8 @@
     "profit_qoq": "nan",
     "trend": "BULLISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "IT & Technology"
   },
   {
     "rank": 80,
@@ -1517,7 +1596,8 @@
     "profit_qoq": "-19.4",
     "trend": "BULLISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Industrial & Diversified"
   },
   {
     "rank": 81,
@@ -1536,7 +1616,8 @@
     "profit_qoq": "93.54",
     "trend": "BEARISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Industrial & Diversified"
   },
   {
     "rank": 82,
@@ -1555,7 +1636,8 @@
     "profit_qoq": "10002.23",
     "trend": "BEARISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Automobile & Ancillary"
   },
   {
     "rank": 83,
@@ -1574,7 +1656,8 @@
     "profit_qoq": "1329.2",
     "trend": "BEARISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Industrial & Diversified"
   },
   {
     "rank": 84,
@@ -1593,7 +1676,8 @@
     "profit_qoq": "870.96",
     "trend": "BEARISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "FMCG & Consumer Goods"
   },
   {
     "rank": 85,
@@ -1612,7 +1696,8 @@
     "profit_qoq": "950.58",
     "trend": "BEARISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Industrial & Diversified"
   },
   {
     "rank": 86,
@@ -1631,7 +1716,8 @@
     "profit_qoq": "42.8",
     "trend": "BEARISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Automobile & Ancillary"
   },
   {
     "rank": 87,
@@ -1650,7 +1736,8 @@
     "profit_qoq": "436.18",
     "trend": "BEARISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "IT & Technology"
   },
   {
     "rank": 88,
@@ -1669,7 +1756,8 @@
     "profit_qoq": "113.69",
     "trend": "BEARISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Industrial & Diversified"
   },
   {
     "rank": 89,
@@ -1688,7 +1776,8 @@
     "profit_qoq": "123.64",
     "trend": "BEARISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Industrial & Diversified"
   },
   {
     "rank": 90,
@@ -1707,7 +1796,8 @@
     "profit_qoq": "291.83",
     "trend": "BEARISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Industrial & Diversified"
   },
   {
     "rank": 91,
@@ -1726,7 +1816,8 @@
     "profit_qoq": "110.12",
     "trend": "BEARISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Energy, Power & Oil"
   },
   {
     "rank": 92,
@@ -1745,7 +1836,8 @@
     "profit_qoq": "209.85",
     "trend": "BEARISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "IT & Technology"
   },
   {
     "rank": 93,
@@ -1764,7 +1856,8 @@
     "profit_qoq": "50.64",
     "trend": "BEARISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Industrial & Diversified"
   },
   {
     "rank": 94,
@@ -1783,7 +1876,8 @@
     "profit_qoq": "256.85",
     "trend": "BEARISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "IT & Technology"
   },
   {
     "rank": 95,
@@ -1802,7 +1896,8 @@
     "profit_qoq": "32.8",
     "trend": "BEARISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Industrial & Diversified"
   },
   {
     "rank": 96,
@@ -1821,7 +1916,8 @@
     "profit_qoq": "42.53",
     "trend": "BEARISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Industrial & Diversified"
   },
   {
     "rank": 97,
@@ -1840,7 +1936,8 @@
     "profit_qoq": "330.34",
     "trend": "BEARISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Industrial & Diversified"
   },
   {
     "rank": 98,
@@ -1859,7 +1956,8 @@
     "profit_qoq": "177.49",
     "trend": "BEARISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Industrial & Diversified"
   },
   {
     "rank": 99,
@@ -1878,7 +1976,8 @@
     "profit_qoq": "281.73",
     "trend": "BEARISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Energy, Power & Oil"
   },
   {
     "rank": 100,
@@ -1897,7 +1996,8 @@
     "profit_qoq": "26.3",
     "trend": "BEARISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Pharma & Healthcare"
   },
   {
     "rank": 101,
@@ -1916,7 +2016,8 @@
     "profit_qoq": "38.17",
     "trend": "BEARISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Energy, Power & Oil"
   },
   {
     "rank": 102,
@@ -1935,7 +2036,8 @@
     "profit_qoq": "113.1",
     "trend": "BEARISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Energy, Power & Oil"
   },
   {
     "rank": 103,
@@ -1954,7 +2056,8 @@
     "profit_qoq": "26.19",
     "trend": "BEARISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Industrial & Diversified"
   },
   {
     "rank": 104,
@@ -1973,7 +2076,8 @@
     "profit_qoq": "277.8",
     "trend": "BEARISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Banking & Financials"
   },
   {
     "rank": 105,
@@ -1992,7 +2096,8 @@
     "profit_qoq": "25.86",
     "trend": "BEARISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Industrial & Diversified"
   },
   {
     "rank": 106,
@@ -2011,7 +2116,8 @@
     "profit_qoq": "126.73",
     "trend": "BEARISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Energy, Power & Oil"
   },
   {
     "rank": 107,
@@ -2030,7 +2136,8 @@
     "profit_qoq": "82.8",
     "trend": "BEARISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Pharma & Healthcare"
   },
   {
     "rank": 108,
@@ -2049,7 +2156,8 @@
     "profit_qoq": "28.89",
     "trend": "BEARISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Banking & Financials"
   },
   {
     "rank": 109,
@@ -2068,7 +2176,8 @@
     "profit_qoq": "43.98",
     "trend": "BEARISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Energy, Power & Oil"
   },
   {
     "rank": 110,
@@ -2087,7 +2196,8 @@
     "profit_qoq": "63.1",
     "trend": "BEARISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Energy, Power & Oil"
   },
   {
     "rank": 111,
@@ -2106,7 +2216,8 @@
     "profit_qoq": "179.91",
     "trend": "BEARISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Industrial & Diversified"
   },
   {
     "rank": 112,
@@ -2125,7 +2236,8 @@
     "profit_qoq": "19.14",
     "trend": "BEARISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "FMCG & Consumer Goods"
   },
   {
     "rank": 113,
@@ -2144,7 +2256,8 @@
     "profit_qoq": "246.49",
     "trend": "BULLISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Industrial & Diversified"
   },
   {
     "rank": 114,
@@ -2163,7 +2276,8 @@
     "profit_qoq": "107.81",
     "trend": "BEARISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Industrial & Diversified"
   },
   {
     "rank": 115,
@@ -2182,7 +2296,8 @@
     "profit_qoq": "5.59",
     "trend": "BEARISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Banking & Financials"
   },
   {
     "rank": 116,
@@ -2201,7 +2316,8 @@
     "profit_qoq": "30.35",
     "trend": "BEARISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "IT & Technology"
   },
   {
     "rank": 117,
@@ -2220,7 +2336,8 @@
     "profit_qoq": "129.68",
     "trend": "BEARISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "IT & Technology"
   },
   {
     "rank": 118,
@@ -2239,7 +2356,8 @@
     "profit_qoq": "259.74",
     "trend": "BEARISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Metals & Mining"
   },
   {
     "rank": 119,
@@ -2258,7 +2376,8 @@
     "profit_qoq": "500.08",
     "trend": "BEARISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Industrial & Diversified"
   },
   {
     "rank": 120,
@@ -2277,7 +2396,8 @@
     "profit_qoq": "58.75",
     "trend": "BEARISH",
     "macd": "SELL/HOLD",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Industrial & Diversified"
   },
   {
     "rank": 121,
@@ -2296,7 +2416,8 @@
     "profit_qoq": "203.35",
     "trend": "BEARISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "IT & Technology"
   },
   {
     "rank": 122,
@@ -2315,7 +2436,8 @@
     "profit_qoq": "97.09",
     "trend": "BEARISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Pharma & Healthcare"
   },
   {
     "rank": 123,
@@ -2334,7 +2456,8 @@
     "profit_qoq": "57.62",
     "trend": "BEARISH",
     "macd": "SELL/HOLD",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Pharma & Healthcare"
   },
   {
     "rank": 124,
@@ -2353,7 +2476,8 @@
     "profit_qoq": "50.49",
     "trend": "BULLISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Industrial & Diversified"
   },
   {
     "rank": 125,
@@ -2372,7 +2496,8 @@
     "profit_qoq": "41.72",
     "trend": "BEARISH",
     "macd": "SELL/HOLD",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Energy, Power & Oil"
   },
   {
     "rank": 126,
@@ -2391,7 +2516,8 @@
     "profit_qoq": "153.24",
     "trend": "BEARISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Industrial & Diversified"
   },
   {
     "rank": 127,
@@ -2410,7 +2536,8 @@
     "profit_qoq": "227.18",
     "trend": "BEARISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Pharma & Healthcare"
   },
   {
     "rank": 128,
@@ -2429,7 +2556,8 @@
     "profit_qoq": "2.77",
     "trend": "BEARISH",
     "macd": "SELL/HOLD",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Industrial & Diversified"
   },
   {
     "rank": 129,
@@ -2448,7 +2576,8 @@
     "profit_qoq": "97.45",
     "trend": "BEARISH",
     "macd": "SELL/HOLD",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Energy, Power & Oil"
   },
   {
     "rank": 130,
@@ -2467,7 +2596,8 @@
     "profit_qoq": "5.85",
     "trend": "BEARISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "IT & Technology"
   },
   {
     "rank": 131,
@@ -2486,7 +2616,8 @@
     "profit_qoq": "90.4",
     "trend": "BEARISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Banking & Financials"
   },
   {
     "rank": 132,
@@ -2505,7 +2636,8 @@
     "profit_qoq": "0.29",
     "trend": "BULLISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Industrial & Diversified"
   },
   {
     "rank": 133,
@@ -2524,7 +2656,8 @@
     "profit_qoq": "-15.72",
     "trend": "BEARISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Industrial & Diversified"
   },
   {
     "rank": 134,
@@ -2543,7 +2676,8 @@
     "profit_qoq": "9.44",
     "trend": "BEARISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Banking & Financials"
   },
   {
     "rank": 135,
@@ -2562,7 +2696,8 @@
     "profit_qoq": "12.89",
     "trend": "BULLISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Banking & Financials"
   },
   {
     "rank": 136,
@@ -2581,7 +2716,8 @@
     "profit_qoq": "-4.18",
     "trend": "BEARISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Industrial & Diversified"
   },
   {
     "rank": 137,
@@ -2600,7 +2736,8 @@
     "profit_qoq": "20.55",
     "trend": "BEARISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Infrastructure & Realty"
   },
   {
     "rank": 138,
@@ -2619,7 +2756,8 @@
     "profit_qoq": "32.59",
     "trend": "BEARISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Banking & Financials"
   },
   {
     "rank": 139,
@@ -2638,7 +2776,8 @@
     "profit_qoq": "100.62",
     "trend": "BULLISH",
     "macd": "SELL/HOLD",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "IT & Technology"
   },
   {
     "rank": 140,
@@ -2657,7 +2796,8 @@
     "profit_qoq": "58.05",
     "trend": "BULLISH",
     "macd": "SELL/HOLD",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Industrial & Diversified"
   },
   {
     "rank": 141,
@@ -2676,7 +2816,8 @@
     "profit_qoq": "15.07",
     "trend": "BEARISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Industrial & Diversified"
   },
   {
     "rank": 142,
@@ -2695,7 +2836,8 @@
     "profit_qoq": "897.83",
     "trend": "BEARISH",
     "macd": "SELL/HOLD",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Infrastructure & Realty"
   },
   {
     "rank": 143,
@@ -2714,7 +2856,8 @@
     "profit_qoq": "13.86",
     "trend": "BEARISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Infrastructure & Realty"
   },
   {
     "rank": 144,
@@ -2733,7 +2876,8 @@
     "profit_qoq": "8920.0",
     "trend": "BEARISH",
     "macd": "SELL/HOLD",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Infrastructure & Realty"
   },
   {
     "rank": 145,
@@ -2752,7 +2896,8 @@
     "profit_qoq": "9.48",
     "trend": "BEARISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "FMCG & Consumer Goods"
   },
   {
     "rank": 146,
@@ -2771,7 +2916,8 @@
     "profit_qoq": "-5.24",
     "trend": "BEARISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Pharma & Healthcare"
   },
   {
     "rank": 147,
@@ -2790,7 +2936,8 @@
     "profit_qoq": "63.74",
     "trend": "BEARISH",
     "macd": "SELL/HOLD",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Industrial & Diversified"
   },
   {
     "rank": 148,
@@ -2809,7 +2956,8 @@
     "profit_qoq": "12.31",
     "trend": "BEARISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Banking & Financials"
   },
   {
     "rank": 149,
@@ -2828,7 +2976,8 @@
     "profit_qoq": "44.3",
     "trend": "BEARISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Infrastructure & Realty"
   },
   {
     "rank": 150,
@@ -2847,7 +2996,8 @@
     "profit_qoq": "23.97",
     "trend": "BEARISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Industrial & Diversified"
   },
   {
     "rank": 151,
@@ -2866,7 +3016,8 @@
     "profit_qoq": "-43.66",
     "trend": "BEARISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Industrial & Diversified"
   },
   {
     "rank": 152,
@@ -2885,7 +3036,8 @@
     "profit_qoq": "53.71",
     "trend": "BULLISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Automobile & Ancillary"
   },
   {
     "rank": 153,
@@ -2904,7 +3056,8 @@
     "profit_qoq": "15.92",
     "trend": "BEARISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Industrial & Diversified"
   },
   {
     "rank": 154,
@@ -2923,7 +3076,8 @@
     "profit_qoq": "24.27",
     "trend": "BEARISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Banking & Financials"
   },
   {
     "rank": 155,
@@ -2942,7 +3096,8 @@
     "profit_qoq": "18.63",
     "trend": "BEARISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Industrial & Diversified"
   },
   {
     "rank": 156,
@@ -2961,7 +3116,8 @@
     "profit_qoq": "4.1",
     "trend": "BEARISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Banking & Financials"
   },
   {
     "rank": 157,
@@ -2980,7 +3136,8 @@
     "profit_qoq": "233.3",
     "trend": "BEARISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Banking & Financials"
   },
   {
     "rank": 158,
@@ -2999,7 +3156,8 @@
     "profit_qoq": "62.08",
     "trend": "BULLISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Industrial & Diversified"
   },
   {
     "rank": 159,
@@ -3018,7 +3176,8 @@
     "profit_qoq": "747.76",
     "trend": "BEARISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Industrial & Diversified"
   },
   {
     "rank": 160,
@@ -3037,7 +3196,8 @@
     "profit_qoq": "102.75",
     "trend": "BEARISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Industrial & Diversified"
   },
   {
     "rank": 161,
@@ -3056,7 +3216,8 @@
     "profit_qoq": "30.02",
     "trend": "BEARISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Industrial & Diversified"
   },
   {
     "rank": 162,
@@ -3075,7 +3236,8 @@
     "profit_qoq": "62.07",
     "trend": "BEARISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Industrial & Diversified"
   },
   {
     "rank": 163,
@@ -3094,7 +3256,8 @@
     "profit_qoq": "192.26",
     "trend": "BEARISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Industrial & Diversified"
   },
   {
     "rank": 164,
@@ -3113,7 +3276,8 @@
     "profit_qoq": "52.99",
     "trend": "BEARISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Banking & Financials"
   },
   {
     "rank": 165,
@@ -3132,7 +3296,8 @@
     "profit_qoq": "-286.91",
     "trend": "BULLISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Pharma & Healthcare"
   },
   {
     "rank": 166,
@@ -3151,7 +3316,8 @@
     "profit_qoq": "53.11",
     "trend": "BEARISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Industrial & Diversified"
   },
   {
     "rank": 167,
@@ -3170,7 +3336,8 @@
     "profit_qoq": "16.93",
     "trend": "BEARISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Industrial & Diversified"
   },
   {
     "rank": 168,
@@ -3189,7 +3356,8 @@
     "profit_qoq": "153.56",
     "trend": "BEARISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Industrial & Diversified"
   },
   {
     "rank": 169,
@@ -3208,7 +3376,8 @@
     "profit_qoq": "100.99",
     "trend": "BEARISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Banking & Financials"
   },
   {
     "rank": 170,
@@ -3227,7 +3396,8 @@
     "profit_qoq": "70.06",
     "trend": "BEARISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Industrial & Diversified"
   },
   {
     "rank": 171,
@@ -3246,7 +3416,8 @@
     "profit_qoq": "1.44",
     "trend": "BULLISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Banking & Financials"
   },
   {
     "rank": 172,
@@ -3265,7 +3436,8 @@
     "profit_qoq": "100.16",
     "trend": "BEARISH",
     "macd": "SELL/HOLD",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Industrial & Diversified"
   },
   {
     "rank": 173,
@@ -3284,7 +3456,8 @@
     "profit_qoq": "109.95",
     "trend": "BEARISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Industrial & Diversified"
   },
   {
     "rank": 174,
@@ -3303,7 +3476,8 @@
     "profit_qoq": "-33.98",
     "trend": "BEARISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Industrial & Diversified"
   },
   {
     "rank": 175,
@@ -3322,7 +3496,8 @@
     "profit_qoq": "3376.97",
     "trend": "BEARISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Industrial & Diversified"
   },
   {
     "rank": 176,
@@ -3341,7 +3516,8 @@
     "profit_qoq": "14406.05",
     "trend": "BEARISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Media & Telecom"
   },
   {
     "rank": 177,
@@ -3360,7 +3536,8 @@
     "profit_qoq": "219.64",
     "trend": "BEARISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Banking & Financials"
   },
   {
     "rank": 178,
@@ -3379,7 +3556,8 @@
     "profit_qoq": "160.03",
     "trend": "BEARISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Banking & Financials"
   },
   {
     "rank": 179,
@@ -3398,7 +3576,8 @@
     "profit_qoq": "111.24",
     "trend": "BULLISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "FMCG & Consumer Goods"
   },
   {
     "rank": 180,
@@ -3417,7 +3596,8 @@
     "profit_qoq": "-4.07",
     "trend": "BEARISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Industrial & Diversified"
   },
   {
     "rank": 181,
@@ -3436,7 +3616,8 @@
     "profit_qoq": "166.58",
     "trend": "BEARISH",
     "macd": "SELL/HOLD",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Pharma & Healthcare"
   },
   {
     "rank": 182,
@@ -3455,7 +3636,8 @@
     "profit_qoq": "9.78",
     "trend": "BULLISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Industrial & Diversified"
   },
   {
     "rank": 183,
@@ -3474,7 +3656,8 @@
     "profit_qoq": "255.85",
     "trend": "BEARISH",
     "macd": "SELL/HOLD",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Industrial & Diversified"
   },
   {
     "rank": 184,
@@ -3493,7 +3676,8 @@
     "profit_qoq": "14.36",
     "trend": "BEARISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Banking & Financials"
   },
   {
     "rank": 185,
@@ -3512,7 +3696,8 @@
     "profit_qoq": "125.5",
     "trend": "BEARISH",
     "macd": "SELL/HOLD",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Industrial & Diversified"
   },
   {
     "rank": 186,
@@ -3531,7 +3716,8 @@
     "profit_qoq": "16.0",
     "trend": "BEARISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Industrial & Diversified"
   },
   {
     "rank": 187,
@@ -3550,7 +3736,8 @@
     "profit_qoq": "143.92",
     "trend": "BEARISH",
     "macd": "SELL/HOLD",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Industrial & Diversified"
   },
   {
     "rank": 188,
@@ -3569,7 +3756,8 @@
     "profit_qoq": "-19.73",
     "trend": "BEARISH",
     "macd": "SELL/HOLD",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Energy, Power & Oil"
   },
   {
     "rank": 189,
@@ -3588,7 +3776,8 @@
     "profit_qoq": "31.27",
     "trend": "BULLISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "FMCG & Consumer Goods"
   },
   {
     "rank": 190,
@@ -3607,7 +3796,8 @@
     "profit_qoq": "31.01",
     "trend": "BEARISH",
     "macd": "SELL/HOLD",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Industrial & Diversified"
   },
   {
     "rank": 191,
@@ -3626,7 +3816,8 @@
     "profit_qoq": "1.04",
     "trend": "BEARISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Pharma & Healthcare"
   },
   {
     "rank": 192,
@@ -3645,7 +3836,8 @@
     "profit_qoq": "-8.59",
     "trend": "BEARISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Banking & Financials"
   },
   {
     "rank": 193,
@@ -3664,7 +3856,8 @@
     "profit_qoq": "14.91",
     "trend": "BEARISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Banking & Financials"
   },
   {
     "rank": 194,
@@ -3683,7 +3876,8 @@
     "profit_qoq": "-5.65",
     "trend": "BULLISH",
     "macd": "SELL/HOLD",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Industrial & Diversified"
   },
   {
     "rank": 195,
@@ -3702,7 +3896,8 @@
     "profit_qoq": "6.73",
     "trend": "BEARISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Banking & Financials"
   },
   {
     "rank": 196,
@@ -3721,7 +3916,8 @@
     "profit_qoq": "-1.98",
     "trend": "BEARISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Industrial & Diversified"
   },
   {
     "rank": 197,
@@ -3740,7 +3936,8 @@
     "profit_qoq": "14.36",
     "trend": "BEARISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "IT & Technology"
   },
   {
     "rank": 198,
@@ -3759,7 +3956,8 @@
     "profit_qoq": "16.43",
     "trend": "BEARISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Pharma & Healthcare"
   },
   {
     "rank": 199,
@@ -3778,7 +3976,8 @@
     "profit_qoq": "nan",
     "trend": "BEARISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Industrial & Diversified"
   },
   {
     "rank": 200,
@@ -3797,7 +3996,8 @@
     "profit_qoq": "5.83",
     "trend": "BEARISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Banking & Financials"
   },
   {
     "rank": 201,
@@ -3816,7 +4016,8 @@
     "profit_qoq": "-12.4",
     "trend": "BEARISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Infrastructure & Realty"
   },
   {
     "rank": 202,
@@ -3835,7 +4036,8 @@
     "profit_qoq": "1.16",
     "trend": "BULLISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Energy, Power & Oil"
   },
   {
     "rank": 203,
@@ -3854,7 +4056,8 @@
     "profit_qoq": "18.44",
     "trend": "BULLISH",
     "macd": "SELL/HOLD",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Industrial & Diversified"
   },
   {
     "rank": 204,
@@ -3873,7 +4076,8 @@
     "profit_qoq": "-27.05",
     "trend": "BULLISH",
     "macd": "SELL/HOLD",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Industrial & Diversified"
   },
   {
     "rank": 205,
@@ -3892,7 +4096,8 @@
     "profit_qoq": "1.0",
     "trend": "BEARISH",
     "macd": "SELL/HOLD",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Industrial & Diversified"
   },
   {
     "rank": 206,
@@ -3911,7 +4116,8 @@
     "profit_qoq": "-6.98",
     "trend": "BEARISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Industrial & Diversified"
   },
   {
     "rank": 207,
@@ -3930,7 +4136,8 @@
     "profit_qoq": "14.31",
     "trend": "BEARISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Banking & Financials"
   },
   {
     "rank": 208,
@@ -3949,7 +4156,8 @@
     "profit_qoq": "21.46",
     "trend": "BEARISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "IT & Technology"
   },
   {
     "rank": 209,
@@ -3968,7 +4176,8 @@
     "profit_qoq": "24.89",
     "trend": "BEARISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Industrial & Diversified"
   },
   {
     "rank": 210,
@@ -3987,7 +4196,8 @@
     "profit_qoq": "-1.28",
     "trend": "BULLISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Industrial & Diversified"
   },
   {
     "rank": 211,
@@ -4006,7 +4216,8 @@
     "profit_qoq": "7.83",
     "trend": "BEARISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "FMCG & Consumer Goods"
   },
   {
     "rank": 212,
@@ -4025,7 +4236,8 @@
     "profit_qoq": "-31.07",
     "trend": "BULLISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Automobile & Ancillary"
   },
   {
     "rank": 213,
@@ -4044,7 +4256,8 @@
     "profit_qoq": "14.96",
     "trend": "BEARISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Industrial & Diversified"
   },
   {
     "rank": 214,
@@ -4063,7 +4276,8 @@
     "profit_qoq": "-22.55",
     "trend": "BULLISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Infrastructure & Realty"
   },
   {
     "rank": 215,
@@ -4082,7 +4296,8 @@
     "profit_qoq": "-17.86",
     "trend": "BEARISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Industrial & Diversified"
   },
   {
     "rank": 216,
@@ -4101,7 +4316,8 @@
     "profit_qoq": "8.71",
     "trend": "BEARISH",
     "macd": "SELL/HOLD",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Banking & Financials"
   },
   {
     "rank": 217,
@@ -4120,7 +4336,8 @@
     "profit_qoq": "4.22",
     "trend": "BULLISH",
     "macd": "SELL/HOLD",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Industrial & Diversified"
   },
   {
     "rank": 218,
@@ -4139,7 +4356,8 @@
     "profit_qoq": "-23.02",
     "trend": "BEARISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Infrastructure & Realty"
   },
   {
     "rank": 219,
@@ -4158,7 +4376,8 @@
     "profit_qoq": "0.44",
     "trend": "BEARISH",
     "macd": "SELL/HOLD",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Banking & Financials"
   },
   {
     "rank": 220,
@@ -4177,7 +4396,8 @@
     "profit_qoq": "38.38",
     "trend": "BEARISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Industrial & Diversified"
   },
   {
     "rank": 221,
@@ -4196,7 +4416,8 @@
     "profit_qoq": "12.18",
     "trend": "BEARISH",
     "macd": "SELL/HOLD",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Media & Telecom"
   },
   {
     "rank": 222,
@@ -4215,7 +4436,8 @@
     "profit_qoq": "53.71",
     "trend": "BEARISH",
     "macd": "SELL/HOLD",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Industrial & Diversified"
   },
   {
     "rank": 223,
@@ -4234,7 +4456,8 @@
     "profit_qoq": "130.56",
     "trend": "BEARISH",
     "macd": "SELL/HOLD",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Pharma & Healthcare"
   },
   {
     "rank": 224,
@@ -4253,7 +4476,8 @@
     "profit_qoq": "-159.93",
     "trend": "BEARISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Automobile & Ancillary"
   },
   {
     "rank": 225,
@@ -4272,7 +4496,8 @@
     "profit_qoq": "73.72",
     "trend": "BEARISH",
     "macd": "SELL/HOLD",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "IT & Technology"
   },
   {
     "rank": 226,
@@ -4291,7 +4516,8 @@
     "profit_qoq": "121.63",
     "trend": "BEARISH",
     "macd": "SELL/HOLD",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Energy, Power & Oil"
   },
   {
     "rank": 227,
@@ -4310,7 +4536,8 @@
     "profit_qoq": "3.88",
     "trend": "BULLISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Banking & Financials"
   },
   {
     "rank": 228,
@@ -4329,7 +4556,8 @@
     "profit_qoq": "49.97",
     "trend": "BEARISH",
     "macd": "SELL/HOLD",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Metals & Mining"
   },
   {
     "rank": 229,
@@ -4348,7 +4576,8 @@
     "profit_qoq": "16.22",
     "trend": "BEARISH",
     "macd": "SELL/HOLD",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Industrial & Diversified"
   },
   {
     "rank": 230,
@@ -4367,7 +4596,8 @@
     "profit_qoq": "-72.55",
     "trend": "BEARISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Automobile & Ancillary"
   },
   {
     "rank": 231,
@@ -4386,7 +4616,8 @@
     "profit_qoq": "81.59",
     "trend": "BEARISH",
     "macd": "SELL/HOLD",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Industrial & Diversified"
   },
   {
     "rank": 232,
@@ -4405,7 +4636,8 @@
     "profit_qoq": "-40.0",
     "trend": "BEARISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Banking & Financials"
   },
   {
     "rank": 233,
@@ -4424,7 +4656,8 @@
     "profit_qoq": "471.5",
     "trend": "BEARISH",
     "macd": "SELL/HOLD",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Energy, Power & Oil"
   },
   {
     "rank": 234,
@@ -4443,7 +4676,8 @@
     "profit_qoq": "108.03",
     "trend": "BEARISH",
     "macd": "SELL/HOLD",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Industrial & Diversified"
   },
   {
     "rank": 235,
@@ -4462,7 +4696,8 @@
     "profit_qoq": "202.37",
     "trend": "BEARISH",
     "macd": "SELL/HOLD",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Automobile & Ancillary"
   },
   {
     "rank": 236,
@@ -4481,7 +4716,8 @@
     "profit_qoq": "39.52",
     "trend": "BEARISH",
     "macd": "SELL/HOLD",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Banking & Financials"
   },
   {
     "rank": 237,
@@ -4500,7 +4736,8 @@
     "profit_qoq": "4212.54",
     "trend": "BEARISH",
     "macd": "SELL/HOLD",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Banking & Financials"
   },
   {
     "rank": 238,
@@ -4519,7 +4756,8 @@
     "profit_qoq": "-60.07",
     "trend": "BEARISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Banking & Financials"
   },
   {
     "rank": 239,
@@ -4538,7 +4776,8 @@
     "profit_qoq": "-0.01",
     "trend": "BEARISH",
     "macd": "SELL/HOLD",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Banking & Financials"
   },
   {
     "rank": 240,
@@ -4557,7 +4796,8 @@
     "profit_qoq": "70.99",
     "trend": "BEARISH",
     "macd": "SELL/HOLD",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Industrial & Diversified"
   },
   {
     "rank": 241,
@@ -4576,7 +4816,8 @@
     "profit_qoq": "18.75",
     "trend": "BEARISH",
     "macd": "SELL/HOLD",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Banking & Financials"
   },
   {
     "rank": 242,
@@ -4595,7 +4836,8 @@
     "profit_qoq": "77.33",
     "trend": "BEARISH",
     "macd": "SELL/HOLD",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Pharma & Healthcare"
   },
   {
     "rank": 243,
@@ -4614,7 +4856,8 @@
     "profit_qoq": "-6.92",
     "trend": "BULLISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "IT & Technology"
   },
   {
     "rank": 244,
@@ -4633,7 +4876,8 @@
     "profit_qoq": "246.35",
     "trend": "BEARISH",
     "macd": "SELL/HOLD",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Industrial & Diversified"
   },
   {
     "rank": 245,
@@ -4652,7 +4896,8 @@
     "profit_qoq": "21.44",
     "trend": "BEARISH",
     "macd": "SELL/HOLD",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "IT & Technology"
   },
   {
     "rank": 246,
@@ -4671,7 +4916,8 @@
     "profit_qoq": "203.68",
     "trend": "BEARISH",
     "macd": "SELL/HOLD",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "IT & Technology"
   },
   {
     "rank": 247,
@@ -4690,7 +4936,8 @@
     "profit_qoq": "25.07",
     "trend": "BEARISH",
     "macd": "SELL/HOLD",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Industrial & Diversified"
   },
   {
     "rank": 248,
@@ -4709,7 +4956,8 @@
     "profit_qoq": "-5.7",
     "trend": "BEARISH",
     "macd": "SELL/HOLD",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Banking & Financials"
   },
   {
     "rank": 249,
@@ -4728,7 +4976,8 @@
     "profit_qoq": "1214.85",
     "trend": "BEARISH",
     "macd": "SELL/HOLD",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Industrial & Diversified"
   },
   {
     "rank": 250,
@@ -4747,7 +4996,8 @@
     "profit_qoq": "3.55",
     "trend": "BULLISH",
     "macd": "SELL/HOLD",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Banking & Financials"
   },
   {
     "rank": 251,
@@ -4766,7 +5016,8 @@
     "profit_qoq": "-80.64",
     "trend": "BEARISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Energy, Power & Oil"
   },
   {
     "rank": 252,
@@ -4785,7 +5036,8 @@
     "profit_qoq": "5.04",
     "trend": "BEARISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Industrial & Diversified"
   },
   {
     "rank": 253,
@@ -4804,7 +5056,8 @@
     "profit_qoq": "-59.5",
     "trend": "BEARISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Energy, Power & Oil"
   },
   {
     "rank": 254,
@@ -4823,7 +5076,8 @@
     "profit_qoq": "-37.63",
     "trend": "BULLISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Industrial & Diversified"
   },
   {
     "rank": 255,
@@ -4842,7 +5096,8 @@
     "profit_qoq": "3.32",
     "trend": "BEARISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Energy, Power & Oil"
   },
   {
     "rank": 256,
@@ -4861,7 +5116,8 @@
     "profit_qoq": "3.88",
     "trend": "BEARISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Banking & Financials"
   },
   {
     "rank": 257,
@@ -4880,7 +5136,8 @@
     "profit_qoq": "-21.48",
     "trend": "BEARISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Industrial & Diversified"
   },
   {
     "rank": 258,
@@ -4899,7 +5156,8 @@
     "profit_qoq": "-0.69",
     "trend": "BEARISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Industrial & Diversified"
   },
   {
     "rank": 259,
@@ -4918,7 +5176,8 @@
     "profit_qoq": "nan",
     "trend": "BEARISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Industrial & Diversified"
   },
   {
     "rank": 260,
@@ -4937,7 +5196,8 @@
     "profit_qoq": "-27.37",
     "trend": "BULLISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Industrial & Diversified"
   },
   {
     "rank": 261,
@@ -4956,7 +5216,8 @@
     "profit_qoq": "-49.69",
     "trend": "BULLISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Industrial & Diversified"
   },
   {
     "rank": 262,
@@ -4975,7 +5236,8 @@
     "profit_qoq": "-81.24",
     "trend": "BULLISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Industrial & Diversified"
   },
   {
     "rank": 263,
@@ -4994,7 +5256,8 @@
     "profit_qoq": "-57.01",
     "trend": "BEARISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Pharma & Healthcare"
   },
   {
     "rank": 264,
@@ -5013,7 +5276,8 @@
     "profit_qoq": "-6.57",
     "trend": "BEARISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Industrial & Diversified"
   },
   {
     "rank": 265,
@@ -5032,7 +5296,8 @@
     "profit_qoq": "-23.63",
     "trend": "BEARISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Industrial & Diversified"
   },
   {
     "rank": 266,
@@ -5051,7 +5316,8 @@
     "profit_qoq": "-40.78",
     "trend": "BEARISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Industrial & Diversified"
   },
   {
     "rank": 267,
@@ -5070,7 +5336,8 @@
     "profit_qoq": "-26.65",
     "trend": "BEARISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "IT & Technology"
   },
   {
     "rank": 268,
@@ -5089,7 +5356,8 @@
     "profit_qoq": "-16.15",
     "trend": "BEARISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Industrial & Diversified"
   },
   {
     "rank": 269,
@@ -5108,7 +5376,8 @@
     "profit_qoq": "-20.83",
     "trend": "BEARISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Energy, Power & Oil"
   },
   {
     "rank": 270,
@@ -5127,7 +5396,8 @@
     "profit_qoq": "-17.16",
     "trend": "BEARISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "IT & Technology"
   },
   {
     "rank": 271,
@@ -5146,7 +5416,8 @@
     "profit_qoq": "9.52",
     "trend": "BEARISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Industrial & Diversified"
   },
   {
     "rank": 272,
@@ -5165,7 +5436,8 @@
     "profit_qoq": "-78.94",
     "trend": "BEARISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Industrial & Diversified"
   },
   {
     "rank": 273,
@@ -5184,7 +5456,8 @@
     "profit_qoq": "-2.51",
     "trend": "BEARISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Metals & Mining"
   },
   {
     "rank": 274,
@@ -5203,7 +5476,8 @@
     "profit_qoq": "-51.6",
     "trend": "BEARISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Infrastructure & Realty"
   },
   {
     "rank": 275,
@@ -5222,7 +5496,8 @@
     "profit_qoq": "42.36",
     "trend": "BEARISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Industrial & Diversified"
   },
   {
     "rank": 276,
@@ -5241,7 +5516,8 @@
     "profit_qoq": "23.02",
     "trend": "BEARISH",
     "macd": "SELL/HOLD",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "FMCG & Consumer Goods"
   },
   {
     "rank": 277,
@@ -5260,7 +5536,8 @@
     "profit_qoq": "-51.94",
     "trend": "BEARISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Industrial & Diversified"
   },
   {
     "rank": 278,
@@ -5279,7 +5556,8 @@
     "profit_qoq": "32.15",
     "trend": "BEARISH",
     "macd": "SELL/HOLD",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Banking & Financials"
   },
   {
     "rank": 279,
@@ -5298,7 +5576,8 @@
     "profit_qoq": "27.8",
     "trend": "BEARISH",
     "macd": "SELL/HOLD",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Industrial & Diversified"
   },
   {
     "rank": 280,
@@ -5317,7 +5596,8 @@
     "profit_qoq": "21.06",
     "trend": "BEARISH",
     "macd": "SELL/HOLD",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Industrial & Diversified"
   },
   {
     "rank": 281,
@@ -5336,7 +5616,8 @@
     "profit_qoq": "4.01",
     "trend": "BEARISH",
     "macd": "SELL/HOLD",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Industrial & Diversified"
   },
   {
     "rank": 282,
@@ -5355,7 +5636,8 @@
     "profit_qoq": "8.04",
     "trend": "BEARISH",
     "macd": "SELL/HOLD",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Media & Telecom"
   },
   {
     "rank": 283,
@@ -5374,7 +5656,8 @@
     "profit_qoq": "31.09",
     "trend": "BEARISH",
     "macd": "SELL/HOLD",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Industrial & Diversified"
   },
   {
     "rank": 284,
@@ -5393,7 +5676,8 @@
     "profit_qoq": "18.51",
     "trend": "BEARISH",
     "macd": "SELL/HOLD",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Industrial & Diversified"
   },
   {
     "rank": 285,
@@ -5412,7 +5696,8 @@
     "profit_qoq": "-18.04",
     "trend": "BULLISH",
     "macd": "SELL/HOLD",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Industrial & Diversified"
   },
   {
     "rank": 286,
@@ -5431,7 +5716,8 @@
     "profit_qoq": "nan",
     "trend": "BEARISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Infrastructure & Realty"
   },
   {
     "rank": 287,
@@ -5450,7 +5736,8 @@
     "profit_qoq": "70.96",
     "trend": "BEARISH",
     "macd": "SELL/HOLD",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "IT & Technology"
   },
   {
     "rank": 288,
@@ -5469,7 +5756,8 @@
     "profit_qoq": "202.18",
     "trend": "BEARISH",
     "macd": "SELL/HOLD",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Pharma & Healthcare"
   },
   {
     "rank": 289,
@@ -5488,7 +5776,8 @@
     "profit_qoq": "158.35",
     "trend": "BEARISH",
     "macd": "SELL/HOLD",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Banking & Financials"
   },
   {
     "rank": 290,
@@ -5507,7 +5796,8 @@
     "profit_qoq": "348.07",
     "trend": "BEARISH",
     "macd": "SELL/HOLD",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "IT & Technology"
   },
   {
     "rank": 291,
@@ -5526,7 +5816,8 @@
     "profit_qoq": "54.16",
     "trend": "BEARISH",
     "macd": "SELL/HOLD",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Industrial & Diversified"
   },
   {
     "rank": 292,
@@ -5545,7 +5836,8 @@
     "profit_qoq": "-35.86",
     "trend": "BEARISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Infrastructure & Realty"
   },
   {
     "rank": 293,
@@ -5564,7 +5856,8 @@
     "profit_qoq": "-17.37",
     "trend": "BEARISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Pharma & Healthcare"
   },
   {
     "rank": 294,
@@ -5583,7 +5876,8 @@
     "profit_qoq": "-101.65",
     "trend": "BEARISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Industrial & Diversified"
   },
   {
     "rank": 295,
@@ -5602,7 +5896,8 @@
     "profit_qoq": "-14.4",
     "trend": "BULLISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Industrial & Diversified"
   },
   {
     "rank": 296,
@@ -5621,7 +5916,8 @@
     "profit_qoq": "-25.71",
     "trend": "BEARISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Industrial & Diversified"
   },
   {
     "rank": 297,
@@ -5640,7 +5936,8 @@
     "profit_qoq": "-44.84",
     "trend": "BULLISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "FMCG & Consumer Goods"
   },
   {
     "rank": 298,
@@ -5659,7 +5956,8 @@
     "profit_qoq": "-80.41",
     "trend": "BULLISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Industrial & Diversified"
   },
   {
     "rank": 299,
@@ -5678,7 +5976,8 @@
     "profit_qoq": "-85.94",
     "trend": "BEARISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Infrastructure & Realty"
   },
   {
     "rank": 300,
@@ -5697,7 +5996,8 @@
     "profit_qoq": "-110.65",
     "trend": "BEARISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "FMCG & Consumer Goods"
   },
   {
     "rank": 301,
@@ -5716,7 +6016,8 @@
     "profit_qoq": "-59.0",
     "trend": "BEARISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Banking & Financials"
   },
   {
     "rank": 302,
@@ -5735,7 +6036,8 @@
     "profit_qoq": "-25.58",
     "trend": "BEARISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Industrial & Diversified"
   },
   {
     "rank": 303,
@@ -5754,7 +6056,8 @@
     "profit_qoq": "-29.44",
     "trend": "BEARISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Pharma & Healthcare"
   },
   {
     "rank": 304,
@@ -5773,7 +6076,8 @@
     "profit_qoq": "-21.47",
     "trend": "BEARISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Jewellery & Textiles"
   },
   {
     "rank": 305,
@@ -5792,7 +6096,8 @@
     "profit_qoq": "-23.12",
     "trend": "BEARISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Industrial & Diversified"
   },
   {
     "rank": 306,
@@ -5811,7 +6116,8 @@
     "profit_qoq": "-17.3",
     "trend": "BEARISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Industrial & Diversified"
   },
   {
     "rank": 307,
@@ -5830,7 +6136,8 @@
     "profit_qoq": "-17.04",
     "trend": "BEARISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Industrial & Diversified"
   },
   {
     "rank": 308,
@@ -5849,7 +6156,8 @@
     "profit_qoq": "0.19",
     "trend": "BEARISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Banking & Financials"
   },
   {
     "rank": 309,
@@ -5868,7 +6176,8 @@
     "profit_qoq": "-395.35",
     "trend": "BULLISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Industrial & Diversified"
   },
   {
     "rank": 310,
@@ -5887,7 +6196,8 @@
     "profit_qoq": "1.62",
     "trend": "BEARISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Banking & Financials"
   },
   {
     "rank": 311,
@@ -5906,7 +6216,8 @@
     "profit_qoq": "-2.63",
     "trend": "BULLISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Industrial & Diversified"
   },
   {
     "rank": 312,
@@ -5925,7 +6236,8 @@
     "profit_qoq": "-14.19",
     "trend": "BEARISH",
     "macd": "SELL/HOLD",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Infrastructure & Realty"
   },
   {
     "rank": 313,
@@ -5944,7 +6256,8 @@
     "profit_qoq": "4.02",
     "trend": "BEARISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Energy, Power & Oil"
   },
   {
     "rank": 314,
@@ -5963,7 +6276,8 @@
     "profit_qoq": "-1088.57",
     "trend": "BEARISH",
     "macd": "SELL/HOLD",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Industrial & Diversified"
   },
   {
     "rank": 315,
@@ -5982,7 +6296,8 @@
     "profit_qoq": "-164.99",
     "trend": "BULLISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Industrial & Diversified"
   },
   {
     "rank": 316,
@@ -6001,7 +6316,8 @@
     "profit_qoq": "46.6",
     "trend": "BEARISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Energy, Power & Oil"
   },
   {
     "rank": 317,
@@ -6020,7 +6336,8 @@
     "profit_qoq": "-14.07",
     "trend": "BULLISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Industrial & Diversified"
   },
   {
     "rank": 318,
@@ -6039,7 +6356,8 @@
     "profit_qoq": "-14.87",
     "trend": "BULLISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Infrastructure & Realty"
   },
   {
     "rank": 319,
@@ -6058,7 +6376,8 @@
     "profit_qoq": "-56.67",
     "trend": "BEARISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Industrial & Diversified"
   },
   {
     "rank": 320,
@@ -6077,7 +6396,8 @@
     "profit_qoq": "-65.25",
     "trend": "BEARISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Industrial & Diversified"
   },
   {
     "rank": 321,
@@ -6096,7 +6416,8 @@
     "profit_qoq": "-3.28",
     "trend": "BEARISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Industrial & Diversified"
   },
   {
     "rank": 322,
@@ -6115,7 +6436,8 @@
     "profit_qoq": "33.08",
     "trend": "BEARISH",
     "macd": "SELL/HOLD",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Jewellery & Textiles"
   },
   {
     "rank": 323,
@@ -6134,7 +6456,8 @@
     "profit_qoq": "-19.61",
     "trend": "BEARISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Industrial & Diversified"
   },
   {
     "rank": 324,
@@ -6153,7 +6476,8 @@
     "profit_qoq": "-13.72",
     "trend": "BEARISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Industrial & Diversified"
   },
   {
     "rank": 325,
@@ -6172,7 +6496,8 @@
     "profit_qoq": "-58.33",
     "trend": "BEARISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "IT & Technology"
   },
   {
     "rank": 326,
@@ -6191,7 +6516,8 @@
     "profit_qoq": "-16.48",
     "trend": "BEARISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Banking & Financials"
   },
   {
     "rank": 327,
@@ -6210,7 +6536,8 @@
     "profit_qoq": "-85.78",
     "trend": "BEARISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Infrastructure & Realty"
   },
   {
     "rank": 328,
@@ -6229,7 +6556,8 @@
     "profit_qoq": "-18.34",
     "trend": "BEARISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Industrial & Diversified"
   },
   {
     "rank": 329,
@@ -6248,7 +6576,8 @@
     "profit_qoq": "-44.4",
     "trend": "BEARISH",
     "macd": "SELL/HOLD",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Automobile & Ancillary"
   },
   {
     "rank": 330,
@@ -6267,7 +6596,8 @@
     "profit_qoq": "-10.53",
     "trend": "BEARISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Energy, Power & Oil"
   },
   {
     "rank": 331,
@@ -6286,7 +6616,8 @@
     "profit_qoq": "-14.81",
     "trend": "BEARISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Infrastructure & Realty"
   },
   {
     "rank": 332,
@@ -6305,7 +6636,8 @@
     "profit_qoq": "-27.51",
     "trend": "BEARISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "IT & Technology"
   },
   {
     "rank": 333,
@@ -6324,7 +6656,8 @@
     "profit_qoq": "-55.05",
     "trend": "BEARISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Industrial & Diversified"
   },
   {
     "rank": 334,
@@ -6343,7 +6676,8 @@
     "profit_qoq": "10.88",
     "trend": "BEARISH",
     "macd": "SELL/HOLD",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Banking & Financials"
   },
   {
     "rank": 335,
@@ -6362,7 +6696,8 @@
     "profit_qoq": "-23.91",
     "trend": "BEARISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Infrastructure & Realty"
   },
   {
     "rank": 336,
@@ -6381,7 +6716,8 @@
     "profit_qoq": "-180.47",
     "trend": "BEARISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Industrial & Diversified"
   },
   {
     "rank": 337,
@@ -6400,7 +6736,8 @@
     "profit_qoq": "-25.52",
     "trend": "BEARISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Energy, Power & Oil"
   },
   {
     "rank": 338,
@@ -6419,7 +6756,8 @@
     "profit_qoq": "-99.36",
     "trend": "BEARISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Industrial & Diversified"
   },
   {
     "rank": 339,
@@ -6438,7 +6776,8 @@
     "profit_qoq": "-60.62",
     "trend": "BEARISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Pharma & Healthcare"
   },
   {
     "rank": 340,
@@ -6457,7 +6796,8 @@
     "profit_qoq": "-90.46",
     "trend": "BEARISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Energy, Power & Oil"
   },
   {
     "rank": 341,
@@ -6476,7 +6816,8 @@
     "profit_qoq": "-123.43",
     "trend": "BEARISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Industrial & Diversified"
   },
   {
     "rank": 342,
@@ -6495,7 +6836,8 @@
     "profit_qoq": "-30.0",
     "trend": "BEARISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Industrial & Diversified"
   },
   {
     "rank": 343,
@@ -6514,7 +6856,8 @@
     "profit_qoq": "-13.34",
     "trend": "BEARISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Infrastructure & Realty"
   },
   {
     "rank": 344,
@@ -6533,7 +6876,8 @@
     "profit_qoq": "-13.36",
     "trend": "BEARISH",
     "macd": "SELL/HOLD",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Industrial & Diversified"
   },
   {
     "rank": 345,
@@ -6552,7 +6896,8 @@
     "profit_qoq": "nan",
     "trend": "BEARISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Industrial & Diversified"
   },
   {
     "rank": 346,
@@ -6571,7 +6916,8 @@
     "profit_qoq": "-11.14",
     "trend": "BEARISH",
     "macd": "SELL/HOLD",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "IT & Technology"
   },
   {
     "rank": 347,
@@ -6590,7 +6936,8 @@
     "profit_qoq": "-32.92",
     "trend": "BEARISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "FMCG & Consumer Goods"
   },
   {
     "rank": 348,
@@ -6609,7 +6956,8 @@
     "profit_qoq": "-94.84",
     "trend": "BEARISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Industrial & Diversified"
   },
   {
     "rank": 349,
@@ -6628,7 +6976,8 @@
     "profit_qoq": "-47.1",
     "trend": "BEARISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Industrial & Diversified"
   },
   {
     "rank": 350,
@@ -6647,7 +6996,8 @@
     "profit_qoq": "-3.34",
     "trend": "BEARISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Industrial & Diversified"
   },
   {
     "rank": 351,
@@ -6666,7 +7016,8 @@
     "profit_qoq": "-15.59",
     "trend": "BEARISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Infrastructure & Realty"
   },
   {
     "rank": 352,
@@ -6685,7 +7036,8 @@
     "profit_qoq": "-40.15",
     "trend": "BEARISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Pharma & Healthcare"
   },
   {
     "rank": 353,
@@ -6704,7 +7056,8 @@
     "profit_qoq": "-80.69",
     "trend": "BEARISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Infrastructure & Realty"
   },
   {
     "rank": 354,
@@ -6723,7 +7076,8 @@
     "profit_qoq": "-46.9",
     "trend": "BEARISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "IT & Technology"
   },
   {
     "rank": 355,
@@ -6742,7 +7096,8 @@
     "profit_qoq": "-5.4",
     "trend": "BEARISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Energy, Power & Oil"
   },
   {
     "rank": 356,
@@ -6761,7 +7116,8 @@
     "profit_qoq": "-34.56",
     "trend": "BEARISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "IT & Technology"
   },
   {
     "rank": 357,
@@ -6780,7 +7136,8 @@
     "profit_qoq": "-45.11",
     "trend": "BEARISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Infrastructure & Realty"
   },
   {
     "rank": 358,
@@ -6799,7 +7156,8 @@
     "profit_qoq": "-61.62",
     "trend": "BEARISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "IT & Technology"
   },
   {
     "rank": 359,
@@ -6818,7 +7176,8 @@
     "profit_qoq": "-16.92",
     "trend": "BEARISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Industrial & Diversified"
   },
   {
     "rank": 360,
@@ -6837,7 +7196,8 @@
     "profit_qoq": "-45.04",
     "trend": "BEARISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "FMCG & Consumer Goods"
   },
   {
     "rank": 361,
@@ -6856,7 +7216,8 @@
     "profit_qoq": "-0.91",
     "trend": "BULLISH",
     "macd": "SELL/HOLD",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Industrial & Diversified"
   },
   {
     "rank": 362,
@@ -6875,7 +7236,8 @@
     "profit_qoq": "-17.23",
     "trend": "BEARISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Energy, Power & Oil"
   },
   {
     "rank": 363,
@@ -6894,7 +7256,8 @@
     "profit_qoq": "-62.79",
     "trend": "BEARISH",
     "macd": "SELL/HOLD",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "IT & Technology"
   },
   {
     "rank": 364,
@@ -6913,7 +7276,8 @@
     "profit_qoq": "-66.86",
     "trend": "BEARISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Energy, Power & Oil"
   },
   {
     "rank": 365,
@@ -6932,7 +7296,8 @@
     "profit_qoq": "nan",
     "trend": "BULLISH",
     "macd": "SELL/HOLD",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Industrial & Diversified"
   },
   {
     "rank": 366,
@@ -6951,7 +7316,8 @@
     "profit_qoq": "-49.55",
     "trend": "BULLISH",
     "macd": "SELL/HOLD",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Infrastructure & Realty"
   },
   {
     "rank": 367,
@@ -6970,7 +7336,8 @@
     "profit_qoq": "-136.75",
     "trend": "BULLISH",
     "macd": "SELL/HOLD",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "FMCG & Consumer Goods"
   },
   {
     "rank": 368,
@@ -6989,7 +7356,8 @@
     "profit_qoq": "-49.28",
     "trend": "BULLISH",
     "macd": "SELL/HOLD",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Industrial & Diversified"
   },
   {
     "rank": 369,
@@ -7008,7 +7376,8 @@
     "profit_qoq": "-40.29",
     "trend": "BULLISH",
     "macd": "SELL/HOLD",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Banking & Financials"
   },
   {
     "rank": 370,
@@ -7027,7 +7396,8 @@
     "profit_qoq": "-22.74",
     "trend": "BEARISH",
     "macd": "SELL/HOLD",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Infrastructure & Realty"
   },
   {
     "rank": 371,
@@ -7046,7 +7416,8 @@
     "profit_qoq": "-97.76",
     "trend": "BULLISH",
     "macd": "SELL/HOLD",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Industrial & Diversified"
   },
   {
     "rank": 372,
@@ -7065,7 +7436,8 @@
     "profit_qoq": "-11.46",
     "trend": "BEARISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Industrial & Diversified"
   },
   {
     "rank": 373,
@@ -7084,7 +7456,8 @@
     "profit_qoq": "-217.33",
     "trend": "BULLISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Pharma & Healthcare"
   },
   {
     "rank": 374,
@@ -7103,7 +7476,8 @@
     "profit_qoq": "-85.0",
     "trend": "BEARISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Industrial & Diversified"
   },
   {
     "rank": 375,
@@ -7122,7 +7496,8 @@
     "profit_qoq": "-135.95",
     "trend": "BEARISH",
     "macd": "SELL/HOLD",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Banking & Financials"
   },
   {
     "rank": 376,
@@ -7141,7 +7516,8 @@
     "profit_qoq": "-79.55",
     "trend": "BULLISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Industrial & Diversified"
   },
   {
     "rank": 377,
@@ -7160,7 +7536,8 @@
     "profit_qoq": "-88.0",
     "trend": "BEARISH",
     "macd": "SELL/HOLD",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Industrial & Diversified"
   },
   {
     "rank": 378,
@@ -7179,7 +7556,8 @@
     "profit_qoq": "-388.39",
     "trend": "BEARISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Industrial & Diversified"
   },
   {
     "rank": 379,
@@ -7198,7 +7576,8 @@
     "profit_qoq": "-90.26",
     "trend": "BULLISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Industrial & Diversified"
   },
   {
     "rank": 380,
@@ -7217,7 +7596,8 @@
     "profit_qoq": "1.57",
     "trend": "BEARISH",
     "macd": "SELL/HOLD",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Industrial & Diversified"
   },
   {
     "rank": 381,
@@ -7236,7 +7616,8 @@
     "profit_qoq": "7.07",
     "trend": "BEARISH",
     "macd": "SELL/HOLD",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Industrial & Diversified"
   },
   {
     "rank": 382,
@@ -7255,7 +7636,8 @@
     "profit_qoq": "-52.29",
     "trend": "BEARISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Industrial & Diversified"
   },
   {
     "rank": 383,
@@ -7274,7 +7656,8 @@
     "profit_qoq": "-5.41",
     "trend": "BEARISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Industrial & Diversified"
   },
   {
     "rank": 384,
@@ -7293,7 +7676,8 @@
     "profit_qoq": "-2.97",
     "trend": "BEARISH",
     "macd": "SELL/HOLD",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Industrial & Diversified"
   },
   {
     "rank": 385,
@@ -7312,7 +7696,8 @@
     "profit_qoq": "3.81",
     "trend": "BEARISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Industrial & Diversified"
   },
   {
     "rank": 386,
@@ -7331,7 +7716,8 @@
     "profit_qoq": "-0.58",
     "trend": "BEARISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Industrial & Diversified"
   },
   {
     "rank": 387,
@@ -7350,7 +7736,8 @@
     "profit_qoq": "-2.2",
     "trend": "BEARISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Pharma & Healthcare"
   },
   {
     "rank": 388,
@@ -7369,7 +7756,8 @@
     "profit_qoq": "-66.52",
     "trend": "BEARISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Infrastructure & Realty"
   },
   {
     "rank": 389,
@@ -7388,7 +7776,8 @@
     "profit_qoq": "-28.45",
     "trend": "BEARISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Industrial & Diversified"
   },
   {
     "rank": 390,
@@ -7407,7 +7796,8 @@
     "profit_qoq": "-16.02",
     "trend": "BEARISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Industrial & Diversified"
   },
   {
     "rank": 391,
@@ -7426,7 +7816,8 @@
     "profit_qoq": "-50.76",
     "trend": "BEARISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Industrial & Diversified"
   },
   {
     "rank": 392,
@@ -7445,7 +7836,8 @@
     "profit_qoq": "-66.35",
     "trend": "BEARISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Industrial & Diversified"
   },
   {
     "rank": 393,
@@ -7464,7 +7856,8 @@
     "profit_qoq": "7.06",
     "trend": "BEARISH",
     "macd": "SELL/HOLD",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "IT & Technology"
   },
   {
     "rank": 394,
@@ -7483,7 +7876,8 @@
     "profit_qoq": "-74.21",
     "trend": "BEARISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Energy, Power & Oil"
   },
   {
     "rank": 395,
@@ -7502,7 +7896,8 @@
     "profit_qoq": "-46.74",
     "trend": "BEARISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Energy, Power & Oil"
   },
   {
     "rank": 396,
@@ -7521,7 +7916,8 @@
     "profit_qoq": "-15.05",
     "trend": "BEARISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "FMCG & Consumer Goods"
   },
   {
     "rank": 397,
@@ -7540,7 +7936,8 @@
     "profit_qoq": "-174.43",
     "trend": "BEARISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Industrial & Diversified"
   },
   {
     "rank": 398,
@@ -7559,7 +7956,8 @@
     "profit_qoq": "-89.23",
     "trend": "BEARISH",
     "macd": "SELL/HOLD",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Energy, Power & Oil"
   },
   {
     "rank": 399,
@@ -7578,7 +7976,8 @@
     "profit_qoq": "-107.22",
     "trend": "BEARISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Industrial & Diversified"
   },
   {
     "rank": 400,
@@ -7597,7 +7996,8 @@
     "profit_qoq": "-9.59",
     "trend": "BEARISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Industrial & Diversified"
   },
   {
     "rank": 401,
@@ -7616,7 +8016,8 @@
     "profit_qoq": "-51.78",
     "trend": "BEARISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Media & Telecom"
   },
   {
     "rank": 402,
@@ -7635,7 +8036,8 @@
     "profit_qoq": "-5.57",
     "trend": "BEARISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "FMCG & Consumer Goods"
   },
   {
     "rank": 403,
@@ -7654,7 +8056,8 @@
     "profit_qoq": "-28.81",
     "trend": "BEARISH",
     "macd": "SELL/HOLD",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Energy, Power & Oil"
   },
   {
     "rank": 404,
@@ -7673,7 +8076,8 @@
     "profit_qoq": "-81.3",
     "trend": "BEARISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Jewellery & Textiles"
   },
   {
     "rank": 405,
@@ -7692,7 +8096,8 @@
     "profit_qoq": "-77.18",
     "trend": "BEARISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Industrial & Diversified"
   },
   {
     "rank": 406,
@@ -7711,7 +8116,8 @@
     "profit_qoq": "-57.1",
     "trend": "BEARISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Industrial & Diversified"
   },
   {
     "rank": 407,
@@ -7730,7 +8136,8 @@
     "profit_qoq": "-25.18",
     "trend": "BEARISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Industrial & Diversified"
   },
   {
     "rank": 408,
@@ -7749,7 +8156,8 @@
     "profit_qoq": "-74.52",
     "trend": "BEARISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Industrial & Diversified"
   },
   {
     "rank": 409,
@@ -7768,7 +8176,8 @@
     "profit_qoq": "-3.91",
     "trend": "BEARISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Industrial & Diversified"
   },
   {
     "rank": 410,
@@ -7787,7 +8196,8 @@
     "profit_qoq": "-78.75",
     "trend": "BEARISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Pharma & Healthcare"
   },
   {
     "rank": 411,
@@ -7806,7 +8216,8 @@
     "profit_qoq": "-87.11",
     "trend": "BEARISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Metals & Mining"
   },
   {
     "rank": 412,
@@ -7825,7 +8236,8 @@
     "profit_qoq": "-3.69",
     "trend": "BEARISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Metals & Mining"
   },
   {
     "rank": 413,
@@ -7844,7 +8256,8 @@
     "profit_qoq": "-23.3",
     "trend": "BEARISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Infrastructure & Realty"
   },
   {
     "rank": 414,
@@ -7863,7 +8276,8 @@
     "profit_qoq": "-16.19",
     "trend": "BEARISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Industrial & Diversified"
   },
   {
     "rank": 415,
@@ -7882,7 +8296,8 @@
     "profit_qoq": "-1.99",
     "trend": "BEARISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Industrial & Diversified"
   },
   {
     "rank": 416,
@@ -7901,7 +8316,8 @@
     "profit_qoq": "-16.31",
     "trend": "BEARISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Energy, Power & Oil"
   },
   {
     "rank": 417,
@@ -7920,7 +8336,8 @@
     "profit_qoq": "-42.37",
     "trend": "BEARISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "IT & Technology"
   },
   {
     "rank": 418,
@@ -7939,7 +8356,8 @@
     "profit_qoq": "-27.61",
     "trend": "BEARISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Banking & Financials"
   },
   {
     "rank": 419,
@@ -7958,7 +8376,8 @@
     "profit_qoq": "-34.58",
     "trend": "BEARISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Industrial & Diversified"
   },
   {
     "rank": 420,
@@ -7977,7 +8396,8 @@
     "profit_qoq": "-10.74",
     "trend": "BEARISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Infrastructure & Realty"
   },
   {
     "rank": 421,
@@ -7996,7 +8416,8 @@
     "profit_qoq": "-22.02",
     "trend": "BEARISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Industrial & Diversified"
   },
   {
     "rank": 422,
@@ -8015,7 +8436,8 @@
     "profit_qoq": "-77.37",
     "trend": "BEARISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Industrial & Diversified"
   },
   {
     "rank": 423,
@@ -8034,7 +8456,8 @@
     "profit_qoq": "-58.44",
     "trend": "BEARISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Infrastructure & Realty"
   },
   {
     "rank": 424,
@@ -8053,7 +8476,8 @@
     "profit_qoq": "-67.48",
     "trend": "BEARISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "IT & Technology"
   },
   {
     "rank": 425,
@@ -8072,7 +8496,8 @@
     "profit_qoq": "-15.51",
     "trend": "BEARISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Industrial & Diversified"
   },
   {
     "rank": 426,
@@ -8091,7 +8516,8 @@
     "profit_qoq": "-24.31",
     "trend": "BEARISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "IT & Technology"
   },
   {
     "rank": 427,
@@ -8110,7 +8536,8 @@
     "profit_qoq": "-21.71",
     "trend": "BEARISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Banking & Financials"
   },
   {
     "rank": 428,
@@ -8129,7 +8556,8 @@
     "profit_qoq": "-116.39",
     "trend": "BEARISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Industrial & Diversified"
   },
   {
     "rank": 429,
@@ -8148,7 +8576,8 @@
     "profit_qoq": "-51.69",
     "trend": "BEARISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Energy, Power & Oil"
   },
   {
     "rank": 430,
@@ -8167,7 +8596,8 @@
     "profit_qoq": "-5.14",
     "trend": "BULLISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Industrial & Diversified"
   },
   {
     "rank": 431,
@@ -8186,7 +8616,8 @@
     "profit_qoq": "-14.61",
     "trend": "BEARISH",
     "macd": "SELL/HOLD",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Industrial & Diversified"
   },
   {
     "rank": 432,
@@ -8205,7 +8636,8 @@
     "profit_qoq": "-174.41",
     "trend": "BEARISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "FMCG & Consumer Goods"
   },
   {
     "rank": 433,
@@ -8224,7 +8656,8 @@
     "profit_qoq": "-32.9",
     "trend": "BEARISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Industrial & Diversified"
   },
   {
     "rank": 434,
@@ -8243,7 +8676,8 @@
     "profit_qoq": "-1342.58",
     "trend": "BEARISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "IT & Technology"
   },
   {
     "rank": 435,
@@ -8262,7 +8696,8 @@
     "profit_qoq": "-23.13",
     "trend": "BEARISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Industrial & Diversified"
   },
   {
     "rank": 436,
@@ -8281,7 +8716,8 @@
     "profit_qoq": "-80.17",
     "trend": "BEARISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Infrastructure & Realty"
   },
   {
     "rank": 437,
@@ -8300,7 +8736,8 @@
     "profit_qoq": "-31.87",
     "trend": "BEARISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Industrial & Diversified"
   },
   {
     "rank": 438,
@@ -8319,7 +8756,8 @@
     "profit_qoq": "-780.66",
     "trend": "BEARISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Banking & Financials"
   },
   {
     "rank": 439,
@@ -8338,7 +8776,8 @@
     "profit_qoq": "-55.65",
     "trend": "BEARISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Industrial & Diversified"
   },
   {
     "rank": 440,
@@ -8357,7 +8796,8 @@
     "profit_qoq": "-22.89",
     "trend": "BEARISH",
     "macd": "SELL/HOLD",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Pharma & Healthcare"
   },
   {
     "rank": 441,
@@ -8376,7 +8816,8 @@
     "profit_qoq": "-41.49",
     "trend": "BEARISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Industrial & Diversified"
   },
   {
     "rank": 442,
@@ -8395,7 +8836,8 @@
     "profit_qoq": "-69.17",
     "trend": "BEARISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Pharma & Healthcare"
   },
   {
     "rank": 443,
@@ -8414,7 +8856,8 @@
     "profit_qoq": "-36.35",
     "trend": "BEARISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Industrial & Diversified"
   },
   {
     "rank": 444,
@@ -8433,7 +8876,8 @@
     "profit_qoq": "-40.01",
     "trend": "BEARISH",
     "macd": "SELL/HOLD",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "IT & Technology"
   },
   {
     "rank": 445,
@@ -8452,7 +8896,8 @@
     "profit_qoq": "-58.09",
     "trend": "BEARISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Energy, Power & Oil"
   },
   {
     "rank": 446,
@@ -8471,7 +8916,8 @@
     "profit_qoq": "-424.97",
     "trend": "BEARISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Banking & Financials"
   },
   {
     "rank": 447,
@@ -8490,7 +8936,8 @@
     "profit_qoq": "-65.45",
     "trend": "BEARISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Infrastructure & Realty"
   },
   {
     "rank": 448,
@@ -8509,7 +8956,8 @@
     "profit_qoq": "-127.05",
     "trend": "BEARISH",
     "macd": "SELL/HOLD",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Industrial & Diversified"
   },
   {
     "rank": 449,
@@ -8528,7 +8976,8 @@
     "profit_qoq": "-35.01",
     "trend": "BEARISH",
     "macd": "SELL/HOLD",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "IT & Technology"
   },
   {
     "rank": 450,
@@ -8547,7 +8996,8 @@
     "profit_qoq": "-34.27",
     "trend": "BULLISH",
     "macd": "SELL/HOLD",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Pharma & Healthcare"
   },
   {
     "rank": 451,
@@ -8566,7 +9016,8 @@
     "profit_qoq": "-111.79",
     "trend": "BULLISH",
     "macd": "SELL/HOLD",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Industrial & Diversified"
   },
   {
     "rank": 452,
@@ -8585,7 +9036,8 @@
     "profit_qoq": "-129.72",
     "trend": "BULLISH",
     "macd": "SELL/HOLD",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Pharma & Healthcare"
   },
   {
     "rank": 453,
@@ -8604,7 +9056,8 @@
     "profit_qoq": "-20.32",
     "trend": "BEARISH",
     "macd": "SELL/HOLD",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Infrastructure & Realty"
   },
   {
     "rank": 454,
@@ -8623,7 +9076,8 @@
     "profit_qoq": "-2.1",
     "trend": "BEARISH",
     "macd": "SELL/HOLD",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Jewellery & Textiles"
   },
   {
     "rank": 455,
@@ -8642,7 +9096,8 @@
     "profit_qoq": "-144.82",
     "trend": "BEARISH",
     "macd": "SELL/HOLD",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "FMCG & Consumer Goods"
   },
   {
     "rank": 456,
@@ -8661,7 +9116,8 @@
     "profit_qoq": "-79.21",
     "trend": "BEARISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Industrial & Diversified"
   },
   {
     "rank": 457,
@@ -8680,7 +9136,8 @@
     "profit_qoq": "-66.36",
     "trend": "BULLISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Industrial & Diversified"
   },
   {
     "rank": 458,
@@ -8699,7 +9156,8 @@
     "profit_qoq": "-131.85",
     "trend": "BEARISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Industrial & Diversified"
   },
   {
     "rank": 459,
@@ -8718,7 +9176,8 @@
     "profit_qoq": "-73.78",
     "trend": "BULLISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Industrial & Diversified"
   },
   {
     "rank": 460,
@@ -8737,7 +9196,8 @@
     "profit_qoq": "-136.53",
     "trend": "BEARISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Banking & Financials"
   },
   {
     "rank": 461,
@@ -8756,7 +9216,8 @@
     "profit_qoq": "-151.39",
     "trend": "BEARISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Industrial & Diversified"
   },
   {
     "rank": 462,
@@ -8775,7 +9236,8 @@
     "profit_qoq": "-44.44",
     "trend": "BEARISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Banking & Financials"
   },
   {
     "rank": 463,
@@ -8794,7 +9256,8 @@
     "profit_qoq": "-70.01",
     "trend": "BEARISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Industrial & Diversified"
   },
   {
     "rank": 464,
@@ -8813,7 +9276,8 @@
     "profit_qoq": "-87.92",
     "trend": "BULLISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Infrastructure & Realty"
   },
   {
     "rank": 465,
@@ -8832,7 +9296,8 @@
     "profit_qoq": "-366.24",
     "trend": "BEARISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Industrial & Diversified"
   },
   {
     "rank": 466,
@@ -8851,7 +9316,8 @@
     "profit_qoq": "-46.87",
     "trend": "BEARISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Infrastructure & Realty"
   },
   {
     "rank": 467,
@@ -8870,7 +9336,8 @@
     "profit_qoq": "-1.9",
     "trend": "BULLISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Banking & Financials"
   },
   {
     "rank": 468,
@@ -8889,7 +9356,8 @@
     "profit_qoq": "-43.31",
     "trend": "BULLISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Pharma & Healthcare"
   },
   {
     "rank": 469,
@@ -8908,7 +9376,8 @@
     "profit_qoq": "-665.58",
     "trend": "BEARISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Industrial & Diversified"
   },
   {
     "rank": 470,
@@ -8927,7 +9396,8 @@
     "profit_qoq": "-54.9",
     "trend": "BEARISH",
     "macd": "SELL/HOLD",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Energy, Power & Oil"
   },
   {
     "rank": 471,
@@ -8946,7 +9416,8 @@
     "profit_qoq": "-2766.89",
     "trend": "BEARISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "IT & Technology"
   },
   {
     "rank": 472,
@@ -8965,7 +9436,8 @@
     "profit_qoq": "-25.72",
     "trend": "BEARISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Industrial & Diversified"
   },
   {
     "rank": 473,
@@ -8984,7 +9456,8 @@
     "profit_qoq": "-29.36",
     "trend": "BEARISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Industrial & Diversified"
   },
   {
     "rank": 474,
@@ -9003,7 +9476,8 @@
     "profit_qoq": "-99.36",
     "trend": "BEARISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Infrastructure & Realty"
   },
   {
     "rank": 475,
@@ -9022,7 +9496,8 @@
     "profit_qoq": "-44.41",
     "trend": "BEARISH",
     "macd": "SELL/HOLD",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "IT & Technology"
   },
   {
     "rank": 476,
@@ -9041,7 +9516,8 @@
     "profit_qoq": "-19.22",
     "trend": "BEARISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Banking & Financials"
   },
   {
     "rank": 477,
@@ -9060,7 +9536,8 @@
     "profit_qoq": "-109.07",
     "trend": "BEARISH",
     "macd": "SELL/HOLD",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Industrial & Diversified"
   },
   {
     "rank": 478,
@@ -9079,7 +9556,8 @@
     "profit_qoq": "-92.89",
     "trend": "BEARISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Energy, Power & Oil"
   },
   {
     "rank": 479,
@@ -9098,7 +9576,8 @@
     "profit_qoq": "-102.12",
     "trend": "BEARISH",
     "macd": "SELL/HOLD",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "FMCG & Consumer Goods"
   },
   {
     "rank": 480,
@@ -9117,7 +9596,8 @@
     "profit_qoq": "-97.6",
     "trend": "BEARISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "FMCG & Consumer Goods"
   },
   {
     "rank": 481,
@@ -9136,7 +9616,8 @@
     "profit_qoq": "-32.01",
     "trend": "BEARISH",
     "macd": "BUY",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Industrial & Diversified"
   },
   {
     "rank": 482,
@@ -9155,7 +9636,8 @@
     "profit_qoq": "-71.72",
     "trend": "BEARISH",
     "macd": "SELL/HOLD",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Industrial & Diversified"
   },
   {
     "rank": 483,
@@ -9174,7 +9656,8 @@
     "profit_qoq": "-7.91",
     "trend": "BEARISH",
     "macd": "SELL/HOLD",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Industrial & Diversified"
   },
   {
     "rank": 484,
@@ -9193,7 +9676,8 @@
     "profit_qoq": "-189.06",
     "trend": "BEARISH",
     "macd": "SELL/HOLD",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "IT & Technology"
   },
   {
     "rank": 485,
@@ -9212,7 +9696,8 @@
     "profit_qoq": "-557.5",
     "trend": "BEARISH",
     "macd": "SELL/HOLD",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Industrial & Diversified"
   },
   {
     "rank": 486,
@@ -9231,7 +9716,8 @@
     "profit_qoq": "-31.66",
     "trend": "BEARISH",
     "macd": "SELL/HOLD",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Industrial & Diversified"
   },
   {
     "rank": 487,
@@ -9250,7 +9736,8 @@
     "profit_qoq": "-66.25",
     "trend": "BEARISH",
     "macd": "SELL/HOLD",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "IT & Technology"
   },
   {
     "rank": 488,
@@ -9269,7 +9756,8 @@
     "profit_qoq": "-36.83",
     "trend": "BEARISH",
     "macd": "SELL/HOLD",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Energy, Power & Oil"
   },
   {
     "rank": 489,
@@ -9288,7 +9776,8 @@
     "profit_qoq": "-56.89",
     "trend": "BEARISH",
     "macd": "SELL/HOLD",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Industrial & Diversified"
   },
   {
     "rank": 490,
@@ -9307,7 +9796,8 @@
     "profit_qoq": "-850.79",
     "trend": "BEARISH",
     "macd": "SELL/HOLD",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Industrial & Diversified"
   },
   {
     "rank": 491,
@@ -9326,7 +9816,8 @@
     "profit_qoq": "-32.0",
     "trend": "BEARISH",
     "macd": "SELL/HOLD",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Industrial & Diversified"
   },
   {
     "rank": 492,
@@ -9345,7 +9836,8 @@
     "profit_qoq": "-2893.33",
     "trend": "BEARISH",
     "macd": "SELL/HOLD",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Industrial & Diversified"
   },
   {
     "rank": 493,
@@ -9364,7 +9856,8 @@
     "profit_qoq": "-147.26",
     "trend": "BEARISH",
     "macd": "SELL/HOLD",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "FMCG & Consumer Goods"
   },
   {
     "rank": 494,
@@ -9383,7 +9876,8 @@
     "profit_qoq": "-10.51",
     "trend": "BEARISH",
     "macd": "SELL/HOLD",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Infrastructure & Realty"
   },
   {
     "rank": 495,
@@ -9402,7 +9896,8 @@
     "profit_qoq": "-4.78",
     "trend": "BEARISH",
     "macd": "SELL/HOLD",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Infrastructure & Realty"
   },
   {
     "rank": 496,
@@ -9421,7 +9916,8 @@
     "profit_qoq": "-527.61",
     "trend": "BEARISH",
     "macd": "SELL/HOLD",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "IT & Technology"
   },
   {
     "rank": 497,
@@ -9440,7 +9936,8 @@
     "profit_qoq": "-44.94",
     "trend": "BEARISH",
     "macd": "SELL/HOLD",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Industrial & Diversified"
   },
   {
     "rank": 498,
@@ -9459,7 +9956,8 @@
     "profit_qoq": "-64.04",
     "trend": "BEARISH",
     "macd": "SELL/HOLD",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Industrial & Diversified"
   },
   {
     "rank": 499,
@@ -9478,7 +9976,8 @@
     "profit_qoq": "-82.37",
     "trend": "BEARISH",
     "macd": "SELL/HOLD",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Infrastructure & Realty"
   },
   {
     "rank": 500,
@@ -9497,7 +9996,8 @@
     "profit_qoq": "-18.48",
     "trend": "BEARISH",
     "macd": "SELL/HOLD",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "IT & Technology"
   },
   {
     "rank": 501,
@@ -9516,7 +10016,8 @@
     "profit_qoq": "-1987.05",
     "trend": "BEARISH",
     "macd": "SELL/HOLD",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Banking & Financials"
   },
   {
     "rank": 502,
@@ -9535,7 +10036,8 @@
     "profit_qoq": "-174.31",
     "trend": "BEARISH",
     "macd": "SELL/HOLD",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Infrastructure & Realty"
   },
   {
     "rank": 503,
@@ -9554,7 +10056,8 @@
     "profit_qoq": "-74.31",
     "trend": "BEARISH",
     "macd": "SELL/HOLD",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Industrial & Diversified"
   },
   {
     "rank": 504,
@@ -9573,7 +10076,8 @@
     "profit_qoq": "-53.1",
     "trend": "BEARISH",
     "macd": "SELL/HOLD",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Industrial & Diversified"
   },
   {
     "rank": 505,
@@ -9592,7 +10096,8 @@
     "profit_qoq": "-76.09",
     "trend": "BEARISH",
     "macd": "SELL/HOLD",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Industrial & Diversified"
   },
   {
     "rank": 506,
@@ -9611,7 +10116,8 @@
     "profit_qoq": "-14.11",
     "trend": "BEARISH",
     "macd": "SELL/HOLD",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Industrial & Diversified"
   },
   {
     "rank": 507,
@@ -9630,7 +10136,8 @@
     "profit_qoq": "-86.79",
     "trend": "BEARISH",
     "macd": "SELL/HOLD",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "FMCG & Consumer Goods"
   },
   {
     "rank": 508,
@@ -9649,7 +10156,8 @@
     "profit_qoq": "-415.45",
     "trend": "BEARISH",
     "macd": "SELL/HOLD",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Industrial & Diversified"
   },
   {
     "rank": 509,
@@ -9668,7 +10176,8 @@
     "profit_qoq": "-41.0",
     "trend": "BEARISH",
     "macd": "SELL/HOLD",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Industrial & Diversified"
   },
   {
     "rank": 510,
@@ -9687,7 +10196,8 @@
     "profit_qoq": "-89.66",
     "trend": "BEARISH",
     "macd": "SELL/HOLD",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Industrial & Diversified"
   },
   {
     "rank": 511,
@@ -9706,7 +10216,8 @@
     "profit_qoq": "-52.33",
     "trend": "BEARISH",
     "macd": "SELL/HOLD",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Banking & Financials"
   },
   {
     "rank": 512,
@@ -9725,7 +10236,8 @@
     "profit_qoq": "-25.45",
     "trend": "BEARISH",
     "macd": "SELL/HOLD",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Industrial & Diversified"
   },
   {
     "rank": 513,
@@ -9744,7 +10256,8 @@
     "profit_qoq": "-312.12",
     "trend": "BEARISH",
     "macd": "SELL/HOLD",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Industrial & Diversified"
   },
   {
     "rank": 514,
@@ -9763,7 +10276,8 @@
     "profit_qoq": "-85.92",
     "trend": "BEARISH",
     "macd": "SELL/HOLD",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Industrial & Diversified"
   },
   {
     "rank": 515,
@@ -9782,7 +10296,8 @@
     "profit_qoq": "-38.86",
     "trend": "BEARISH",
     "macd": "SELL/HOLD",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Automobile & Ancillary"
   },
   {
     "rank": 516,
@@ -9801,7 +10316,8 @@
     "profit_qoq": "-19.59",
     "trend": "BEARISH",
     "macd": "SELL/HOLD",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Industrial & Diversified"
   },
   {
     "rank": 517,
@@ -9820,6 +10336,287 @@
     "profit_qoq": "-26.14",
     "trend": "BEARISH",
     "macd": "SELL/HOLD",
-    "supertrend": "BULLISH"
+    "supertrend": "BULLISH",
+    "sector": "Industrial & Diversified"
+  },
+  {
+    "rank": 518,
+    "symbol": "HDFCBANK",
+    "name": "HDFC Bank Ltd",
+    "price": 798.15,
+    "score": 86.5,
+    "target": 917.87,
+    "stop_loss": 734.3,
+    "potential_gain": "+15.0%",
+    "risk": "-8.0%",
+    "rsi": 54.2,
+    "vol_surge": "1.5\u00d7",
+    "pattern": "\ud83d\udfe2 Institutional Sector Benchmark",
+    "rev_qoq": "12.0",
+    "profit_qoq": "16.8",
+    "trend": "BULLISH",
+    "macd": "BUY",
+    "supertrend": "BULLISH",
+    "sector": "Banking & Financials"
+  },
+  {
+    "rank": 519,
+    "symbol": "ICICIBANK",
+    "name": "ICICI Bank Ltd",
+    "price": 1589.0,
+    "score": 88.0,
+    "target": 1827.35,
+    "stop_loss": 1461.88,
+    "potential_gain": "+15.0%",
+    "risk": "-8.0%",
+    "rsi": 56.4,
+    "vol_surge": "1.5\u00d7",
+    "pattern": "\ud83d\udfe2 Institutional Sector Benchmark",
+    "rev_qoq": "12.0",
+    "profit_qoq": "18.5",
+    "trend": "BULLISH",
+    "macd": "BUY",
+    "supertrend": "BULLISH",
+    "sector": "Banking & Financials"
+  },
+  {
+    "rank": 520,
+    "symbol": "SBIN",
+    "name": "State Bank of India",
+    "price": 1042.0,
+    "score": 87.0,
+    "target": 1198.3,
+    "stop_loss": 958.64,
+    "potential_gain": "+15.0%",
+    "risk": "-8.0%",
+    "rsi": 53.0,
+    "vol_surge": "1.5\u00d7",
+    "pattern": "\ud83d\udfe2 Institutional Sector Benchmark",
+    "rev_qoq": "12.0",
+    "profit_qoq": "14.2",
+    "trend": "BULLISH",
+    "macd": "BUY",
+    "supertrend": "BULLISH",
+    "sector": "Banking & Financials"
+  },
+  {
+    "rank": 521,
+    "symbol": "TCS",
+    "name": "Tata Consultancy Services",
+    "price": 2475.4,
+    "score": 85.0,
+    "target": 2846.71,
+    "stop_loss": 2277.37,
+    "potential_gain": "+15.0%",
+    "risk": "-8.0%",
+    "rsi": 52.8,
+    "vol_surge": "1.5\u00d7",
+    "pattern": "\ud83d\udfe2 Institutional Sector Benchmark",
+    "rev_qoq": "12.0",
+    "profit_qoq": "11.5",
+    "trend": "BULLISH",
+    "macd": "BUY",
+    "supertrend": "BULLISH",
+    "sector": "IT & Technology"
+  },
+  {
+    "rank": 522,
+    "symbol": "INFY",
+    "name": "Infosys Ltd",
+    "price": 1154.1,
+    "score": 84.5,
+    "target": 1327.21,
+    "stop_loss": 1061.77,
+    "potential_gain": "+15.0%",
+    "risk": "-8.0%",
+    "rsi": 51.5,
+    "vol_surge": "1.5\u00d7",
+    "pattern": "\ud83d\udfe2 Institutional Sector Benchmark",
+    "rev_qoq": "12.0",
+    "profit_qoq": "10.8",
+    "trend": "BULLISH",
+    "macd": "BUY",
+    "supertrend": "BULLISH",
+    "sector": "IT & Technology"
+  },
+  {
+    "rank": 523,
+    "symbol": "RELIANCE",
+    "name": "Reliance Industries Ltd",
+    "price": 1324.4,
+    "score": 86.0,
+    "target": 1523.06,
+    "stop_loss": 1218.45,
+    "potential_gain": "+15.0%",
+    "risk": "-8.0%",
+    "rsi": 54.1,
+    "vol_surge": "1.5\u00d7",
+    "pattern": "\ud83d\udfe2 Institutional Sector Benchmark",
+    "rev_qoq": "12.0",
+    "profit_qoq": "12.0",
+    "trend": "BULLISH",
+    "macd": "BUY",
+    "supertrend": "BULLISH",
+    "sector": "Energy, Power & Oil"
+  },
+  {
+    "rank": 524,
+    "symbol": "LT",
+    "name": "Larsen & Toubro Ltd",
+    "price": 4185.0,
+    "score": 88.5,
+    "target": 4812.75,
+    "stop_loss": 3850.2,
+    "potential_gain": "+15.0%",
+    "risk": "-8.0%",
+    "rsi": 58.0,
+    "vol_surge": "1.5\u00d7",
+    "pattern": "\ud83d\udfe2 Institutional Sector Benchmark",
+    "rev_qoq": "12.0",
+    "profit_qoq": "19.4",
+    "trend": "BULLISH",
+    "macd": "BUY",
+    "supertrend": "BULLISH",
+    "sector": "Infrastructure & Realty"
+  },
+  {
+    "rank": 525,
+    "symbol": "MARUTI",
+    "name": "Maruti Suzuki India Ltd",
+    "price": 12928.0,
+    "score": 84.0,
+    "target": 14867.2,
+    "stop_loss": 11893.76,
+    "potential_gain": "+15.0%",
+    "risk": "-8.0%",
+    "rsi": 51.2,
+    "vol_surge": "1.5\u00d7",
+    "pattern": "\ud83d\udfe2 Institutional Sector Benchmark",
+    "rev_qoq": "12.0",
+    "profit_qoq": "13.1",
+    "trend": "BULLISH",
+    "macd": "BUY",
+    "supertrend": "BULLISH",
+    "sector": "Automobile & Ancillary"
+  },
+  {
+    "rank": 526,
+    "symbol": "SUNPHARMA",
+    "name": "Sun Pharma Industries",
+    "price": 1904.5,
+    "score": 85.5,
+    "target": 2190.17,
+    "stop_loss": 1752.14,
+    "potential_gain": "+15.0%",
+    "risk": "-8.0%",
+    "rsi": 53.6,
+    "vol_surge": "1.5\u00d7",
+    "pattern": "\ud83d\udfe2 Institutional Sector Benchmark",
+    "rev_qoq": "12.0",
+    "profit_qoq": "15.0",
+    "trend": "BULLISH",
+    "macd": "BUY",
+    "supertrend": "BULLISH",
+    "sector": "Pharma & Healthcare"
+  },
+  {
+    "rank": 527,
+    "symbol": "ITC",
+    "name": "ITC Ltd",
+    "price": 278.8,
+    "score": 85.0,
+    "target": 320.62,
+    "stop_loss": 256.5,
+    "potential_gain": "+15.0%",
+    "risk": "-8.0%",
+    "rsi": 52.0,
+    "vol_surge": "1.5\u00d7",
+    "pattern": "\ud83d\udfe2 Institutional Sector Benchmark",
+    "rev_qoq": "12.0",
+    "profit_qoq": "11.2",
+    "trend": "BULLISH",
+    "macd": "BUY",
+    "supertrend": "BULLISH",
+    "sector": "FMCG & Consumer Goods"
+  },
+  {
+    "rank": 528,
+    "symbol": "HINDUNILVR",
+    "name": "Hindustan Unilever Ltd",
+    "price": 1990.3,
+    "score": 83.5,
+    "target": 2288.84,
+    "stop_loss": 1831.08,
+    "potential_gain": "+15.0%",
+    "risk": "-8.0%",
+    "rsi": 49.5,
+    "vol_surge": "1.5\u00d7",
+    "pattern": "\ud83d\udfe2 Institutional Sector Benchmark",
+    "rev_qoq": "12.0",
+    "profit_qoq": "9.8",
+    "trend": "BULLISH",
+    "macd": "BUY",
+    "supertrend": "BULLISH",
+    "sector": "FMCG & Consumer Goods"
+  },
+  {
+    "rank": 529,
+    "symbol": "TATASTEEL",
+    "name": "Tata Steel Ltd",
+    "price": 184.85,
+    "score": 86.2,
+    "target": 212.58,
+    "stop_loss": 170.06,
+    "potential_gain": "+15.0%",
+    "risk": "-8.0%",
+    "rsi": 55.4,
+    "vol_surge": "1.5\u00d7",
+    "pattern": "\ud83d\udfe2 Institutional Sector Benchmark",
+    "rev_qoq": "12.0",
+    "profit_qoq": "24.5",
+    "trend": "BULLISH",
+    "macd": "BUY",
+    "supertrend": "BULLISH",
+    "sector": "Metals & Mining"
+  },
+  {
+    "rank": 530,
+    "symbol": "TITAN",
+    "name": "Titan Company Ltd",
+    "price": 5005.0,
+    "score": 86.8,
+    "target": 5755.75,
+    "stop_loss": 4604.6,
+    "potential_gain": "+15.0%",
+    "risk": "-8.0%",
+    "rsi": 56.1,
+    "vol_surge": "1.5\u00d7",
+    "pattern": "\ud83d\udfe2 Institutional Sector Benchmark",
+    "rev_qoq": "12.0",
+    "profit_qoq": "18.2",
+    "trend": "BULLISH",
+    "macd": "BUY",
+    "supertrend": "BULLISH",
+    "sector": "Jewellery & Textiles"
+  },
+  {
+    "rank": 531,
+    "symbol": "BHARTIARTL",
+    "name": "Bharti Airtel Ltd",
+    "price": 2072.1,
+    "score": 87.0,
+    "target": 2382.91,
+    "stop_loss": 1906.33,
+    "potential_gain": "+15.0%",
+    "risk": "-8.0%",
+    "rsi": 58.2,
+    "vol_surge": "1.5\u00d7",
+    "pattern": "\ud83d\udfe2 Institutional Sector Benchmark",
+    "rev_qoq": "12.0",
+    "profit_qoq": "20.6",
+    "trend": "BULLISH",
+    "macd": "BUY",
+    "supertrend": "BULLISH",
+    "sector": "Media & Telecom"
   }
 ]
