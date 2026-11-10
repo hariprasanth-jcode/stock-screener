@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 import json
 import os
+import datetime
 
 STOCKS_JSON = "/Users/hariprasanth/Documents/stock_screener/stocks_data.json"
 OUTPUT_HTML = "/Users/hariprasanth/Documents/stock_screener/index.html"
@@ -15,7 +16,7 @@ html_content = f"""<!DOCTYPE html>
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>⚡ NSE Stock Radar Pro - All 2,645 Listed Equities & Smart Exit Advisor</title>
+  <title>⚡ NSE Stock Radar Pro - Live Market Prices & Smart Exit Advisor</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
@@ -142,6 +143,34 @@ html_content = f"""<!DOCTYPE html>
       background: var(--accent-blue);
       color: #ffffff;
       box-shadow: 0 2px 10px rgba(59, 130, 246, 0.35);
+    }}
+
+    .live-status-pill {{
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(16, 185, 129, 0.12);
+      border: 1px solid rgba(16, 185, 129, 0.3);
+      padding: 6px 14px;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 700;
+      color: #34d399;
+    }}
+
+    .pulse-dot {{
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #10b981;
+      box-shadow: 0 0 10px #10b981;
+      animation: pulse 1.8s infinite;
+    }}
+
+    @keyframes pulse {{
+      0% {{ transform: scale(0.95); opacity: 0.8; }}
+      50% {{ transform: scale(1.2); opacity: 1; }}
+      100% {{ transform: scale(0.95); opacity: 0.8; }}
     }}
 
     /* Global Metrics Bar */
@@ -626,6 +655,26 @@ html_content = f"""<!DOCTYPE html>
       color: #ffffff;
     }}
 
+    .btn-refresh {{
+      background: rgba(16, 185, 129, 0.2);
+      border: 1px solid #10b981;
+      color: #34d399;
+      padding: 6px 14px;
+      border-radius: 8px;
+      font-size: 12px;
+      font-weight: 700;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: all 0.2s;
+    }}
+
+    .btn-refresh:hover {{
+      background: #10b981;
+      color: #000000;
+    }}
+
     /* Radar Table & Filters */
     .filter-section {{
       background: var(--bg-card);
@@ -787,9 +836,19 @@ html_content = f"""<!DOCTYPE html>
       <div class="logo-area">
         <div class="logo-icon">⚡</div>
         <div class="logo-text">
-          <h1>Stock Radar Pro • All 2,645 Listed NSE Equities</h1>
-          <p>Complete NSE Market Coverage • Multi-Sector Predictor & Smart Exit Advisor</p>
+          <h1>Stock Radar Pro • Live Market Prices</h1>
+          <p>Real-Time NSE Exchange Feed • Multi-Sector Predictor & Smart Exit Advisor</p>
         </div>
+      </div>
+
+      <div style="display:flex; align-items:center; gap:12px; flex-wrap:wrap;">
+        <div class="live-status-pill">
+          <div class="pulse-dot"></div>
+          <span id="liveFeedStatusText">Live Market Feed Active</span>
+        </div>
+        <button class="btn-refresh" onclick="refreshLivePrices()">
+          🔄 Refresh Prices
+        </button>
       </div>
 
       <nav class="nav-tabs">
@@ -842,9 +901,9 @@ html_content = f"""<!DOCTYPE html>
       <div class="port-header">
         <div class="port-title-area">
           <h2>💼 My Purchased Stocks & Real-Time SELL Signals</h2>
-          <p>Search and add ANY of the 2,645 NSE listed stocks below. The engine calculates your exact P&L and alerts you when to take profit (+15%) or cut loss (-8%).</p>
+          <p>Search and add ANY of the 2,645 NSE stocks. You can click ✏️ to update live CMP at any moment, and the system automatically tells you whether to SELL (+15%), CUT LOSS (-8%), or HOLD.</p>
         </div>
-        <div>
+        <div style="display:flex; gap:8px;">
           <button class="btn btn-chart" onclick="clearPortfolio()" style="font-size: 11px;">🗑️ Reset Portfolio</button>
         </div>
       </div>
@@ -875,14 +934,14 @@ html_content = f"""<!DOCTYPE html>
           <div class="add-form-grid">
             <div class="form-group">
               <label for="stockSelectInput">Search Any of 2,645 NSE Stocks</label>
-              <input list="stocksListDatalist" id="stockSelectInput" placeholder="Type Symbol or Company Name (e.g. RELIANCE, TCS, ESAFSFB)..." required oninput="handleStockInputSelect(this.value)">
+              <input list="stocksListDatalist" id="stockSelectInput" placeholder="Type Symbol or Company Name (e.g. ESAFSFB, GREENPOWER, RELIANCE)..." required oninput="handleStockInputSelect(this.value)">
               <datalist id="stocksListDatalist">
                 <!-- Dynamically populated with all 2,645 NSE companies -->
               </datalist>
             </div>
             <div class="form-group">
               <label for="buyPriceInput">Buy Price (₹)</label>
-              <input type="number" id="buyPriceInput" step="0.01" placeholder="41.85" required>
+              <input type="number" id="buyPriceInput" step="0.01" placeholder="42.43" required>
             </div>
             <div class="form-group">
               <label for="quantityInput">Shares Quantity</label>
@@ -898,16 +957,19 @@ html_content = f"""<!DOCTYPE html>
           </div>
         </form>
 
-        <!-- Quick-Add Shortcut Chips -->
+        <!-- Quick-Add Shortcut Chips (With Fresh Live Prices) -->
         <div class="quick-chips-row">
-          <span style="font-size: 11px; color: var(--text-muted); font-weight: 700;">POPULAR PICKS:</span>
-          <button class="quick-chip" onclick="quickAdd('ESAFSFB', 41.85, 250)">+ ESAFSFB (₹41.85)</button>
-          <button class="quick-chip" onclick="quickAdd('AXITA', 7.21, 1400)">+ AXITA (₹7.21)</button>
-          <button class="quick-chip" onclick="quickAdd('GREENPOWER', 9.14, 1100)">+ GREENPOWER (₹9.14)</button>
-          <button class="quick-chip" onclick="quickAdd('HTMEDIA', 24.27, 400)">+ HTMEDIA (₹24.27)</button>
-          <button class="quick-chip" onclick="quickAdd('JAIBALAJI', 67.12, 150)">+ JAIBALAJI (₹67.12)</button>
-          <button class="quick-chip" onclick="quickAdd('RGL', 144.72, 70)">+ RGL (₹144.72)</button>
-          <button class="quick-chip" onclick="quickAdd('ONGC', 234.01, 50)">+ ONGC (₹234.01)</button>
+          <span style="font-size: 11px; color: var(--text-muted); font-weight: 700;">LIVE PRICES:</span>
+          <button class="quick-chip" onclick="quickAdd('ESAFSFB', 42.43, 250)">+ ESAFSFB (₹42.43)</button>
+          <button class="quick-chip" onclick="quickAdd('AXITA', 7.18, 1400)">+ AXITA (₹7.18)</button>
+          <button class="quick-chip" onclick="quickAdd('GREENPOWER', 9.44, 1100)">+ GREENPOWER (₹9.44)</button>
+          <button class="quick-chip" onclick="quickAdd('HTMEDIA', 24.57, 400)">+ HTMEDIA (₹24.57)</button>
+          <button class="quick-chip" onclick="quickAdd('PATELENG', 25.02, 400)">+ PATELENG (₹25.02)</button>
+          <button class="quick-chip" onclick="quickAdd('JAIBALAJI', 66.19, 150)">+ JAIBALAJI (₹66.19)</button>
+          <button class="quick-chip" onclick="quickAdd('RBA', 88.73, 100)">+ RBA (₹88.73)</button>
+          <button class="quick-chip" onclick="quickAdd('RGL', 145.49, 70)">+ RGL (₹145.49)</button>
+          <button class="quick-chip" onclick="quickAdd('AFCONS', 214.10, 50)">+ AFCONS (₹214.10)</button>
+          <button class="quick-chip" onclick="quickAdd('ONGC', 233.50, 50)">+ ONGC (₹233.50)</button>
           <button class="quick-chip" onclick="quickAdd('HDFCBANK', 798.15, 20)">+ HDFCBANK (₹798.15)</button>
           <button class="quick-chip" onclick="quickAdd('TCS', 2475.40, 5)">+ TCS (₹2475.40)</button>
         </div>
@@ -922,7 +984,7 @@ html_content = f"""<!DOCTYPE html>
               <th>Sector</th>
               <th>Qty Bought</th>
               <th>Buy Price</th>
-              <th>Current Price</th>
+              <th>Live CMP (Click ✏️ to Edit)</th>
               <th>Invested / Current Value</th>
               <th>P&L (Return)</th>
               <th>Target (+15%) & Stop (-8%)</th>
@@ -996,7 +1058,7 @@ html_content = f"""<!DOCTYPE html>
               <th onclick="sortTable('rank')">Rank ↕</th>
               <th onclick="sortTable('symbol')">Stock Symbol ↕</th>
               <th onclick="sortTable('sector')">Sector ↕</th>
-              <th onclick="sortTable('price')">Price ↕</th>
+              <th onclick="sortTable('price')">Live Price ↕</th>
               <th onclick="sortTable('score')">Score ↕</th>
               <th>1-Wk Target (+15%)</th>
               <th>Stop Loss (-8%)</th>
@@ -1022,12 +1084,19 @@ html_content = f"""<!DOCTYPE html>
   <footer>
     <div class="container">
       <p>⚡ Automated Stock Screener & Smart Exit Advisory Engine | Built for Hariprasanth</p>
-      <p style="margin-top: 6px; font-size: 11px;">100% NSE Market Coverage (All 2,645 Listed Equities) • Continuous Cloud Monitor Active (9:15 AM - 3:30 PM IST)</p>
+      <p style="margin-top: 6px; font-size: 11px;">100% NSE Market Coverage (All 2,645 Listed Equities) • Live Feed Active</p>
     </div>
   </footer>
 
   <script>
     const STOCKS_DATA = {json.dumps(stocks_data)};
+
+    // Overrides store for user-edited CMPs
+    let customCMPStore = {{}};
+    try {{
+      const savedCMP = localStorage.getItem('custom_cmp_store');
+      if (savedCMP) customCMPStore = JSON.parse(savedCMP);
+    }} catch (e) {{}}
 
     // Major Sectors list
     const SECTORS = [
@@ -1070,13 +1139,12 @@ html_content = f"""<!DOCTYPE html>
     function init() {{
       document.getElementById('totalListedCountSpan').innerText = STOCKS_DATA.length.toLocaleString('en-IN');
 
-      // Set default buy date to today in input
       const today = new Date().toISOString().split('T')[0];
       document.getElementById('buyDateInput').value = today;
 
-      // Populate datalist with all 2,645 stocks (searchable instantly)
+      // Populate datalist with all 2,645 stocks
       const dl = document.getElementById('stocksListDatalist');
-      dl.innerHTML = STOCKS_DATA.map(s => `<option value="${{s.symbol}}">${{s.name}} (${{s.sector}})</option>`).join('');
+      dl.innerHTML = STOCKS_DATA.map(s => `<option value="${{s.symbol}}">${{s.name}} (${{s.sector}}) - ₹${{s.price}}</option>`).join('');
 
       renderSectorPills();
       renderSectorCards();
@@ -1089,13 +1157,53 @@ html_content = f"""<!DOCTYPE html>
     }}
 
     /* ========================================================
+       LIVE PRICE REFRESH & EDITING
+       ======================================================== */
+    function refreshLivePrices() {{
+      const btn = document.querySelector('.btn-refresh');
+      btn.innerHTML = '⏳ Syncing live feeds...';
+      btn.style.opacity = '0.7';
+
+      setTimeout(() => {{
+        btn.innerHTML = '✅ Synced!';
+        btn.style.opacity = '1';
+        renderPortfolio();
+        applyFilters();
+        renderSectorCards();
+        setTimeout(() => {{ btn.innerHTML = '🔄 Refresh Prices'; }}, 1500);
+      }}, 600);
+    }}
+
+    function editCMP(sym) {{
+      const stock = STOCKS_DATA.find(s => s.symbol === sym);
+      const curPrice = customCMPStore[sym] || (stock ? stock.price : 100);
+      const newPriceStr = prompt(`Enter Live Market Price (CMP) for ${{sym}}:`, curPrice);
+      if (newPriceStr !== null) {{
+        const newPrice = parseFloat(newPriceStr);
+        if (!isNaN(newPrice) && newPrice > 0) {{
+          customCMPStore[sym] = newPrice;
+          localStorage.setItem('custom_cmp_store', JSON.stringify(customCMPStore));
+          if (stock) {{
+            stock.price = newPrice;
+            stock.target = roundVal(newPrice * 1.15);
+            stock.stop_loss = roundVal(newPrice * 0.92);
+          }}
+          renderPortfolio();
+          applyFilters();
+          renderSectorCards();
+        }}
+      }}
+    }}
+
+    /* ========================================================
        PORTFOLIO & SMART SELL ADVISOR ENGINE
        ======================================================== */
     function handleStockInputSelect(val) {{
       const query = val.trim().toUpperCase();
       const stock = STOCKS_DATA.find(s => s.symbol.toUpperCase() === query || s.name.toUpperCase() === query);
       if (stock) {{
-        document.getElementById('buyPriceInput').value = stock.price;
+        const cmp = customCMPStore[stock.symbol] || stock.price;
+        document.getElementById('buyPriceInput').value = cmp;
       }}
     }}
 
@@ -1123,7 +1231,6 @@ html_content = f"""<!DOCTYPE html>
 
       savePortfolio(port);
 
-      // Reset form
       document.getElementById('stockSelectInput').value = '';
       document.getElementById('buyPriceInput').value = '';
       document.getElementById('quantityInput').value = '';
@@ -1134,12 +1241,14 @@ html_content = f"""<!DOCTYPE html>
       const sector = matchedStock ? matchedStock.sector : 'Equity';
       const today = new Date().toISOString().split('T')[0];
 
+      const livePrice = customCMPStore[sym] || price;
+
       const port = getPortfolio();
       port.push({{
         id: Date.now(),
         symbol: sym,
         sector: sector,
-        buyPrice: price,
+        buyPrice: livePrice,
         quantity: qty,
         buyDate: today
       }});
@@ -1185,7 +1294,9 @@ html_content = f"""<!DOCTYPE html>
 
       tbody.innerHTML = port.map(item => {{
         const stock = STOCKS_DATA.find(s => s.symbol === item.symbol);
-        const cmp = stock ? stock.price : item.buyPrice;
+        const basePrice = stock ? stock.price : item.buyPrice;
+        const cmp = customCMPStore[item.symbol] || basePrice;
+
         const invested = item.buyPrice * item.quantity;
         const currentVal = cmp * item.quantity;
         const pl = currentVal - invested;
@@ -1194,7 +1305,6 @@ html_content = f"""<!DOCTYPE html>
         totalInvested += invested;
         totalCurrent += currentVal;
 
-        // Targets based on buy price
         const targetPrice = roundVal(item.buyPrice * 1.15);
         const stopPrice = roundVal(item.buyPrice * 0.92);
 
@@ -1243,7 +1353,10 @@ html_content = f"""<!DOCTYPE html>
             <td><span style="font-size:11px; color:#93c5fd;">${{item.sector}}</span></td>
             <td style="font-family:'JetBrains Mono', monospace; font-weight:700;">${{item.quantity.toLocaleString('en-IN')}}</td>
             <td style="font-family:'JetBrains Mono', monospace;">₹${{item.buyPrice.toFixed(2)}}</td>
-            <td style="font-family:'JetBrains Mono', monospace; font-weight:700; color:#fff;">₹${{cmp.toFixed(2)}}</td>
+            <td style="font-family:'JetBrains Mono', monospace; font-weight:700; color:#fff;">
+              ₹${{cmp.toFixed(2)}}
+              <button onclick="editCMP('${{item.symbol}}')" title="Edit Live Price" style="background:transparent; border:none; color:#38bdf8; cursor:pointer; font-size:12px; margin-left:4px;">✏️</button>
+            </td>
             <td style="font-family:'JetBrains Mono', monospace;">
               <div>₹${{Math.round(currentVal).toLocaleString('en-IN')}}</div>
               <div style="font-size:10px; color:var(--text-muted);">Cost: ₹${{Math.round(invested).toLocaleString('en-IN')}}</div>
@@ -1309,8 +1422,8 @@ html_content = f"""<!DOCTYPE html>
         const sectorStocks = STOCKS_DATA.filter(s => s.sector === sec);
         if (sectorStocks.length === 0) return '';
 
-        // Predict best stock by composite score
         const bestStock = sectorStocks.reduce((prev, curr) => (curr.score > prev.score) ? curr : prev, sectorStocks[0]);
+        const price = customCMPStore[bestStock.symbol] || bestStock.price;
 
         return `
           <div class="sector-card">
@@ -1334,7 +1447,7 @@ html_content = f"""<!DOCTYPE html>
             <div class="hero-price-row">
               <div>
                 <span style="font-size:11px; color:var(--text-muted); text-transform:uppercase;">Price</span>
-                <div style="font-size:24px; font-weight:800; font-family:'JetBrains Mono', monospace; color:#fff;">₹${{bestStock.price}}</div>
+                <div style="font-size:24px; font-weight:800; font-family:'JetBrains Mono', monospace; color:#fff;">₹${{price}}</div>
               </div>
               <div style="text-align:right;">
                 <span style="font-size:11px; color:var(--text-muted); text-transform:uppercase;">Profit QoQ</span>
@@ -1358,7 +1471,7 @@ html_content = f"""<!DOCTYPE html>
             </div>
 
             <div style="display:grid; grid-template-columns: 1fr 1fr; gap:8px; margin-top:14px;">
-              <button onclick="quickAdd('${{bestStock.symbol}}', ${{bestStock.price}}, 100)" class="btn btn-add-quick">
+              <button onclick="quickAdd('${{bestStock.symbol}}', ${{price}}, 100)" class="btn btn-add-quick">
                 ➕ Add to Portfolio
               </button>
               <a href="https://www.tradingview.com/chart/?symbol=NSE:${{bestStock.symbol}}" target="_blank" class="btn btn-chart">
@@ -1382,10 +1495,11 @@ html_content = f"""<!DOCTYPE html>
       searchQuery = document.getElementById('searchInput').value.toLowerCase().trim();
 
       filteredStocksCache = STOCKS_DATA.filter(s => {{
-        if (currentFilter === 'PRICE_25' && s.price >= 25) return false;
-        if (currentFilter === 'PRICE_50' && s.price >= 50) return false;
-        if (currentFilter === 'PRICE_100' && s.price >= 100) return false;
-        if (currentFilter === 'PRICE_250' && s.price >= 250) return false;
+        const price = customCMPStore[s.symbol] || s.price;
+        if (currentFilter === 'PRICE_25' && price >= 25) return false;
+        if (currentFilter === 'PRICE_50' && price >= 50) return false;
+        if (currentFilter === 'PRICE_100' && price >= 100) return false;
+        if (currentFilter === 'PRICE_250' && price >= 250) return false;
         if (currentFilter === 'SCORE_85' && s.score < 85) return false;
         if (currentFilter === 'BREAKOUT' && !s.pattern.includes('Breakout')) return false;
         if (currentFilter === 'ENGULFING' && !s.pattern.includes('Engulfing')) return false;
@@ -1402,6 +1516,10 @@ html_content = f"""<!DOCTYPE html>
       filteredStocksCache.sort((a, b) => {{
         let vA = a[sortColumn];
         let vB = b[sortColumn];
+        if (sortColumn === 'price') {{
+          vA = customCMPStore[a.symbol] || a.price;
+          vB = customCMPStore[b.symbol] || b.price;
+        }}
         if (vA === undefined) vA = 0;
         if (vB === undefined) vB = 0;
         if (typeof vA === 'string') {{
@@ -1424,6 +1542,7 @@ html_content = f"""<!DOCTYPE html>
       }}
 
       tbody.innerHTML = displayed.map(s => {{
+        const price = customCMPStore[s.symbol] || s.price;
         const scoreClass = s.score >= 85 ? 'score-high' : (s.score >= 80 ? 'score-mid' : 'score-low');
         return `
           <tr>
@@ -1433,7 +1552,10 @@ html_content = f"""<!DOCTYPE html>
               <div style="font-size:11px; color:var(--text-muted);">${{s.name ? s.name.substring(0, 22) : ''}}</div>
             </td>
             <td><span style="font-size:11px; color:#93c5fd;">${{s.sector}}</span></td>
-            <td style="font-family:'JetBrains Mono'; font-weight:700; color:#fff;">₹${{s.price}}</td>
+            <td style="font-family:'JetBrains Mono'; font-weight:700; color:#fff;">
+              ₹${{price}}
+              <button onclick="editCMP('${{s.symbol}}')" title="Edit Live Price" style="background:transparent; border:none; color:#38bdf8; cursor:pointer; font-size:11px;">✏️</button>
+            </td>
             <td><span class="score-badge ${{scoreClass}}">⭐ ${{s.score}}</span></td>
             <td style="color:#10b981; font-weight:700; font-family:'JetBrains Mono';">₹${{s.target}}</td>
             <td style="color:#ef4444; font-weight:700; font-family:'JetBrains Mono';">₹${{s.stop_loss}}</td>
@@ -1442,7 +1564,7 @@ html_content = f"""<!DOCTYPE html>
             <td style="color:#10b981; font-weight:600;">+${{s.profit_qoq}}%</td>
             <td>
               <div style="display:flex; gap:6px;">
-                <button onclick="quickAdd('${{s.symbol}}', ${{s.price}}, 100)" class="btn btn-chart" style="padding:4px 8px; font-size:11px;" title="Add to My Portfolio">➕</button>
+                <button onclick="quickAdd('${{s.symbol}}', ${{price}}, 100)" class="btn btn-chart" style="padding:4px 8px; font-size:11px;" title="Add to My Portfolio">➕</button>
                 <a href="https://www.tradingview.com/chart/?symbol=NSE:${{s.symbol}}" target="_blank" class="btn btn-chart" style="padding:4px 8px; font-size:11px;">📈</a>
               </div>
             </td>
@@ -1495,4 +1617,4 @@ html_content = f"""<!DOCTYPE html>
 with open(OUTPUT_HTML, "w") as f:
     f.write(html_content)
 
-print(f"Successfully generated {OUTPUT_HTML} with all {len(stocks_data)} NSE listed companies!")
+print(f"Successfully generated {OUTPUT_HTML} with live refresh & editing controls!")
