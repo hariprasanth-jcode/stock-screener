@@ -8,12 +8,14 @@ OUTPUT_HTML = "/Users/hariprasanth/Documents/stock_screener/index.html"
 with open(STOCKS_JSON, "r") as f:
     stocks_data = json.load(f)
 
+print(f"Loaded {len(stocks_data)} total stocks from {STOCKS_JSON}")
+
 html_content = f"""<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>⚡ Stock Radar Pro - Sector Predictor & Smart Exit Portfolio</title>
+  <title>⚡ NSE Stock Radar Pro - All 2,645 Listed Equities & Smart Exit Advisor</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
@@ -114,6 +116,7 @@ html_content = f"""<!DOCTYPE html>
       padding: 4px;
       border-radius: 12px;
       border: 1px solid var(--border-color);
+      flex-wrap: wrap;
     }}
 
     .nav-tab-btn {{
@@ -129,6 +132,10 @@ html_content = f"""<!DOCTYPE html>
       display: inline-flex;
       align-items: center;
       gap: 6px;
+    }}
+
+    .nav-tab-btn:hover {{
+      color: #ffffff;
     }}
 
     .nav-tab-btn.active {{
@@ -740,6 +747,28 @@ html_content = f"""<!DOCTYPE html>
     .score-mid {{ background: rgba(59, 130, 246, 0.15); color: #60a5fa; border: 1px solid rgba(59, 130, 246, 0.3); }}
     .score-low {{ background: rgba(245, 158, 11, 0.15); color: #fbbf24; border: 1px solid rgba(245, 158, 11, 0.3); }}
 
+    .load-more-wrap {{
+      text-align: center;
+      padding: 20px;
+    }}
+
+    .btn-load-more {{
+      background: #1e293b;
+      border: 1px solid #334155;
+      color: #93c5fd;
+      padding: 10px 24px;
+      border-radius: 8px;
+      font-size: 13px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.2s;
+    }}
+
+    .btn-load-more:hover {{
+      background: var(--accent-blue);
+      color: #ffffff;
+    }}
+
     footer {{
       margin-top: 60px;
       padding: 24px 0;
@@ -758,15 +787,15 @@ html_content = f"""<!DOCTYPE html>
       <div class="logo-area">
         <div class="logo-icon">⚡</div>
         <div class="logo-text">
-          <h1>Stock Radar Pro • Sector Predictor & Smart Exit Advisor</h1>
-          <p>Multi-Sector NSE Intelligence & Automated Buy/Sell Signal Engine</p>
+          <h1>Stock Radar Pro • All 2,645 Listed NSE Equities</h1>
+          <p>Complete NSE Market Coverage • Multi-Sector Predictor & Smart Exit Advisor</p>
         </div>
       </div>
 
       <nav class="nav-tabs">
         <button class="nav-tab-btn active" onclick="scrollToSection('portfolioSection')">💼 My Portfolio & Sell Signals</button>
         <button class="nav-tab-btn" onclick="scrollToSection('sectorSection')">🏢 Sector Predictions</button>
-        <button class="nav-tab-btn" onclick="scrollToSection('radarSection')">📊 Market Radar (531)</button>
+        <button class="nav-tab-btn" onclick="scrollToSection('radarSection')">📊 All 2,645 Equities</button>
         <a href="https://github.com/hariprasanth-jcode/stock-screener/actions" target="_blank" class="nav-tab-btn" style="text-decoration:none;">⚙️ Actions</a>
       </nav>
     </div>
@@ -777,17 +806,17 @@ html_content = f"""<!DOCTYPE html>
     <!-- Global Key Metrics -->
     <div class="metrics-bar">
       <div class="metric-card">
-        <div class="metric-icon" style="background: rgba(59, 130, 246, 0.15); color: #60a5fa;">🏢</div>
+        <div class="metric-icon" style="background: rgba(59, 130, 246, 0.15); color: #60a5fa;">🇮🇳</div>
         <div class="metric-data">
-          <h4>Active Coverage</h4>
-          <div class="value">All NSE Sectors</div>
+          <h4>Market Coverage</h4>
+          <div class="value">100% of NSE</div>
         </div>
       </div>
       <div class="metric-card">
-        <div class="metric-icon" style="background: rgba(16, 185, 129, 0.15); color: #34d399;">🎯</div>
+        <div class="metric-icon" style="background: rgba(16, 185, 129, 0.15); color: #34d399;">🏢</div>
         <div class="metric-data">
-          <h4>Total Tracked</h4>
-          <div class="value">531 Stocks</div>
+          <h4>Total Listed Stocks</h4>
+          <div class="value">2,645 Equities</div>
         </div>
       </div>
       <div class="metric-card">
@@ -813,7 +842,7 @@ html_content = f"""<!DOCTYPE html>
       <div class="port-header">
         <div class="port-title-area">
           <h2>💼 My Purchased Stocks & Real-Time SELL Signals</h2>
-          <p>Add your purchased stocks below. The engine continuously tracks live prices and alerts you exactly when to take profit (+15%) or cut loss (-8%).</p>
+          <p>Search and add ANY of the 2,645 NSE listed stocks below. The engine calculates your exact P&L and alerts you when to take profit (+15%) or cut loss (-8%).</p>
         </div>
         <div>
           <button class="btn btn-chart" onclick="clearPortfolio()" style="font-size: 11px;">🗑️ Reset Portfolio</button>
@@ -845,10 +874,10 @@ html_content = f"""<!DOCTYPE html>
         <form id="addStockForm" onsubmit="handleAddStock(event)">
           <div class="add-form-grid">
             <div class="form-group">
-              <label for="stockSelectInput">Select or Type Stock Symbol</label>
-              <input list="stocksListDatalist" id="stockSelectInput" placeholder="e.g. ESAFSFB, AXITA, GREENPOWER..." required oninput="handleStockInputSelect(this.value)">
+              <label for="stockSelectInput">Search Any of 2,645 NSE Stocks</label>
+              <input list="stocksListDatalist" id="stockSelectInput" placeholder="Type Symbol or Company Name (e.g. RELIANCE, TCS, ESAFSFB)..." required oninput="handleStockInputSelect(this.value)">
               <datalist id="stocksListDatalist">
-                <!-- Populated via JS -->
+                <!-- Dynamically populated with all 2,645 NSE companies -->
               </datalist>
             </div>
             <div class="form-group">
@@ -871,7 +900,7 @@ html_content = f"""<!DOCTYPE html>
 
         <!-- Quick-Add Shortcut Chips -->
         <div class="quick-chips-row">
-          <span style="font-size: 11px; color: var(--text-muted); font-weight: 700;">QUICK ADD:</span>
+          <span style="font-size: 11px; color: var(--text-muted); font-weight: 700;">POPULAR PICKS:</span>
           <button class="quick-chip" onclick="quickAdd('ESAFSFB', 41.85, 250)">+ ESAFSFB (₹41.85)</button>
           <button class="quick-chip" onclick="quickAdd('AXITA', 7.21, 1400)">+ AXITA (₹7.21)</button>
           <button class="quick-chip" onclick="quickAdd('GREENPOWER', 9.14, 1100)">+ GREENPOWER (₹9.14)</button>
@@ -879,6 +908,8 @@ html_content = f"""<!DOCTYPE html>
           <button class="quick-chip" onclick="quickAdd('JAIBALAJI', 67.12, 150)">+ JAIBALAJI (₹67.12)</button>
           <button class="quick-chip" onclick="quickAdd('RGL', 144.72, 70)">+ RGL (₹144.72)</button>
           <button class="quick-chip" onclick="quickAdd('ONGC', 234.01, 50)">+ ONGC (₹234.01)</button>
+          <button class="quick-chip" onclick="quickAdd('HDFCBANK', 798.15, 20)">+ HDFCBANK (₹798.15)</button>
+          <button class="quick-chip" onclick="quickAdd('TCS', 2475.40, 5)">+ TCS (₹2475.40)</button>
         </div>
       </div>
 
@@ -912,8 +943,8 @@ html_content = f"""<!DOCTYPE html>
     <section id="sectorSection" class="sector-hub-wrapper">
       <div class="section-header">
         <div>
-          <h2 class="section-title">🏢 Sector-Wise Prediction Hub</h2>
-          <p class="section-subtitle">Algorithmic #1 Best Stock to Buy for every sector across all listed NSE companies</p>
+          <h2 class="section-title">🏢 Multi-Sector Intelligence & Prediction Hub</h2>
+          <p class="section-subtitle">Algorithmic #1 Best Stock to Buy for every sector across all 2,645 NSE equities</p>
         </div>
       </div>
 
@@ -929,12 +960,12 @@ html_content = f"""<!DOCTYPE html>
     </section>
 
     <!-- ========================================== -->
-    <!-- SECTION 3: COMPLETE RADAR TABLE (531 STOCKS) -->
+    <!-- SECTION 3: ALL 2,645 EQUITIES RADAR TABLE -->
     <!-- ========================================== -->
     <section id="radarSection">
       <div class="section-header">
         <div>
-          <h2 class="section-title">📊 Multi-Sector Market Radar (531 Equities)</h2>
+          <h2 class="section-title">📊 Complete NSE Market Radar (<span id="totalListedCountSpan">2,645</span> Equities)</h2>
           <p class="section-subtitle">Real-time indicators, Volume surge, RSI, and Candlestick patterns</p>
         </div>
       </div>
@@ -943,16 +974,16 @@ html_content = f"""<!DOCTYPE html>
         <div class="search-row">
           <div class="search-box">
             <span class="search-icon">🔍</span>
-            <input type="text" id="searchInput" placeholder="Search by Symbol, Company Name, or Sector (e.g. Banking, Energy, ESAFSFB)..." oninput="applyFilters()" />
+            <input type="text" id="searchInput" placeholder="Search across all 2,645 stocks by Symbol, Company Name, or Sector (e.g. RELIANCE, Banking, ZOMATO)..." oninput="handleSearchInput()" />
           </div>
         </div>
         <div class="filter-pills">
-          <button class="pill active" onclick="setFilter('ALL', this)">All Stocks (531)</button>
+          <button class="pill active" onclick="setFilter('ALL', this)">All 2,645 Stocks</button>
           <button class="pill" onclick="setFilter('PRICE_25', this)">Under ₹25</button>
           <button class="pill" onclick="setFilter('PRICE_50', this)">Under ₹50</button>
           <button class="pill" onclick="setFilter('PRICE_100', this)">Under ₹100</button>
           <button class="pill" onclick="setFilter('PRICE_250', this)">Under ₹250</button>
-          <button class="pill" onclick="setFilter('SCORE_85', this)">🔥 Score ≥ 85 (Top Conviction)</button>
+          <button class="pill" onclick="setFilter('SCORE_85', this)">🔥 High Conviction (Score ≥ 85)</button>
           <button class="pill" onclick="setFilter('BREAKOUT', this)">🔥 20-Day Breakout</button>
           <button class="pill" onclick="setFilter('ENGULFING', this)">🟢 Bullish Engulfing</button>
         </div>
@@ -976,9 +1007,13 @@ html_content = f"""<!DOCTYPE html>
             </tr>
           </thead>
           <tbody id="stocksTableBody">
-            <!-- Rendered by JS -->
+            <!-- Rendered progressively by JS -->
           </tbody>
         </table>
+
+        <div class="load-more-wrap" id="loadMoreWrap">
+          <button class="btn-load-more" onclick="loadMoreStocks()">Load More Stocks...</button>
+        </div>
       </div>
     </section>
 
@@ -986,8 +1021,8 @@ html_content = f"""<!DOCTYPE html>
 
   <footer>
     <div class="container">
-      <p>⚡ Automated Multi-Sector Stock Screener & Smart Exit Advisory Engine | Built for Hariprasanth</p>
-      <p style="margin-top: 6px; font-size: 11px;">Active Cloud Monitor: 9:15 AM - 3:30 PM IST | Data synced with live market feeds.</p>
+      <p>⚡ Automated Stock Screener & Smart Exit Advisory Engine | Built for Hariprasanth</p>
+      <p style="margin-top: 6px; font-size: 11px;">100% NSE Market Coverage (All 2,645 Listed Equities) • Continuous Cloud Monitor Active (9:15 AM - 3:30 PM IST)</p>
     </div>
   </footer>
 
@@ -1014,6 +1049,8 @@ html_content = f"""<!DOCTYPE html>
     let searchQuery = '';
     let sortColumn = 'rank';
     let sortAsc = true;
+    let renderLimit = 100;
+    let filteredStocksCache = [];
 
     // Load portfolio from localStorage
     function getPortfolio() {{
@@ -1031,13 +1068,15 @@ html_content = f"""<!DOCTYPE html>
     }}
 
     function init() {{
+      document.getElementById('totalListedCountSpan').innerText = STOCKS_DATA.length.toLocaleString('en-IN');
+
       // Set default buy date to today in input
       const today = new Date().toISOString().split('T')[0];
       document.getElementById('buyDateInput').value = today;
 
-      // Populate datalist
+      // Populate datalist with all 2,645 stocks (searchable instantly)
       const dl = document.getElementById('stocksListDatalist');
-      dl.innerHTML = STOCKS_DATA.map(s => `<option value="${{s.symbol}}">${{s.name}} (${{s.sector}}) - ₹${{s.price}}</option>`).join('');
+      dl.innerHTML = STOCKS_DATA.map(s => `<option value="${{s.symbol}}">${{s.name}} (${{s.sector}})</option>`).join('');
 
       renderSectorPills();
       renderSectorCards();
@@ -1052,8 +1091,9 @@ html_content = f"""<!DOCTYPE html>
     /* ========================================================
        PORTFOLIO & SMART SELL ADVISOR ENGINE
        ======================================================== */
-    function handleStockInputSelect(sym) {{
-      const stock = STOCKS_DATA.find(s => s.symbol.toUpperCase() === sym.trim().toUpperCase());
+    function handleStockInputSelect(val) {{
+      const query = val.trim().toUpperCase();
+      const stock = STOCKS_DATA.find(s => s.symbol.toUpperCase() === query || s.name.toUpperCase() === query);
       if (stock) {{
         document.getElementById('buyPriceInput').value = stock.price;
       }}
@@ -1130,7 +1170,7 @@ html_content = f"""<!DOCTYPE html>
 
       if (port.length === 0) {{
         tbody.innerHTML = `<tr><td colspan="10" style="text-align:center; padding: 30px; color: var(--text-muted);">
-          No stocks added yet. Type a symbol above or click any "+ Quick Add" button to track your purchased stocks!
+          No stocks added yet. Search any of the 2,645 NSE stocks above or click any "+ Quick Add" button to track your purchases!
         </td></tr>`;
 
         document.getElementById('portTotalInvested').innerText = '₹0';
@@ -1333,10 +1373,15 @@ html_content = f"""<!DOCTYPE html>
     /* ========================================================
        RADAR TABLE & FILTERING
        ======================================================== */
+    function handleSearchInput() {{
+      renderLimit = 100;
+      applyFilters();
+    }}
+
     function applyFilters() {{
       searchQuery = document.getElementById('searchInput').value.toLowerCase().trim();
 
-      let filtered = STOCKS_DATA.filter(s => {{
+      filteredStocksCache = STOCKS_DATA.filter(s => {{
         if (currentFilter === 'PRICE_25' && s.price >= 25) return false;
         if (currentFilter === 'PRICE_50' && s.price >= 50) return false;
         if (currentFilter === 'PRICE_100' && s.price >= 100) return false;
@@ -1354,7 +1399,7 @@ html_content = f"""<!DOCTYPE html>
         return true;
       }});
 
-      filtered.sort((a, b) => {{
+      filteredStocksCache.sort((a, b) => {{
         let vA = a[sortColumn];
         let vB = b[sortColumn];
         if (vA === undefined) vA = 0;
@@ -1365,17 +1410,20 @@ html_content = f"""<!DOCTYPE html>
         return sortAsc ? vA - vB : vB - vA;
       }});
 
-      renderTable(filtered);
+      renderTable();
     }}
 
-    function renderTable(stocks) {{
+    function renderTable() {{
       const tbody = document.getElementById('stocksTableBody');
-      if (stocks.length === 0) {{
-        tbody.innerHTML = `<tr><td colspan="11" style="text-align:center; padding:40px; color:var(--text-muted);">No stocks matched your search.</td></tr>`;
+      const displayed = filteredStocksCache.slice(0, renderLimit);
+
+      if (displayed.length === 0) {{
+        tbody.innerHTML = `<tr><td colspan="11" style="text-align:center; padding:40px; color:var(--text-muted);">No stocks matched your search query across all 2,645 NSE equities.</td></tr>`;
+        document.getElementById('loadMoreWrap').style.display = 'none';
         return;
       }}
 
-      tbody.innerHTML = stocks.map(s => {{
+      tbody.innerHTML = displayed.map(s => {{
         const scoreClass = s.score >= 85 ? 'score-high' : (s.score >= 80 ? 'score-mid' : 'score-low');
         return `
           <tr>
@@ -1401,10 +1449,24 @@ html_content = f"""<!DOCTYPE html>
           </tr>
         `;
       }}).join('');
+
+      const loadMoreBtn = document.getElementById('loadMoreWrap');
+      if (renderLimit < filteredStocksCache.length) {{
+        loadMoreBtn.style.display = 'block';
+        loadMoreBtn.innerHTML = `<button class="btn-load-more" onclick="loadMoreStocks()">Showing ${{displayed.length}} of ${{filteredStocksCache.length}} Stocks • Load More...</button>`;
+      }} else {{
+        loadMoreBtn.style.display = 'none';
+      }}
+    }}
+
+    function loadMoreStocks() {{
+      renderLimit += 150;
+      renderTable();
     }}
 
     function setFilter(f, btn) {{
       currentFilter = f;
+      renderLimit = 100;
       document.querySelectorAll('.filter-pills .pill').forEach(p => p.classList.remove('active'));
       btn.classList.add('active');
       applyFilters();
@@ -1433,4 +1495,4 @@ html_content = f"""<!DOCTYPE html>
 with open(OUTPUT_HTML, "w") as f:
     f.write(html_content)
 
-print(f"Successfully generated {OUTPUT_HTML} (size: {os.path.getsize(OUTPUT_HTML)} bytes)")
+print(f"Successfully generated {OUTPUT_HTML} with all {len(stocks_data)} NSE listed companies!")
